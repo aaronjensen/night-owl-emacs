@@ -101,17 +101,17 @@ Also affects 'linum-mode' background."
   :group 'night-owl)
 
 ;; Primary colors
-(defcustom night-owl-yellow "#E6DB74"
+(defcustom night-owl-yellow "#ECC48D"
   "Primary colors - yellow"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-orange "#FD971F"
+(defcustom night-owl-orange "#ADDB67"
   "Primary colors - orange"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-red "#F92672"
+(defcustom night-owl-red "#C792EA"
   "Primary colors - red"
   :type 'string
   :group 'night-owl)
@@ -126,7 +126,7 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-green "#A6E22E"
+(defcustom night-owl-green "#F78C6C"
   "Primary colors - green"
   :type 'string
   :group 'night-owl)
@@ -166,7 +166,7 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-line-number "#8F908A"
+(defcustom night-owl-line-number "#4B6479"
   "Adaptive colors - line number"
   :type 'string
   :group 'night-owl)
@@ -181,7 +181,7 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-highlight-line "#3C3D37"
+(defcustom night-owl-highlight-line "#010F1D"
   "Adaptive colors - line highlight"
   :type 'string
   :group 'night-owl)
@@ -403,9 +403,7 @@ Also affects 'linum-mode' background."
                                       :underline unspecified
                                       :foreground ,night-owl-emphasis
                                       :background ,night-owl-highlight
-                                      :box (:line-width 1
-                                                        :color ,night-owl-gray
-                                                        :style unspecified)))))
+                                      :box nil))))
 
    `(powerline-active1
      ((,night-owl-class (:background ,night-owl-gray-d))))
@@ -419,9 +417,7 @@ Also affects 'linum-mode' background."
                                       :underline unspecified
                                       :foreground ,night-owl-comments
                                       :background ,night-owl-background
-                                      :box (:line-width 1
-                                                        :color ,night-owl-gray
-                                                        :style unspecified)))))
+                                      :box nil))))
 
    `(powerline-inactive1
      ((,night-owl-class (:background ,night-owl-gray-d))))
