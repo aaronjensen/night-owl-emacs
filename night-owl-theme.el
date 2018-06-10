@@ -5488,483 +5488,345 @@ Also affects 'linum-mode' background."
 
    ;; web-mode
    `(web-mode-builtin-face
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(web-mode-comment-face
-     ((,night-owl-class (:foreground ,night-owl-comments))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments))))
+     ((,night-owl-class (:foreground ,night-owl-comments))))
 
    `(web-mode-constant-face
-     ((,night-owl-class (:foreground ,night-owl-violet))
-      (,night-owl-256-class (:foreground ,night-owl-256-violet))))
+     ((,night-owl-class (:foreground ,night-owl-violet))))
 
    `(web-mode-current-element-highlight-face
      ((,night-owl-class (:underline unspecified
                                   :weight unspecified
-                                  :background ,night-owl-highlight-line))
-      (,night-owl-256-class (:underline unspecified
-                                       :weight unspecified
-                                       :background ,night-owl-256-highlight-line))))
+                                  :background ,night-owl-highlight-line))))
 
    `(web-mode-doctype-face
      ((,night-owl-class (:foreground ,night-owl-comments
                                    :slant italic
-                                   :weight bold))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments
-                                        :slant italic
-                                        :weight bold))))
+                                   :weight bold))))
 
    `(web-mode-folded-face
-     ((,night-owl-class (:underline t))
-      (,night-owl-256-class (:underline t))))
+     ((,night-owl-class (:underline t))))
 
    `(web-mode-function-name-face
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(web-mode-html-attr-name-face
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(web-mode-html-attr-custom-face
-     ((,night-owl-class (:inherit web-mode-html-attr-name-face))
-      (,night-owl-256-class (:inherit web-mode-html-attr-name-face))))
+     ((,night-owl-class (:inherit web-mode-html-attr-name-face))))
 
    `(web-mode-html-attr-engine-face
-     ((,night-owl-class (:inherit web-mode-block-delimiter-face))
-      (,night-owl-256-class (:inherit web-mode-block-delimiter-face))))
+     ((,night-owl-class (:inherit web-mode-block-delimiter-face))))
 
    `(web-mode-html-attr-equal-face
-     ((,night-owl-class (:inherit web-mode-html-attr-name-face))
-      (,night-owl-256-class (:inherit web-mode-html-attr-name-face))))
+     ((,night-owl-class (:inherit web-mode-html-attr-name-face))))
 
    `(web-mode-html-attr-value-face
-     ((,night-owl-class (:foreground ,night-owl-yellow))
-      (,night-owl-256-class (:foreground ,night-owl-256-yellow))))
+     ((,night-owl-class (:foreground ,night-owl-yellow))))
 
    `(web-mode-html-tag-face
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(web-mode-keyword-face
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(web-mode-preprocessor-face
      ((,night-owl-class (:foreground ,night-owl-yellow
                                    :slant normal
-                                   :weight unspecified))
-      (,night-owl-256-class (:foreground ,night-owl-256-yellow
-                                        :slant normal
-                                        :weight unspecified))))
+                                   :weight unspecified))))
 
    `(web-mode-string-face
-     ((,night-owl-class (:foreground ,night-owl-yellow))
-      (,night-owl-256-class (:foreground ,night-owl-256-yellow))))
+     ((,night-owl-class (:foreground ,night-owl-yellow))))
 
    `(web-mode-type-face
-     ((,night-owl-class (:inherit font-lock-type-face))
-      (,night-owl-256-class (:inherit font-lock-type-face))))
+     ((,night-owl-class (:inherit font-lock-type-face))))
 
    `(web-mode-variable-name-face
-     ((,night-owl-class (:foreground ,night-owl-orange))
-      (,night-owl-256-class (:foreground ,night-owl-256-orange))))
+     ((,night-owl-class (:foreground ,night-owl-orange))))
 
    `(web-mode-warning-face
-     ((,night-owl-class (:inherit font-lock-warning-face))
-      (,night-owl-256-class (:inherit font-lock-warning-face))))
+     ((,night-owl-class (:inherit font-lock-warning-face))))
 
    `(web-mode-block-face
-     ((,night-owl-class (:background unspecified))
-      (,night-owl-256-class (:background unspecified))))
+     ((,night-owl-class (:background unspecified))))
 
    `(web-mode-block-delimiter-face
-     ((,night-owl-class (:inherit font-lock-preprocessor-face))
-      (,night-owl-256-class (:inherit font-lock-preprocessor-face))))
+     ((,night-owl-class (:inherit font-lock-preprocessor-face))))
 
    `(web-mode-block-comment-face
-     ((,night-owl-class (:inherit web-mode-comment-face))
-      (,night-owl-256-class (:inherit web-mode-comment-face))))
+     ((,night-owl-class (:inherit web-mode-comment-face))))
 
    `(web-mode-block-control-face
-     ((,night-owl-class (:inherit font-lock-preprocessor-face))
-      (,night-owl-256-class (:inherit font-lock-preprocessor-face))))
+     ((,night-owl-class (:inherit font-lock-preprocessor-face))))
 
    `(web-mode-block-string-face
-     ((,night-owl-class (:inherit web-mode-string-face))
-      (,night-owl-256-class (:inherit web-mode-string-face))))
+     ((,night-owl-class (:inherit web-mode-string-face))))
 
    `(web-mode-comment-keyword-face
-     ((,night-owl-class (:box 1 :weight bold))
-      (,night-owl-256-class (:box 1 :weight bold))))
+     ((,night-owl-class (:box 1 :weight bold))))
 
    `(web-mode-css-at-rule-face
-     ((,night-owl-class (:inherit font-lock-constant-face))
-      (,night-owl-256-class (:inherit font-lock-constant-face))))
+     ((,night-owl-class (:inherit font-lock-constant-face))))
 
    `(web-mode-css-pseudo-class-face
-     ((,night-owl-class (:inherit font-lock-builtin-face))
-      (,night-owl-256-class (:inherit font-lock-builtin-face))))
+     ((,night-owl-class (:inherit font-lock-builtin-face))))
 
    `(web-mode-css-color-face
-     ((,night-owl-class (:inherit font-lock-builtin-face))
-      (,night-owl-256-class (:inherit font-lock-builtin-face))))
+     ((,night-owl-class (:inherit font-lock-builtin-face))))
 
    `(web-mode-css-filter-face
-     ((,night-owl-class (:inherit font-lock-function-name-face))
-      (,night-owl-256-class (:inherit font-lock-function-name-face))))
+     ((,night-owl-class (:inherit font-lock-function-name-face))))
 
    `(web-mode-css-function-face
-     ((,night-owl-class (:inherit font-lock-builtin-face))
-      (,night-owl-256-class (:inherit font-lock-builtin-face))))
+     ((,night-owl-class (:inherit font-lock-builtin-face))))
 
    `(web-mode-css-function-call-face
-     ((,night-owl-class (:inherit font-lock-function-name-face))
-      (,night-owl-256-class (:inherit font-lock-function-name-face))))
+     ((,night-owl-class (:inherit font-lock-function-name-face))))
 
    `(web-mode-css-priority-face
-     ((,night-owl-class (:inherit font-lock-builtin-face))
-      (,night-owl-256-class (:inherit font-lock-builtin-face))))
+     ((,night-owl-class (:inherit font-lock-builtin-face))))
 
    `(web-mode-css-property-name-face
-     ((,night-owl-class (:inherit font-lock-variable-name-face))
-      (,night-owl-256-class (:inherit font-lock-variable-name-face))))
+     ((,night-owl-class (:inherit font-lock-variable-name-face))))
 
    `(web-mode-css-selector-face
-     ((,night-owl-class (:inherit font-lock-keyword-face))
-      (,night-owl-256-class (:inherit font-lock-keyword-face))))
+     ((,night-owl-class (:inherit font-lock-keyword-face))))
 
    `(web-mode-css-string-face
-     ((,night-owl-class (:inherit web-mode-string-face))
-      (,night-owl-256-class (:inherit web-mode-string-face))))
+     ((,night-owl-class (:inherit web-mode-string-face))))
 
    `(web-mode-javascript-string-face
-     ((,night-owl-class (:inherit web-mode-string-face))
-      (,night-owl-256-class (:inherit web-mode-string-face))))
+     ((,night-owl-class (:inherit web-mode-string-face))))
 
    `(web-mode-json-comment-face
-     ((,night-owl-class (:inherit web-mode-comment-face))
-      (,night-owl-256-class (:inherit web-mode-comment-face))))
+     ((,night-owl-class (:inherit web-mode-comment-face))))
 
    `(web-mode-json-context-face
-     ((,night-owl-class (:foreground ,night-owl-violet))
-      (,night-owl-256-class (:foreground ,night-owl-256-violet))))
+     ((,night-owl-class (:foreground ,night-owl-violet))))
 
    `(web-mode-json-key-face
-     ((,night-owl-class (:foreground ,night-owl-violet))
-      (,night-owl-256-class (:foreground ,night-owl-256-violet))))
+     ((,night-owl-class (:foreground ,night-owl-violet))))
 
    `(web-mode-json-string-face
-     ((,night-owl-class (:inherit web-mode-string-face))
-      (,night-owl-256-class (:inherit web-mode-string-face))))
+     ((,night-owl-class (:inherit web-mode-string-face))))
 
    `(web-mode-param-name-face
-     ((,night-owl-class (:foreground ,night-owl-foreground))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground))))
+     ((,night-owl-class (:foreground ,night-owl-foreground))))
 
    `(web-mode-part-comment-face
-     ((,night-owl-class (:inherit web-mode-comment-face))
-      (,night-owl-256-class (:inherit web-mode-comment-face))))
+     ((,night-owl-class (:inherit web-mode-comment-face))))
 
    `(web-mode-part-face
-     ((,night-owl-class (:inherit web-mode-block-face))
-      (,night-owl-256-class (:inherit web-mode-block-face))))
+     ((,night-owl-class (:inherit web-mode-block-face))))
 
    `(web-mode-part-string-face
-     ((,night-owl-class (:inherit web-mode-string-face))
-      (,night-owl-256-class (:inherit web-mode-string-face))))
+     ((,night-owl-class (:inherit web-mode-string-face))))
 
    `(web-mode-symbol-face
-     ((,night-owl-class (:foreground ,night-owl-violet))
-      (,night-owl-256-class (:foreground ,night-owl-256-violet))))
+     ((,night-owl-class (:foreground ,night-owl-violet))))
 
    `(web-mode-whitespace-face
-     ((,night-owl-class (:background ,night-owl-red))
-      (,night-owl-256-class (:background ,night-owl-256-red))))
+     ((,night-owl-class (:background ,night-owl-red))))
 
    ;; whitespace-mode
    `(whitespace-space
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-comments
                                    :inverse-video unspecified
-                                   :slant italic))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-comments
-                                        :inverse-video unspecified
-                                        :slant italic))))
+                                   :slant italic))))
 
    `(whitespace-hspace
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-emphasis
-                                   :inverse-video unspecified))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-emphasis
-                                        :inverse-video unspecified))))
+                                   :inverse-video unspecified))))
 
    `(whitespace-tab
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-red
                                    :inverse-video unspecified
-                                   :weight bold))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-red
-                                        :inverse-video unspecified
-                                        :weight bold))))
+                                   :weight bold))))
 
    `(whitespace-newline
      ((,night-owl-class(:background unspecified
                                   :foreground ,night-owl-comments
-                                  :inverse-video unspecified))
-      (,night-owl-256-class (:background unspecified
-                                       :foreground ,night-owl-256-comments
-                                       :inverse-video unspecified))))
+                                  :inverse-video unspecified))))
 
    `(whitespace-trailing
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-orange-lc
-                                   :inverse-video t))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-orange-lc
-                                        :inverse-video t))))
+                                   :inverse-video t))))
 
    `(whitespace-line
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-magenta
-                                   :inverse-video unspecified))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-magenta
-                                        :inverse-video unspecified))))
+                                   :inverse-video unspecified))))
 
    `(whitespace-space-before-tab
      ((,night-owl-class (:background ,night-owl-red-lc
                                    :foreground unspecified
-                                   :inverse-video unspecified))
-      (,night-owl-256-class (:background ,night-owl-256-red-lc
-                                        :foreground unspecified
-                                        :inverse-video unspecified))))
+                                   :inverse-video unspecified))))
 
    `(whitespace-indentation
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-yellow
                                    :inverse-video unspecified
-                                   :weight bold))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-yellow
-                                        :inverse-video unspecified
-                                        :weight bold))))
+                                   :weight bold))))
 
    `(whitespace-empty
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-red-lc
-                                   :inverse-video t))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-red-lc
-                                        :inverse-video t))))
+                                   :inverse-video t))))
 
    `(whitespace-space-after-tab
      ((,night-owl-class (:background unspecified
                                    :foreground ,night-owl-orange
                                    :inverse-video t
-                                   :weight bold))
-      (,night-owl-256-class (:background unspecified
-                                        :foreground ,night-owl-256-orange
-                                        :inverse-video t
-                                        :weight bold))))
+                                   :weight bold))))
 
    ;; wanderlust
    `(wl-highlight-folder-few-face
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(wl-highlight-folder-many-face
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(wl-highlight-folder-path-face
-     ((,night-owl-class (:foreground ,night-owl-orange))
-      (,night-owl-256-class (:foreground ,night-owl-256-orange))))
+     ((,night-owl-class (:foreground ,night-owl-orange))))
 
    `(wl-highlight-folder-unread-face
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(wl-highlight-folder-zero-face
-     ((,night-owl-class (:foreground ,night-owl-foreground))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground))))
+     ((,night-owl-class (:foreground ,night-owl-foreground))))
 
    `(wl-highlight-folder-unknown-face
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-citation-header
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(wl-highlight-message-cited-text-1
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(wl-highlight-message-cited-text-2
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(wl-highlight-message-cited-text-3
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-cited-text-4
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-header-contents-face
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(wl-highlight-message-headers-face
-     ((,night-owl-class (:foreground ,night-owl-red))
-      (,night-owl-256-class (:foreground ,night-owl-256-red))))
+     ((,night-owl-class (:foreground ,night-owl-red))))
 
    `(wl-highlight-message-important-header-contents
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(wl-highlight-message-header-contents
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(wl-highlight-message-important-header-contents2
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(wl-highlight-message-signature
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    `(wl-highlight-message-unimportant-header-contents
-     ((,night-owl-class (:foreground ,night-owl-foreground))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground))))
+     ((,night-owl-class (:foreground ,night-owl-foreground))))
 
    `(wl-highlight-summary-answenight-owl-red-face
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(wl-highlight-summary-disposed-face
      ((,night-owl-class (:foreground ,night-owl-foreground
-                                   :slant italic))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground
-                                        :slant italic))))
+                                   :slant italic))))
 
    `(wl-highlight-summary-new-face
-     ((,night-owl-class (:foreground ,night-owl-blue))
-      (,night-owl-256-class (:foreground ,night-owl-256-blue))))
+     ((,night-owl-class (:foreground ,night-owl-blue))))
 
    `(wl-highlight-summary-normal-face
-     ((,night-owl-class (:foreground ,night-owl-foreground))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground))))
+     ((,night-owl-class (:foreground ,night-owl-foreground))))
 
    `(wl-highlight-summary-thread-top-face
-     ((,night-owl-class (:foreground ,night-owl-yellow))
-      (,night-owl-256-class (:foreground ,night-owl-256-yellow))))
+     ((,night-owl-class (:foreground ,night-owl-yellow))))
 
    `(wl-highlight-thread-indent-face
-     ((,night-owl-class (:foreground ,night-owl-magenta))
-      (,night-owl-256-class (:foreground ,night-owl-256-magenta))))
+     ((,night-owl-class (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-summary-refiled-face
-     ((,night-owl-class (:foreground ,night-owl-foreground))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground))))
+     ((,night-owl-class (:foreground ,night-owl-foreground))))
 
    `(wl-highlight-summary-displaying-face
      ((,night-owl-class (:underline t
-                                  :weight bold))
-      (,night-owl-256-class (:underline t
-                                       :weight bold))))
+                                  :weight bold))))
 
    ;; weechat
    `(weechat-error-face
-     ((,night-owl-class (:inherit error))
-      (,night-owl-256-class (:inherit error))))
+     ((,night-owl-class (:inherit error))))
 
    `(weechat-highlight-face
      ((,night-owl-class (:foreground ,night-owl-emphasis
-                                   :weight bold))
-      (,night-owl-256-class (:foreground ,night-owl-256-emphasis
-                                        :weight bold))))
+                                   :weight bold))))
 
    `(weechat-nick-self-face
      ((,night-owl-class (:foreground ,night-owl-green
                                    :weight unspecified
-                                   :inverse-video t))
-      (,night-owl-256-class (:foreground ,night-owl-256-green
-                                        :weight unspecified
-                                        :inverse-video t))))
+                                   :inverse-video t))))
 
    `(weechat-prompt-face
-     ((,night-owl-class (:inherit minibuffer-prompt))
-      (,night-owl-256-class (:inherit minibuffer-prompt))))
+     ((,night-owl-class (:inherit minibuffer-prompt))))
 
    `(weechat-time-face
-     ((,night-owl-class (:foreground ,night-owl-comments))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments))))
+     ((,night-owl-class (:foreground ,night-owl-comments))))
 
    ;; which-func-mode
    `(which-func
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    ;; which-key
    `(which-key-key-face
      ((,night-owl-class (:foreground ,night-owl-green
-                                   :weight bold))
-      (,night-owl-256-class (:foreground ,night-owl-256-green
-                                        :weight bold))))
+                                   :weight bold))))
 
    `(which-key-separator-face
-     ((,night-owl-class (:foreground ,night-owl-comments))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments))))
+     ((,night-owl-class (:foreground ,night-owl-comments))))
 
    `(which-key-note-face
-     ((,night-owl-class (:foreground ,night-owl-comments))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments))))
+     ((,night-owl-class (:foreground ,night-owl-comments))))
 
    `(which-key-command-description-face
-     ((,night-owl-class (:foreground ,night-owl-foreground))
-      (,night-owl-256-class (:foreground ,night-owl-256-foreground))))
+     ((,night-owl-class (:foreground ,night-owl-foreground))))
 
    `(which-key-local-map-description-face
-     ((,night-owl-class (:foreground ,night-owl-yellow-hc))
-      (,night-owl-256-class (:foreground ,night-owl-256-yellow-hc))))
+     ((,night-owl-class (:foreground ,night-owl-yellow-hc))))
 
    `(which-key-group-description-face
      ((,night-owl-class (:foreground ,night-owl-red
-                                   :weight bold))
-      (,night-owl-256-class (:foreground ,night-owl-256-red
-                                        :weight bold))))
+                                   :weight bold))))
    ;; window-number-mode
    `(window-number-face
-     ((,night-owl-class (:foreground ,night-owl-green))
-      (,night-owl-256-class (:foreground ,night-owl-256-green))))
+     ((,night-owl-class (:foreground ,night-owl-green))))
 
    ;; yascroll
    `(yascroll:thumb-text-area
      ((,night-owl-class (:foreground ,night-owl-comments
-                                   :background ,night-owl-comments))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments
-                                        :background ,night-owl-256-comments))))
+                                   :background ,night-owl-comments))))
 
    `(yascroll:thumb-fringe
      ((,night-owl-class (:foreground ,night-owl-comments
-                                   :background ,night-owl-comments))
-      (,night-owl-256-class (:foreground ,night-owl-256-comments
-                                        :background ,night-owl-256-comments))))
+                                   :background ,night-owl-comments))))
 
    ;; zencoding
    `(zencoding-preview-input
      ((,night-owl-class (:background ,night-owl-highlight-line
-                                   :box ,night-owl-emphasis))
-      (,night-owl-256-class (:background ,night-owl-256-highlight-line
-                                        :box ,night-owl-256-emphasis)))))
+                                   :box ,night-owl-emphasis)))))
 
   (custom-theme-set-variables
    'night-owl
