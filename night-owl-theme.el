@@ -171,7 +171,7 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-highlight "#49483E"
+(defcustom night-owl-highlight "#1D3B54"
   "Adaptive colors - highlight"
   :type 'string
   :group 'night-owl)
