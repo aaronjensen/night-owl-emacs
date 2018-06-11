@@ -283,7 +283,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(font-lock-preprocessor-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    `(font-lock-regexp-grouping-construct
      ((t (:foreground ,night-owl-yellow
@@ -1126,7 +1126,7 @@ Also affects 'linum-mode' background."
 
    `(diff-refine-added
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-orange))))
+                      :background ,night-owl-green))))
 
    `(diff-refine-change
      ((t (:foreground ,night-owl-background
@@ -1134,7 +1134,7 @@ Also affects 'linum-mode' background."
 
    `(diff-refine-removed
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-magenta))))
+                      :background ,night-owl-red))))
 
    ;; diff-hl
    `(diff-hl-change
@@ -2296,20 +2296,27 @@ Also affects 'linum-mode' background."
    ;; https://github.com/magit/magit/search?utf8=%E2%9C%93&q=face
    ;;
    `(magit-diff-added
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :background ,night-owl-background))))
 
+   `(magit-diff-context-highlight
+     ((t (:background ,night-owl-background
+                      :foreground ,night-owl-foreground-muted))))
+
    `(magit-diff-added-highlight
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :background ,night-owl-highlight-line))))
 
    `(magit-diff-removed
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :background ,night-owl-background))))
 
    `(magit-diff-removed-highlight
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :background ,night-owl-highlight-line))))
+
+   `(magit-section-highlight
+     ((t (:background ,night-owl-highlight-line))))
 
    `(magit-section-title
      ((t (:foreground ,night-owl-yellow
@@ -3802,7 +3809,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(web-mode-constant-face
-     ((t (:foreground ,night-owl-violet))))
+     ((t (:foreground ,night-owl-red))))
 
    `(web-mode-current-element-highlight-face
      ((t (:underline unspecified
@@ -3821,7 +3828,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(web-mode-html-attr-name-face
-     ((t (:foreground ,night-owl-blue))))
+     ((t (:foreground ,night-owl-green))))
 
    `(web-mode-html-attr-custom-face
      ((t (:inherit web-mode-html-attr-name-face))))
@@ -3839,10 +3846,10 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-cyan))))
 
    `(web-mode-html-tag-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-cyan))))
 
    `(web-mode-keyword-face
-     ((t (:foreground ,night-owl-cyan))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(web-mode-preprocessor-face
      ((t (:foreground ,night-owl-yellow
