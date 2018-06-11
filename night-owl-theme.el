@@ -101,48 +101,55 @@ Also affects 'linum-mode' background."
   :group 'night-owl)
 
 ;; Primary colors
-(defcustom night-owl-yellow "#ECC48D"
-  "Primary colors - yellow"
+
+;; Converted
+(defcustom night-owl-white "#FFFFFF"
+  "Primary colors - white"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-orange "#ADDB67"
-  "Primary colors - orange"
-  :type 'string
-  :group 'night-owl)
-
-(defcustom night-owl-red "#C792EA"
-  "Primary colors - red"
-  :type 'string
-  :group 'night-owl)
-
-(defcustom night-owl-magenta "#FD5FF0"
-  "Primary colors - magenta"
-  :type 'string
-  :group 'night-owl)
-
-(defcustom night-owl-blue "#66D9EF"
-  "Primary colors - blue"
-  :type 'string
-  :group 'night-owl)
-
-(defcustom night-owl-green "#F78C6C"
+(defcustom night-owl-green "#ADDB67"
   "Primary colors - green"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-cyan "#A1EFE4"
+(defcustom night-owl-orange "#F78C6C"
+  "Primary colors - orange"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-red "#EF5350"
+  "Primary colors - red"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-magenta "#C792EA"
+  "Primary colors - magenta"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-blue "#82AAFF"
+  "Primary colors - blue"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-gray "#5F7E97"
+  "Primary colors - gray"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-cyan "#7FDBCA"
   "Primary colors - cyan"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-violet "#AE81FF"
+(defcustom night-owl-violet "#7E57C2"
   "Primary colors - violet"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-gray "#64645E"
-  "Primary colors - gray"
+(defcustom night-owl-yellow "#FFEB95"
+  "Primary colors - yellow"
   :type 'string
   :group 'night-owl)
 
@@ -176,17 +183,7 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-emphasis "#F8F8F0"
-  "Adaptive colors - emphasis"
-  :type 'string
-  :group 'night-owl)
-
-(defcustom night-owl-line-number "#4B6479"
-  "Adaptive colors - line number"
-  :type 'string
-  :group 'night-owl)
-
-(defcustom night-owl-highlight "#1D3B54"
+(defcustom night-owl-highlight "#1D3B53"
   "Adaptive colors - highlight"
   :type 'string
   :group 'night-owl)
@@ -201,6 +198,16 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
+(defcustom night-owl-line-number "#4B6479"
+  "Adaptive colors - line number"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-emphasis "#FFFFFF"
+  "Adaptive colors - emphasis"
+  :type 'string
+  :group 'night-owl)
+
 (let* (;; Variable pitch
        (night-owl-pitch (if night-owl-use-variable-pitch
                             'variable-pitch
@@ -209,20 +216,20 @@ Also affects 'linum-mode' background."
        ;; Darker and lighter accented colors
        (night-owl-yellow-d       "#BEB244")
        (night-owl-yellow-l       "#FFF7A8")
-       (night-owl-orange-d       "#D47402")
-       (night-owl-orange-l       "#FFAC4A")
-       (night-owl-red-d          "#F70057")
-       (night-owl-red-l          "#FA518D")
-       (night-owl-magenta-d      "#FB35EA")
-       (night-owl-magenta-l      "#FE8CF4")
+       (night-owl-green-d       "#D47402")
+       (night-owl-green-l       "#FFAC4A")
+       (night-owl-magenta-d          "#F70057")
+       (night-owl-magenta-l          "#FA518D")
+       (night-owl-red-d      "#FB35EA")
+       (night-owl-red-l      "#FE8CF4")
        (night-owl-violet-d       "#945AFF")
        (night-owl-violet-l       "#C9ACFF")
        (night-owl-blue-d         "#40CAE4")
        (night-owl-blue-l         "#92E7F7")
        (night-owl-cyan-d         "#74DBCD")
        (night-owl-cyan-l         "#D3FBF6")
-       (night-owl-green-d        "#86C30D")
-       (night-owl-green-l        "#BBEF53")
+       (night-owl-orange-d        "#86C30D")
+       (night-owl-orange-l        "#BBEF53")
        (night-owl-gray-d         "#35331D")
        (night-owl-gray-l         "#7B7962")
        ;; Adaptive higher/lower contrast accented colors
@@ -231,20 +238,20 @@ Also affects 'linum-mode' background."
        ;; High contrast colors
        (night-owl-yellow-hc      "#FFFACE")
        (night-owl-yellow-lc      "#9A8F21")
-       (night-owl-orange-hc      "#FFBE74")
-       (night-owl-orange-lc      "#A75B00")
-       (night-owl-red-hc         "#FEB0CC")
-       (night-owl-red-lc         "#F20055")
-       (night-owl-magenta-hc     "#FEC6F9")
-       (night-owl-magenta-lc     "#F309DF")
+       (night-owl-green-hc      "#FFBE74")
+       (night-owl-green-lc      "#A75B00")
+       (night-owl-magenta-hc         "#FEB0CC")
+       (night-owl-magenta-lc         "#F20055")
+       (night-owl-red-hc     "#FEC6F9")
+       (night-owl-red-lc     "#F309DF")
        (night-owl-violet-hc      "#F0E7FF")
        (night-owl-violet-lc      "#7830FC")
        (night-owl-blue-hc        "#CAF5FD")
        (night-owl-blue-lc        "#1DB4D0")
        (night-owl-cyan-hc        "#D3FBF6")
        (night-owl-cyan-lc        "#4BBEAE")
-       (night-owl-green-hc       "#CCF47C")
-       (night-owl-green-lc       "#679A01")
+       (night-owl-orange-hc       "#CCF47C")
+       (night-owl-orange-lc       "#679A01")
 
        ;; Distinct fringe
        (night-owl-fringe-bg (if night-owl-distinct-fringe-background
@@ -257,7 +264,7 @@ Also affects 'linum-mode' background."
 
    ;; font lock for syntax highlighting
    `(font-lock-builtin-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight normal))))
 
    `(font-lock-comment-delimiter-face
@@ -275,10 +282,10 @@ Also affects 'linum-mode' background."
                          night-owl-yellow)))))
 
    `(font-lock-function-name-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(font-lock-keyword-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight normal))))
 
    `(font-lock-negation-char-face
@@ -286,7 +293,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(font-lock-preprocessor-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(font-lock-regexp-grouping-construct
      ((t (:foreground ,night-owl-yellow
@@ -304,10 +311,10 @@ Also affects 'linum-mode' background."
                       :italic nil))))
 
    `(font-lock-variable-name-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(font-lock-warning-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold
                       :italic t
                       :underline t))))
@@ -341,7 +348,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(match
-     ((t (:background ,night-owl-green
+     ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background
                       :weight bold))))
 
@@ -376,24 +383,24 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(success
-     ((t (:foreground ,night-owl-green ))))
+     ((t (:foreground ,night-owl-orange ))))
 
    `(warning
      ((t (:foreground ,night-owl-yellow ))))
 
    `(error
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(eval-sexp-fu-flash
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-orange))))
 
    `(eval-sexp-fu-flash-error
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-red))))
+                      :background ,night-owl-magenta))))
 
    `(trailing-whitespace
-     ((t (:background ,night-owl-red))))
+     ((t (:background ,night-owl-magenta))))
 
    `(vertical-border
      ((t (:foreground ,night-owl-gray))))
@@ -407,7 +414,7 @@ Also affects 'linum-mode' background."
 
    ;; mode-line and powerline
    `(mode-line-buffer-id
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    `(mode-line
@@ -465,7 +472,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(dired-flagged
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(dired-header
      ((t (:foreground ,night-owl-blue
@@ -476,7 +483,7 @@ Also affects 'linum-mode' background."
      ((t (:inherit shadow))))
 
    `(dired-mark
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    `(dired-marked
@@ -492,7 +499,7 @@ Also affects 'linum-mode' background."
                       :slant italic))))
 
    `(dired-warning
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :underline t))))
 
    ;; dropdown
@@ -501,7 +508,7 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-blue))))
 
    `(dropdown-list-selection-face
-     ((t (:background ,night-owl-green
+     ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background))))
 
    ;; ecb
@@ -535,7 +542,7 @@ Also affects 'linum-mode' background."
 
    `(ecb-analyse-bucket-element-face
      ((t (:inherit ecb-analyse-general-face
-                   :foreground ,night-owl-green))))
+                   :foreground ,night-owl-orange))))
 
    `(ecb-directories-general-face
      ((t (:inherit ecb-default-general-face
@@ -546,7 +553,7 @@ Also affects 'linum-mode' background."
                    :foreground ,night-owl-cyan))))
 
    `(ecb-mode-line-prefix-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(ecb-tree-guide-line-face
      ((t (:inherit ecb-default-general-face
@@ -567,7 +574,7 @@ Also affects 'linum-mode' background."
      ((t (:inherit link-visited))))
 
    `(ee-marked
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :weight bold))))
 
    `(ee-omitted
@@ -581,15 +588,15 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-foreground))))
 
    `(grep-error-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold
                       :underline t))))
 
    `(grep-hit-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(grep-match-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    ;; isearch
@@ -600,7 +607,7 @@ Also affects 'linum-mode' background."
 
    `(isearch-fail
      ((t (:inherit isearch
-                   :foreground ,night-owl-red
+                   :foreground ,night-owl-magenta
                    :background ,night-owl-background
                    :bold t))))
 
@@ -690,7 +697,7 @@ Also affects 'linum-mode' background."
 
    `(font-latex-warning-face
      ((t (:inherit bold
-                   :foreground ,night-owl-orange))))
+                   :foreground ,night-owl-green))))
 
    ;; auto-complete
    `(ac-candidate-face
@@ -744,22 +751,22 @@ Also affects 'linum-mode' background."
 
    `(ahs-plugin-defalt-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-orange))))
+                      :background ,night-owl-green))))
 
    `(ahs-plugin-whole-buffer-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-orange))))
 
    `(ahs-warning-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
 
    ;; android mode
    `(android-mode-debug-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(android-mode-error-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold))))
 
    `(android-mode-info-face
@@ -786,11 +793,11 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-background))))
 
    `(bm-fringe-persistent-face
-     ((t (:background ,night-owl-green-lc
+     ((t (:background ,night-owl-orange-lc
                       :foreground ,night-owl-background))))
 
    `(bm-persistent-face
-     ((t (:background ,night-owl-green-lc
+     ((t (:background ,night-owl-orange-lc
                       :foreground ,night-owl-background))))
 
    ;; calfw
@@ -802,7 +809,7 @@ Also affects 'linum-mode' background."
                    :foreground ,night-owl-yellow))))
 
    `(cfw:face-default-content
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(cfw:face-default-day
      ((t (:inherit cfw:face-day-title
@@ -822,23 +829,23 @@ Also affects 'linum-mode' background."
 
    `(cfw:face-holiday
      ((t (:background nil
-                      :foreground ,night-owl-red
+                      :foreground ,night-owl-magenta
                       :weight bold))))
 
    `(cfw:face-periods
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    `(cfw:face-select
-     ((t (:background ,night-owl-magenta-lc
-                      :foreground ,night-owl-magenta-hc))))
+     ((t (:background ,night-owl-red-lc
+                      :foreground ,night-owl-red-hc))))
 
    `(cfw:face-saturday
      ((t (:foreground ,night-owl-cyan-hc
                       :background ,night-owl-cyan-lc))))
 
    `(cfw:face-sunday
-     ((t (:foreground ,night-owl-red-hc
-                      :background ,night-owl-red-lc
+     ((t (:foreground ,night-owl-magenta-hc
+                      :background ,night-owl-magenta-lc
                       :weight bold))))
 
    `(cfw:face-title
@@ -892,32 +899,32 @@ Also affects 'linum-mode' background."
 
    `(cider-test-error-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-orange))))
+                      :background ,night-owl-green))))
 
    `(cider-test-failure-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-red))))
+                      :background ,night-owl-magenta))))
 
    `(cider-test-success-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-orange))))
 
    `(cider-traced-face
      ((t :box (:color ,night-owl-blue :line-width -1 :style nil))))
 
    ;; clojure-test
    `(clojure-test-failure-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold
                       :underline t))))
 
    `(clojure-test-error-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold
                       :underline t))))
 
    `(clojure-test-success-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold
                       :underline t))))
 
@@ -959,7 +966,7 @@ Also affects 'linum-mode' background."
 
    `(company-tooltip-annotation
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-green))))
+                      :foreground ,night-owl-orange))))
 
    `(company-template-field
      ((t (:background ,night-owl-highlight-line
@@ -976,7 +983,7 @@ Also affects 'linum-mode' background."
                    :underline nil))))
 
    `(compilation-enter-directory-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :underline nil))))
 
    `(compilation-error
@@ -984,7 +991,7 @@ Also affects 'linum-mode' background."
                    :underline nil))))
 
    `(compilation-error-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :underline nil))))
 
    `(compilation-face
@@ -1001,15 +1008,15 @@ Also affects 'linum-mode' background."
                       :underline nil))))
 
    `(compilation-leave-directory-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :underline nil))))
 
    `(compilation-line-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :underline nil))))
 
    `(compilation-line-number
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :underline nil))))
 
    `(compilation-warning
@@ -1023,21 +1030,21 @@ Also affects 'linum-mode' background."
 
    `(compilation-mode-line-exit
      ((t (:inherit compilation-info
-                   :foreground ,night-owl-green
+                   :foreground ,night-owl-orange
                    :weight bold))))
 
    `(compilation-mode-line-fail
      ((t (:inherit compilation-error
-                   :foreground ,night-owl-red
+                   :foreground ,night-owl-magenta
                    :weight bold))))
 
    `(compilation-mode-line-run
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold))))
 
    ;; CSCOPE
    `(cscope-file-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    `(cscope-function-face
@@ -1100,15 +1107,15 @@ Also affects 'linum-mode' background."
 
    `(custom-group-tag-1
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-red
+                   :foreground ,night-owl-magenta
                    :height ,night-owl-height-plus-3))))
 
    `(custom-state
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    ;; diff
    `(diff-added
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background))))
 
    `(diff-changed
@@ -1116,7 +1123,7 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background))))
 
    `(diff-removed
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background))))
 
    `(diff-header
@@ -1129,7 +1136,7 @@ Also affects 'linum-mode' background."
 
    `(diff-refine-added
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-orange))))
 
    `(diff-refine-change
      ((t (:foreground ,night-owl-background
@@ -1137,7 +1144,7 @@ Also affects 'linum-mode' background."
 
    `(diff-refine-removed
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-red))))
+                      :background ,night-owl-magenta))))
 
    ;; diff-hl
    `(diff-hl-change
@@ -1145,12 +1152,12 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-blue-hc))))
 
    `(diff-hl-delete
-     ((t (:background ,night-owl-red-lc
-                      :foreground ,night-owl-red-hc))))
+     ((t (:background ,night-owl-magenta-lc
+                      :foreground ,night-owl-magenta-hc))))
 
    `(diff-hl-insert
-     ((t (:background ,night-owl-green-lc
-                      :foreground ,night-owl-green-hc))))
+     ((t (:background ,night-owl-orange-lc
+                      :foreground ,night-owl-orange-hc))))
 
    `(diff-hl-unknown
      ((t (:background ,night-owl-violet-lc
@@ -1158,10 +1165,10 @@ Also affects 'linum-mode' background."
 
    ;; ediff
    `(ediff-fine-diff-A
-     ((t (:background ,night-owl-orange-lc))))
+     ((t (:background ,night-owl-green-lc))))
 
    `(ediff-fine-diff-B
-     ((t (:background ,night-owl-green-lc))))
+     ((t (:background ,night-owl-orange-lc))))
 
    `(ediff-fine-diff-C
      ((t (:background ,night-owl-yellow-lc))))
@@ -1196,10 +1203,10 @@ Also affects 'linum-mode' background."
    ;; edts
    `(edts-face-error-line
      ((((supports :underline (:style line)))
-       (:underline (:style line :color ,night-owl-red)
+       (:underline (:style line :color ,night-owl-magenta)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-red-hc
-                      :background ,night-owl-red-lc
+      (t (:foreground ,night-owl-magenta-hc
+                      :background ,night-owl-magenta-lc
                       :weight bold
                       :underline t))))
 
@@ -1213,7 +1220,7 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(edts-face-error-fringe-bitmap
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background unspecified
                       :weight bold))))
 
@@ -1223,7 +1230,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(edts-face-error-mode-line
-     ((t (:background ,night-owl-red
+     ((t (:background ,night-owl-magenta
                       :foreground unspecified))))
 
    `(edts-face-warning-mode-line
@@ -1246,7 +1253,7 @@ Also affects 'linum-mode' background."
 
    ;; elixir
    `(elixir-attribute-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(elixir-atom-face
      ((t (:foreground ,night-owl-violet))))
@@ -1255,13 +1262,13 @@ Also affects 'linum-mode' background."
    `(ein:cell-input-area
      ((t (:background ,night-owl-highlight-line))))
    `(ein:cell-input-prompt
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
    `(ein:cell-output-prompt
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
    `(ein:notification-tab-normal
      ((t (:foreground ,night-owl-blue))))
    `(ein:notification-tab-selected
-     ((t (:foreground ,night-owl-orange :inherit bold))))
+     ((t (:foreground ,night-owl-green :inherit bold))))
 
    ;; enhanced ruby mode
    `(enh-ruby-string-delimiter-face
@@ -1279,19 +1286,19 @@ Also affects 'linum-mode' background."
    ;; erm-syn
    `(erm-syn-errline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-red)
+       (:underline (:style wave :color ,night-owl-magenta)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-red-hc
-                      :background ,night-owl-red-lc
+      (t (:foreground ,night-owl-magenta-hc
+                      :background ,night-owl-magenta-lc
                       :weight bold
                       :underline t))))
 
    `(erm-syn-warnline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-orange)
+       (:underline (:style wave :color ,night-owl-green)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-orange-hc
-                      :background ,night-owl-orange-lc
+      (t (:foreground ,night-owl-green-hc
+                      :background ,night-owl-green-lc
                       :weight bold
                       :underline t))))
 
@@ -1343,26 +1350,26 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(erc-my-nick-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
 
    `(erc-nick-msg-face
      ((t (:inherit erc-default-face))))
 
    `(erc-notice-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(erc-pal-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold))))
 
    `(erc-prompt-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :background ,night-owl-background
                       :weight bold))))
 
    `(erc-timestamp-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(erc-underline-face
      ((t (:underline t))))
@@ -1373,7 +1380,7 @@ Also affects 'linum-mode' background."
                       :inherit bold))))
 
    `(eshell-ls-archive
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
 
    `(eshell-ls-backup
@@ -1387,7 +1394,7 @@ Also affects 'linum-mode' background."
                       :inherit bold))))
 
    `(eshell-ls-executable
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :inherit bold))))
 
    `(eshell-ls-unreadable
@@ -1410,11 +1417,11 @@ Also affects 'linum-mode' background."
    ;; evil-ex-substitute
    `(evil-ex-substitute-matches
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-red-l
+                      :foreground ,night-owl-magenta-l
                       :inherit italic))))
    `(evil-ex-substitute-replacement
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-green-l
+                      :foreground ,night-owl-orange-l
                       :inherit italic))))
 
    ;; evil-search-highlight-persist
@@ -1424,19 +1431,19 @@ Also affects 'linum-mode' background."
    ;; fic
    `(fic-author-face
      ((t (:background ,night-owl-background
-                      :foreground ,night-owl-orange
+                      :foreground ,night-owl-green
                       :underline t
                       :slant italic))))
 
    `(fic-face
      ((t (:background ,night-owl-background
-                      :foreground ,night-owl-orange
+                      :foreground ,night-owl-green
                       :weight normal
                       :slant italic))))
 
    `(font-lock-fic-face
      ((t (:background ,night-owl-background
-                      :foreground ,night-owl-orange
+                      :foreground ,night-owl-green
                       :weight normal
                       :slant italic))))
 
@@ -1449,23 +1456,23 @@ Also affects 'linum-mode' background."
    ;; flymake
    `(flymake-errline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-red)
+       (:underline (:style wave :color ,night-owl-magenta)
                    :inherit unspecified
                    :foreground unspecified
                    :background unspecified))
-      (t (:foreground ,night-owl-red-hc
-                      :background ,night-owl-red-lc
+      (t (:foreground ,night-owl-magenta-hc
+                      :background ,night-owl-magenta-lc
                       :weight bold
                       :underline t))))
 
    `(flymake-infoline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-green)
+       (:underline (:style wave :color ,night-owl-orange)
                    :inherit unspecified
                    :foreground unspecified
                    :background unspecified))
-      (t (:foreground ,night-owl-green-hc
-                      :background ,night-owl-green-lc))))
+      (t (:foreground ,night-owl-orange-hc
+                      :background ,night-owl-orange-lc))))
 
    `(flymake-warnline
      ((((supports :underline (:style wave)))
@@ -1481,16 +1488,16 @@ Also affects 'linum-mode' background."
    ;; flycheck
    `(flycheck-error
      ((((supports :underline (:style line)))
-       (:underline (:style line :color ,night-owl-red)))
-      (t (:foreground ,night-owl-red
+       (:underline (:style line :color ,night-owl-magenta)))
+      (t (:foreground ,night-owl-magenta
                       :background ,night-owl-background
                       :weight bold
                       :underline t))))
 
    `(flycheck-warning
      ((((supports :underline (:style line)))
-       (:underline (:style line :color ,night-owl-orange)))
-      (t (:foreground ,night-owl-orange
+       (:underline (:style line :color ,night-owl-green)))
+      (t (:foreground ,night-owl-green
                       :background ,night-owl-background
                       :weight bold
                       :underline t))))
@@ -1504,12 +1511,12 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(flycheck-fringe-error
-     ((t (:foreground ,night-owl-red-l
+     ((t (:foreground ,night-owl-magenta-l
                       :background unspecified
                       :weight bold))))
 
    `(flycheck-fringe-warning
-     ((t (:foreground ,night-owl-orange-l
+     ((t (:foreground ,night-owl-green-l
                       :background unspecified
                       :weight bold))))
 
@@ -1529,21 +1536,21 @@ Also affects 'linum-mode' background."
 
    `(flyspell-incorrect
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-red)
+       (:underline (:style wave :color ,night-owl-magenta)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-red
+      (t (:foreground ,night-owl-magenta
                       :weight bold
                       :underline t))))
 
 
    ;; git-gutter
    `(git-gutter:added
-     ((t (:background ,night-owl-green
+     ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background
                       :inherit bold))))
 
    `(git-gutter:deleted
-     ((t (:background ,night-owl-red
+     ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background
                       :inherit bold))))
 
@@ -1559,11 +1566,11 @@ Also affects 'linum-mode' background."
 
    ;; git-gutter-fr
    `(git-gutter-fr:added
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :inherit bold))))
 
    `(git-gutter-fr:deleted
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :inherit bold))))
 
    `(git-gutter-fr:modified
@@ -1572,12 +1579,12 @@ Also affects 'linum-mode' background."
 
    ;; git-gutter+ and git-gutter+-fr
    `(git-gutter+-added
-     ((t (:background ,night-owl-green
+     ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background
                       :inherit bold))))
 
    `(git-gutter+-deleted
-     ((t (:background ,night-owl-red
+     ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background
                       :inherit bold))))
 
@@ -1592,11 +1599,11 @@ Also affects 'linum-mode' background."
                       :inherit bold))))
 
    `(git-gutter-fr+-added
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    `(git-gutter-fr+-deleted
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
 
    `(git-gutter-fr+-modified
@@ -1614,7 +1621,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(guide-key/key-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(guide-key/prefix-command-face
      ((t (:foreground ,night-owl-violet))))
@@ -1692,18 +1699,18 @@ Also affects 'linum-mode' background."
      ((t (:inherit message-header-subject))))
 
    `(gnus-summary-cancelled
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(gnus-summary-high-ancient
      ((t (:foreground ,night-owl-blue
                       :weight bold))))
 
    `(gnus-summary-high-read
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    `(gnus-summary-high-ticked
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold))))
 
    `(gnus-summary-high-unread
@@ -1714,10 +1721,10 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(gnus-summary-low-read
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-summary-low-ticked
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(gnus-summary-low-unread
      ((t (:foreground ,night-owl-foreground))))
@@ -1726,10 +1733,10 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(gnus-summary-normal-read
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-summary-normal-ticked
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(gnus-summary-normal-unread
      ((t (:foreground ,night-owl-foreground))))
@@ -1748,22 +1755,22 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(gnus-cite-4
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-cite-5
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-cite-6
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-cite-7
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(gnus-cite-8
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(gnus-cite-9
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(gnus-cite-10
      ((t (:foreground ,night-owl-yellow))))
@@ -1775,10 +1782,10 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow))))
 
    `(gnus-group-news-2-empty
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-group-news-3-empty
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(gnus-group-news-4-empty
      ((t (:foreground ,night-owl-blue))))
@@ -1805,7 +1812,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(helm-apt-installed
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(helm-bookmark-directory
      ((t (:inherit helm-ff-directory))))
@@ -1817,7 +1824,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-cyan))))
 
    `(helm-bookmark-info
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(helm-bookmark-man
      ((t (:foreground ,night-owl-violet))))
@@ -1826,7 +1833,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow))))
 
    `(helm-bookmarks-su
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(helm-buffer-file
      ((t (:foreground ,night-owl-foreground))))
@@ -1838,7 +1845,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(helm-buffer-saved-out
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background
                       :inverse-video t))))
 
@@ -1854,7 +1861,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(helm-ff-executable
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(helm-ff-file
      ((t (:background ,night-owl-background
@@ -1862,11 +1869,11 @@ Also affects 'linum-mode' background."
 
    `(helm-ff-invalid-symlink
      ((t (:background ,night-owl-background
-                      :foreground ,night-owl-orange
+                      :foreground ,night-owl-green
                       :slant italic))))
 
    `(helm-ff-prefix
-     ((t (:background ,night-owl-green
+     ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background))))
 
    `(helm-ff-symlink
@@ -1877,16 +1884,16 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(helm-grep-finish
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(helm-grep-lineno
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(helm-grep-match
      ((t (:inherit helm-match))))
 
    `(helm-grep-running
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(helm-header
      ((t (:inherit header-line))))
@@ -1900,7 +1907,7 @@ Also affects 'linum-mode' background."
                       :bold t))))
 
    `(helm-M-x-key
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :underline t))))
 
    `(helm-moccur-buffer
@@ -1908,7 +1915,7 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(helm-match
-     ((t (:foreground ,night-owl-green :inherit bold))))
+     ((t (:foreground ,night-owl-orange :inherit bold))))
 
    `(helm-match-item
      ((t (:inherit helm-match))))
@@ -1938,17 +1945,17 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-line))))
 
    `(helm-swoop-target-word-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(helm-time-zone-current
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(helm-time-zone-home
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(helm-visible-mark
      ((t (:background ,night-owl-background
-                      :foreground ,night-owl-magenta :bold t))))
+                      :foreground ,night-owl-red :bold t))))
 
    ;; helm-ls-git
    `(helm-ls-git-modified-not-staged-face
@@ -1961,19 +1968,19 @@ Also affects 'linum-mode' background."
      ((t :foreground ,night-owl-blue-l)))
 
    `(helm-ls-git-untracked-face
-     ((t :foreground ,night-owl-orange)))
-
-   `(helm-ls-git-added-copied-face
      ((t :foreground ,night-owl-green)))
 
+   `(helm-ls-git-added-copied-face
+     ((t :foreground ,night-owl-orange)))
+
    `(helm-ls-git-added-modified-face
-     ((t :foreground ,night-owl-green-l)))
+     ((t :foreground ,night-owl-orange-l)))
 
    `(helm-ls-git-deleted-not-staged-face
-     ((t :foreground ,night-owl-red)))
+     ((t :foreground ,night-owl-magenta)))
 
    `(helm-ls-git-deleted-and-staged-face
-     ((t :foreground ,night-owl-red-l)))
+     ((t :foreground ,night-owl-magenta-l)))
 
    `(helm-ls-git-conflict-face
      ((t :foreground ,night-owl-yellow)))
@@ -1984,12 +1991,12 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-yellow-hc))))
 
    `(hi-pink
-     ((t (:foreground ,night-owl-magenta-lc
-                      :background ,night-owl-magenta-hc))))
+     ((t (:foreground ,night-owl-red-lc
+                      :background ,night-owl-red-hc))))
 
    `(hi-green
-     ((t (:foreground ,night-owl-green-lc
-                      :background ,night-owl-green-hc))))
+     ((t (:foreground ,night-owl-orange-lc
+                      :background ,night-owl-orange-hc))))
 
    `(hi-blue
      ((t (:foreground ,night-owl-blue-lc
@@ -2005,11 +2012,11 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(hi-green-b
-     ((t (:foreground ,night-owl-green-lc
+     ((t (:foreground ,night-owl-orange-lc
                       :weight bold))))
 
    `(hi-red-b
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
 
    `(hi-black-hb
@@ -2019,10 +2026,10 @@ Also affects 'linum-mode' background."
 
    ;; highlight-changes
    `(highlight-changes
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(highlight-changes-delete
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :underline t))))
 
    ;; highlight-indentation
@@ -2057,11 +2064,11 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(ido-incomplete-regexp
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold ))))
 
    `(ido-indicator
-     ((t (:background ,night-owl-red
+     ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background
                       :width condensed))))
 
@@ -2070,7 +2077,7 @@ Also affects 'linum-mode' background."
 
    ;; info
    `(info-header-xref
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :inherit bold
                       :underline t))))
 
@@ -2082,7 +2089,7 @@ Also affects 'linum-mode' background."
                       :inherit bold))))
 
    `(info-quoted-name
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(info-reference-item
      ((t (:background nil
@@ -2116,7 +2123,7 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(ivy-minibuffer-match-face-3
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :underline t))))
 
    `(ivy-minibuffer-match-face-4
@@ -2133,18 +2140,18 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-gray-d))))
 
    `(swiper-match-face-2
-     ((t (:background ,night-owl-green))))
-
-   `(swiper-match-face-3
      ((t (:background ,night-owl-orange))))
 
+   `(swiper-match-face-3
+     ((t (:background ,night-owl-green))))
+
    `(swiper-match-face-4
-     ((t (:background ,night-owl-magenta))))
+     ((t (:background ,night-owl-red))))
 
    ;; jabber
    `(jabber-activity-face
      ((t (:weight bold
-                  :foreground ,night-owl-red))))
+                  :foreground ,night-owl-magenta))))
 
    `(jabber-activity-personal-face
      ((t (:weight bold
@@ -2152,11 +2159,11 @@ Also affects 'linum-mode' background."
 
    `(jabber-chat-error
      ((t (:weight bold
-                  :foreground ,night-owl-red))))
+                  :foreground ,night-owl-magenta))))
 
    `(jabber-chat-prompt-foreign
      ((t (:weight bold
-                  :foreground ,night-owl-red))))
+                  :foreground ,night-owl-magenta))))
 
    `(jabber-chat-prompt-local
      ((t (:weight bold
@@ -2164,7 +2171,7 @@ Also affects 'linum-mode' background."
 
    `(jabber-chat-prompt-system
      ((t (:weight bold
-                  :foreground ,night-owl-green))))
+                  :foreground ,night-owl-orange))))
 
    `(jabber-chat-text-foreign
      ((t (:foreground ,night-owl-comments))))
@@ -2174,24 +2181,24 @@ Also affects 'linum-mode' background."
 
    `(jabber-chat-rare-time-face
      ((t (:underline t
-                     :foreground ,night-owl-green))))
+                     :foreground ,night-owl-orange))))
 
    `(jabber-roster-user-away
      ((t (:slant italic
-                 :foreground ,night-owl-green))))
+                 :foreground ,night-owl-orange))))
 
    `(jabber-roster-user-chatty
      ((t (:weight bold
-                  :foreground ,night-owl-orange))))
+                  :foreground ,night-owl-green))))
 
    `(jabber-roster-user-dnd
      ((t (:slant italic
-                 :foreground ,night-owl-red))))
+                 :foreground ,night-owl-magenta))))
 
    `(jabber-roster-user-error
      ((t (:weight light
                   :slant italic
-                  :foreground ,night-owl-red))))
+                  :foreground ,night-owl-magenta))))
 
    `(jabber-roster-user-offline
      ((t (:foreground ,night-owl-comments))))
@@ -2202,29 +2209,29 @@ Also affects 'linum-mode' background."
 
    `(jabber-roster-user-xa
      ((t (:slant italic
-                 :foreground ,night-owl-magenta))))
+                 :foreground ,night-owl-red))))
 
    ;; js2-mode colors
    `(js2-error
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(js2-external-variable
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(js2-function-call
      ((t (:foreground ,night-owl-foreground))))
 
    `(js2-function-param
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(js2-instance-member
      ((t (:foreground ,night-owl-violet))))
 
    `(js2-jsdoc-html-tag-delimiter
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(js2-jsdoc-html-tag-name
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(js2-jsdoc-tag
      ((t (:foreground ,night-owl-violet))))
@@ -2233,7 +2240,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(js2-jsdoc-value
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(js2-magic-paren
      ((t (:underline t))))
@@ -2248,7 +2255,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(js2-warning
-     ((t (:underline ,night-owl-orange))))
+     ((t (:underline ,night-owl-green))))
 
    ;; jedi
    `(jedi:highlight-function-argument
@@ -2281,7 +2288,7 @@ Also affects 'linum-mode' background."
 
    ;; lusty-explorer
    `(lusty-directory-face
-     ((t (:inherit dinight-owl-red-directory))))
+     ((t (:inherit dinight-owl-magenta-directory))))
 
    `(lusty-file-face
      ((t nil)))
@@ -2299,19 +2306,19 @@ Also affects 'linum-mode' background."
    ;; https://github.com/magit/magit/search?utf8=%E2%9C%93&q=face
    ;;
    `(magit-diff-added
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background))))
 
    `(magit-diff-added-highlight
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-highlight-line))))
 
    `(magit-diff-removed
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background))))
 
    `(magit-diff-removed-highlight
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-highlight-line))))
 
    `(magit-section-title
@@ -2319,7 +2326,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(magit-branch
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold))))
 
    `(magit-item-highlight
@@ -2333,13 +2340,13 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(magit-log-head-label-bisect-bad
-     ((t (:background ,night-owl-red-hc
-                      :foreground ,night-owl-red-lc
+     ((t (:background ,night-owl-magenta-hc
+                      :foreground ,night-owl-magenta-lc
                       :box 1))))
 
    `(magit-log-head-label-bisect-good
-     ((t (:background ,night-owl-green-hc
-                      :foreground ,night-owl-green-lc
+     ((t (:background ,night-owl-orange-hc
+                      :foreground ,night-owl-orange-lc
                       :box 1))))
 
    `(magit-log-head-label-default
@@ -2352,13 +2359,13 @@ Also affects 'linum-mode' background."
                       :box 1))))
 
    `(magit-log-head-label-patches
-     ((t (:background ,night-owl-red-lc
-                      :foreground ,night-owl-red-hc
+     ((t (:background ,night-owl-magenta-lc
+                      :foreground ,night-owl-magenta-hc
                       :box 1))))
 
    `(magit-log-head-label-remote
-     ((t (:background ,night-owl-green-lc
-                      :foreground ,night-owl-green-hc
+     ((t (:background ,night-owl-orange-lc
+                      :foreground ,night-owl-orange-hc
                       :box 1))))
 
    `(magit-log-head-label-tags
@@ -2375,10 +2382,10 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(Man-reverse
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(Man-underline
-     ((t (:foreground ,night-owl-green :underline t))))
+     ((t (:foreground ,night-owl-orange :underline t))))
 
    ;; monky
    `(monky-section-title
@@ -2386,10 +2393,10 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(monky-diff-add
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(monky-diff-del
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; markdown-mode
    `(markdown-header-face
@@ -2457,22 +2464,22 @@ Also affects 'linum-mode' background."
 
    ;; mew
    `(mew-face-header-subject
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(mew-face-header-from
      ((t (:foreground ,night-owl-yellow))))
 
    `(mew-face-header-date
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-header-to
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-header-key
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-header-private
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-header-important
      ((t (:foreground ,night-owl-blue))))
@@ -2482,56 +2489,56 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(mew-face-header-warning
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-header-xmew
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-header-xmew-bad
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-body-url
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(mew-face-body-comment
      ((t (:foreground ,night-owl-foreground
                       :slant italic))))
 
    `(mew-face-body-cite1
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-body-cite2
      ((t (:foreground ,night-owl-blue))))
 
    `(mew-face-body-cite3
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(mew-face-body-cite4
      ((t (:foreground ,night-owl-yellow))))
 
    `(mew-face-body-cite5
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-mark-review
      ((t (:foreground ,night-owl-blue))))
 
    `(mew-face-mark-escape
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-mark-delete
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-mark-unlink
      ((t (:foreground ,night-owl-yellow))))
 
    `(mew-face-mark-refile
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-mark-unread
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-eof-message
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(mew-face-eof-part
      ((t (:foreground ,night-owl-yellow))))
@@ -2541,7 +2548,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(mingus-pausing-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    `(mingus-playing-face
      ((t (:foreground ,night-owl-cyan))))
@@ -2553,14 +2560,14 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow))))
 
    `(mingus-stopped-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; mmm
    `(mmm-init-submode-face
      ((t (:background ,night-owl-violet-d))))
 
    `(mmm-cleanup-submode-face
-     ((t (:background ,night-owl-orange-d))))
+     ((t (:background ,night-owl-green-d))))
 
    `(mmm-declaration-submode-face
      ((t (:background ,night-owl-cyan-d))))
@@ -2569,10 +2576,10 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-blue-d))))
 
    `(mmm-output-submode-face
-     ((t (:background ,night-owl-red-d))))
+     ((t (:background ,night-owl-magenta-d))))
 
    `(mmm-special-submode-face
-     ((t (:background ,night-owl-green-d))))
+     ((t (:background ,night-owl-orange-d))))
 
    `(mmm-code-submode-face
      ((t (:background ,night-owl-gray))))
@@ -2597,7 +2604,7 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-line))))
 
    `(moccur-edit-reject-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(moccur-face
      ((t (:background ,night-owl-highlight-line
@@ -2616,7 +2623,7 @@ Also affects 'linum-mode' background."
 
    ;; mu4e
    `(mu4e-cited-1-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :slant italic
                       :weight normal))))
 
@@ -2626,7 +2633,7 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(mu4e-cited-3-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :slant italic
                       :weight normal))))
 
@@ -2641,7 +2648,7 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(mu4e-cited-6-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :slant italic
                       :weight normal))))
 
@@ -2651,7 +2658,7 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(mu4e-flagged-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :weight bold))))
 
    `(mu4e-view-url-number-face
@@ -2659,7 +2666,7 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(mu4e-warning-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :slant normal
                       :weight bold))))
 
@@ -2760,16 +2767,16 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-cyan))))
 
    `(nav-face-dir
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(nav-face-hdir
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(nav-face-file
      ((t (:foreground ,night-owl-foreground))))
 
    `(nav-face-hfile
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; nav-flash
    `(nav-flash-face
@@ -2787,7 +2794,7 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background))))
 
    `(neo-root-dir-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background))))
 
    `(neo-dir-link-face
@@ -2806,36 +2813,36 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-foreground))))
 
    `(neo-vc-user-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :slant italic))))
 
    `(neo-vc-up-to-date-face
      ((t (:foreground ,night-owl-comments))))
 
    `(neo-vc-edited-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(neo-vc-needs-update-face
      ((t (:underline t))))
 
    `(neo-vc-needs-merge-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(neo-vc-unlocked-changes-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-comments))))
 
    `(neo-vc-added-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(neo-vc-removed-face
      ((t (:strike-through t))))
 
    `(neo-vc-conflict-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(neo-vc-missing-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(neo-vc-ignored-face
      ((t (:foreground ,night-owl-comments))))
@@ -2849,7 +2856,7 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-blue-lc))))
 
    `(markup-verbatim-face
-     ((t (:background ,night-owl-orange-lc))))
+     ((t (:background ,night-owl-green-lc))))
 
    `(markup-list-face
      ((t (:foreground ,night-owl-violet-hc
@@ -2866,7 +2873,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(markup-secondary-text-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; org-mode
    `(org-agenda-structure
@@ -2955,7 +2962,7 @@ Also affects 'linum-mode' background."
 
    `(org-done
      ((t (:weight bold
-                  :foreground ,night-owl-green))))
+                  :foreground ,night-owl-orange))))
 
    `(org-ellipsis
      ((t (:foreground ,night-owl-comments))))
@@ -2964,7 +2971,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow))))
 
    `(org-headline-done
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(org-hide
      ((t (:foreground ,night-owl-background))))
@@ -3013,7 +3020,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-violet))))
 
    `(org-scheduled
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(org-scheduled-previously
      ((t (:foreground ,night-owl-cyan))))
@@ -3027,7 +3034,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(org-table
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(org-tag
      ((t (:weight bold))))
@@ -3036,7 +3043,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(org-todo
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
 
    `(org-upcoming-deadline
@@ -3045,7 +3052,7 @@ Also affects 'linum-mode' background."
                       :underline nil))))
 
    `(org-warning
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight normal
                       :underline nil))))
 
@@ -3058,11 +3065,11 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-blue-lc))))
 
    `(org-habit-ready-face
-     ((t (:background ,night-owl-green-lc
-                      :foreground ,night-owl-green))))
+     ((t (:background ,night-owl-orange-lc
+                      :foreground ,night-owl-orange))))
 
    `(org-habit-ready-future-face
-     ((t (:background ,night-owl-green-lc))))
+     ((t (:background ,night-owl-orange-lc))))
 
    `(org-habit-alert-face
      ((t (:background ,night-owl-yellow
@@ -3072,11 +3079,11 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-yellow-lc))))
 
    `(org-habit-overdue-face
-     ((t (:background ,night-owl-red
-                      :foreground ,night-owl-red-lc))))
+     ((t (:background ,night-owl-magenta
+                      :foreground ,night-owl-magenta-lc))))
 
    `(org-habit-overdue-future-face
-     ((t (:background ,night-owl-red-lc))))
+     ((t (:background ,night-owl-magenta-lc))))
 
    ;; latest additions
    `(org-agenda-dimmed-todo-face
@@ -3102,7 +3109,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(org-date-selected
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :inverse-video t))))
 
    `(org-document-info
@@ -3117,11 +3124,11 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-cyan))))
 
    `(org-footnote
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :underline t))))
 
    `(org-latex-and-export-specials
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(org-mode-line-clock-overrun
      ((t (:inherit mode-line))))
@@ -3170,7 +3177,7 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-foreground))))
 
    `(popup-isearch-match
-     ((t (:background ,night-owl-green))))
+     ((t (:background ,night-owl-orange))))
 
    `(popup-menu-face
      ((t (:background ,night-owl-highlight-line
@@ -3181,7 +3188,7 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-foreground))))
 
    `(popup-menu-selection-face
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-red
                       :foreground ,night-owl-background))))
 
    `(popup-scroll-bar-background-face
@@ -3202,16 +3209,16 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(rainbow-delimiters-depth-3-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(rainbow-delimiters-depth-4-face
      ((t (:foreground ,night-owl-yellow))))
 
    `(rainbow-delimiters-depth-5-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(rainbow-delimiters-depth-6-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(rainbow-delimiters-depth-7-face
      ((t (:foreground ,night-owl-violet))))
@@ -3220,16 +3227,16 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(rainbow-delimiters-depth-9-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(rainbow-delimiters-depth-10-face
      ((t (:foreground ,night-owl-yellow))))
 
    `(rainbow-delimiters-depth-11-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(rainbow-delimiters-depth-12-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(rainbow-delimiters-unmatched-face
      ((t (:foreground ,night-owl-foreground
@@ -3238,13 +3245,13 @@ Also affects 'linum-mode' background."
 
    ;; realgud
    `(realgud-overlay-arrow1
-     ((t (:foreground ,night-owl-green-d))))
+     ((t (:foreground ,night-owl-orange-d))))
 
    `(realgud-overlay-arrow2
      ((t (:foreground ,night-owl-yellow-d))))
 
    `(realgud-overlay-arrow3
-     ((t (:foreground ,night-owl-orange-d))))
+     ((t (:foreground ,night-owl-green-d))))
 
    `(realgud-bp-enabled-face
      ((t (:inherit error))))
@@ -3253,7 +3260,7 @@ Also affects 'linum-mode' background."
      ((t (:inherit secondary-selection))))
 
    `(realgud-bp-line-enabled-face
-     ((t (:foreground ,night-owl-red-d))))
+     ((t (:foreground ,night-owl-magenta-d))))
 
    `(realgud-bp-line-disabled-face
      ((t (:inherit secondary-selection))))
@@ -3316,31 +3323,31 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-background))))
 
    `(rst-level-5-face
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-red
                       :foreground ,night-owl-background))))
 
    `(rst-level-6-face
-     ((t (:background ,night-owl-red
+     ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background))))
 
    ;; rpm-mode
    `(rpm-spec-dir-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(rpm-spec-doc-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(rpm-spec-ghost-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(rpm-spec-macro-face
      ((t (:foreground ,night-owl-yellow))))
 
    `(rpm-spec-obsolete-tag-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(rpm-spec-package-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(rpm-spec-section-face
      ((t (:foreground ,night-owl-yellow))))
@@ -3349,7 +3356,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(rpm-spec-var-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; sh-mode
    `(sh-quoted-exec
@@ -3378,52 +3385,52 @@ Also affects 'linum-mode' background."
      ((t (:inherit highlight))))
 
    `(sp-show-pair-match-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    `(sp-show-pair-mismatch-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    ;; show-paren
    `(show-paren-match
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    `(show-paren-mismatch
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    ;; mic-paren
    `(paren-face-match
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    `(paren-face-mismatch
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    `(paren-face-no-match
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
 
    ;; SLIME
    `(slime-repl-inputed-output-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; speedbar
    `(speedbar-button-face
@@ -3455,7 +3462,7 @@ Also affects 'linum-mode' background."
 
    `(speedbar-tag-face
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-green))))
+                   :foreground ,night-owl-orange))))
 
    ;; sunrise commander headings
    `(sr-active-path-face
@@ -3471,7 +3478,7 @@ Also affects 'linum-mode' background."
                       :height ,night-owl-height-plus-1))))
 
    `(sr-highlight-path-face
-     ((t (:background ,night-owl-green
+     ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background
                       :weight bold
                       :height ,night-owl-height-plus-1))))
@@ -3484,38 +3491,38 @@ Also affects 'linum-mode' background."
 
    ;; sunrise commander marked
    `(sr-marked-dir-face
-     ((t (:inherit dinight-owl-red-marked))))
+     ((t (:inherit dinight-owl-magenta-marked))))
 
    `(sr-marked-file-face
-     ((t (:inherit dinight-owl-red-marked))))
+     ((t (:inherit dinight-owl-magenta-marked))))
 
    `(sr-alt-marked-dir-face
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-red
                       :foreground ,night-owl-background
                       :weight bold))))
 
    `(sr-alt-marked-file-face
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-red
                       :foreground ,night-owl-background
                       :weight bold))))
 
    ;; sunrise commander fstat
    `(sr-directory-face
-     ((t (:inherit dinight-owl-red-directory
+     ((t (:inherit dinight-owl-magenta-directory
                    :weight normal))))
 
    `(sr-symlink-directory-face
-     ((t (:inherit dinight-owl-red-directory
+     ((t (:inherit dinight-owl-magenta-directory
                    :slant italic
                    :weight normal))))
 
    `(sr-symlink-face
-     ((t (:inherit dinight-owl-red-symlink
+     ((t (:inherit dinight-owl-magenta-symlink
                    :slant italic
                    :weight normal))))
 
    `(sr-broken-link-face
-     ((t (:inherit dinight-owl-red-warning
+     ((t (:inherit dinight-owl-magenta-warning
                    :slant italic
                    :weight normal))))
 
@@ -3540,7 +3547,7 @@ Also affects 'linum-mode' background."
 
    ;; sunrise commander misc
    `(sr-clex-hotchar-face
-     ((t (:background ,night-owl-red
+     ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background
                       :weight bold))))
 
@@ -3551,16 +3558,16 @@ Also affects 'linum-mode' background."
 
    `(syslog-hour-face
      ((t (:background unspecified
-                      :foreground ,night-owl-green))))
+                      :foreground ,night-owl-orange))))
 
    `(syslog-error-face
      ((t (:background unspecified
-                      :foreground ,night-owl-red
+                      :foreground ,night-owl-magenta
                       :weight bold))))
 
    `(syslog-warn-face
      ((t (:background unspecified
-                      :foreground ,night-owl-orange
+                      :foreground ,night-owl-green
                       :weight bold))))
 
    `(syslog-info-face
@@ -3575,7 +3582,7 @@ Also affects 'linum-mode' background."
 
    `(syslog-su-face
      ((t (:background unspecified
-                      :foreground ,night-owl-magenta))))
+                      :foreground ,night-owl-red))))
 
    ;; table
    `(table-cell
@@ -3588,12 +3595,12 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-highlight-line))))
 
    `(term-color-red
-     ((t (:foreground ,night-owl-red
-                      :background ,night-owl-red-d))))
+     ((t (:foreground ,night-owl-magenta
+                      :background ,night-owl-magenta-d))))
 
    `(term-color-green
-     ((t (:foreground ,night-owl-green
-                      :background ,night-owl-green-d))))
+     ((t (:foreground ,night-owl-orange
+                      :background ,night-owl-orange-d))))
 
    `(term-color-yellow
      ((t (:foreground ,night-owl-yellow
@@ -3604,8 +3611,8 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-blue-d))))
 
    `(term-color-magenta
-     ((t (:foreground ,night-owl-magenta
-                      :background ,night-owl-magenta-d))))
+     ((t (:foreground ,night-owl-red
+                      :background ,night-owl-red-d))))
 
    `(term-color-cyan
      ((t (:foreground ,night-owl-cyan
@@ -3641,11 +3648,11 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(treemacs-git-modified-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background))))
 
    `(treemacs-git-renamed-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background))))
 
    `(treemacs-git-ignored-face
@@ -3653,20 +3660,20 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background))))
 
    `(treemacs-git-untracked-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :background ,night-owl-background))))
 
    `(treemacs-git-added-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background))))
 
    `(treemacs-git-conflict-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :background ,night-owl-background))))
 
    ;; tuareg
    `(tuareg-font-lock-governing-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :weight bold))))
 
    `(tuareg-font-lock-multistage-face
@@ -3679,14 +3686,14 @@ Also affects 'linum-mode' background."
 
    `(tuareg-font-lock-error-face
      ((t (:foreground ,night-owl-yellow
-                      :background ,night-owl-red
+                      :background ,night-owl-magenta
                       :weight bold))))
 
    `(tuareg-font-lock-interactive-output-face
      ((t (:foreground ,night-owl-cyan))))
 
    `(tuareg-font-lock-interactive-error-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    ;; undo-tree
    `(undo-tree-visualizer-default-face
@@ -3694,7 +3701,7 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background))))
 
    `(undo-tree-visualizer-unmodified-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(undo-tree-visualizer-current-face
      ((t (:foreground ,night-owl-blue
@@ -3754,7 +3761,7 @@ Also affects 'linum-mode' background."
    `(w3m-lnum
      ((t (:underline nil
                      :bold nil
-                     :foreground ,night-owl-red))))
+                     :foreground ,night-owl-magenta))))
 
    `(w3m-session-select
      ((t (:foreground ,night-owl-foreground))))
@@ -3787,11 +3794,11 @@ Also affects 'linum-mode' background."
 
    `(w3m-tab-selected-retrieving
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-red))))
+                      :foreground ,night-owl-magenta))))
 
    `(w3m-tab-unselected-retrieving
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-orange))))
+                      :foreground ,night-owl-green))))
 
    `(w3m-tab-unselected-unseen
      ((t (:background ,night-owl-highlight-line
@@ -3799,7 +3806,7 @@ Also affects 'linum-mode' background."
 
    ;; web-mode
    `(web-mode-builtin-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(web-mode-comment-face
      ((t (:foreground ,night-owl-comments))))
@@ -3821,7 +3828,7 @@ Also affects 'linum-mode' background."
      ((t (:underline t))))
 
    `(web-mode-function-name-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(web-mode-html-attr-name-face
      ((t (:foreground ,night-owl-blue))))
@@ -3839,10 +3846,10 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow))))
 
    `(web-mode-html-tag-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(web-mode-keyword-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(web-mode-preprocessor-face
      ((t (:foreground ,night-owl-yellow
@@ -3856,7 +3863,7 @@ Also affects 'linum-mode' background."
      ((t (:inherit font-lock-type-face))))
 
    `(web-mode-variable-name-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(web-mode-warning-face
      ((t (:inherit font-lock-warning-face))))
@@ -3940,7 +3947,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-violet))))
 
    `(web-mode-whitespace-face
-     ((t (:background ,night-owl-red))))
+     ((t (:background ,night-owl-magenta))))
 
    ;; whitespace-mode
    `(whitespace-space
@@ -3956,7 +3963,7 @@ Also affects 'linum-mode' background."
 
    `(whitespace-tab
      ((t (:background unspecified
-                      :foreground ,night-owl-red
+                      :foreground ,night-owl-magenta
                       :inverse-video unspecified
                       :weight bold))))
 
@@ -3967,16 +3974,16 @@ Also affects 'linum-mode' background."
 
    `(whitespace-trailing
      ((t (:background unspecified
-                      :foreground ,night-owl-orange-lc
+                      :foreground ,night-owl-green-lc
                       :inverse-video t))))
 
    `(whitespace-line
      ((t (:background unspecified
-                      :foreground ,night-owl-magenta
+                      :foreground ,night-owl-red
                       :inverse-video unspecified))))
 
    `(whitespace-space-before-tab
-     ((t (:background ,night-owl-red-lc
+     ((t (:background ,night-owl-magenta-lc
                       :foreground unspecified
                       :inverse-video unspecified))))
 
@@ -3988,24 +3995,24 @@ Also affects 'linum-mode' background."
 
    `(whitespace-empty
      ((t (:background unspecified
-                      :foreground ,night-owl-red-lc
+                      :foreground ,night-owl-magenta-lc
                       :inverse-video t))))
 
    `(whitespace-space-after-tab
      ((t (:background unspecified
-                      :foreground ,night-owl-orange
+                      :foreground ,night-owl-green
                       :inverse-video t
                       :weight bold))))
 
    ;; wanderlust
    `(wl-highlight-folder-few-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-folder-many-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-folder-path-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(wl-highlight-folder-unread-face
      ((t (:foreground ,night-owl-blue))))
@@ -4017,13 +4024,13 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-citation-header
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-message-cited-text-1
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-message-cited-text-2
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(wl-highlight-message-cited-text-3
      ((t (:foreground ,night-owl-blue))))
@@ -4032,27 +4039,27 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-header-contents-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(wl-highlight-message-headers-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-message-important-header-contents
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(wl-highlight-message-header-contents
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(wl-highlight-message-important-header-contents2
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(wl-highlight-message-signature
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(wl-highlight-message-unimportant-header-contents
      ((t (:foreground ,night-owl-foreground))))
 
-   `(wl-highlight-summary-answenight-owl-red-face
+   `(wl-highlight-summary-answenight-owl-magenta-face
      ((t (:foreground ,night-owl-blue))))
 
    `(wl-highlight-summary-disposed-face
@@ -4069,7 +4076,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow))))
 
    `(wl-highlight-thread-indent-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    `(wl-highlight-summary-refiled-face
      ((t (:foreground ,night-owl-foreground))))
@@ -4087,7 +4094,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(weechat-nick-self-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight unspecified
                       :inverse-video t))))
 
@@ -4099,11 +4106,11 @@ Also affects 'linum-mode' background."
 
    ;; which-func-mode
    `(which-func
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    ;; which-key
    `(which-key-key-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold))))
 
    `(which-key-separator-face
@@ -4119,11 +4126,11 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-yellow-hc))))
 
    `(which-key-group-description-face
-     ((t (:foreground ,night-owl-red
+     ((t (:foreground ,night-owl-magenta
                       :weight bold))))
    ;; window-number-mode
    `(window-number-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    ;; yascroll
    `(yascroll:thumb-text-area
@@ -4141,8 +4148,8 @@ Also affects 'linum-mode' background."
 
   (custom-theme-set-variables
    'night-owl
-   `(ansi-color-names-vector [,night-owl-background ,night-owl-red ,night-owl-green ,night-owl-yellow
-                                                    ,night-owl-blue ,night-owl-magenta ,night-owl-cyan ,night-owl-foreground])
+   `(ansi-color-names-vector [,night-owl-background ,night-owl-magenta ,night-owl-orange ,night-owl-yellow
+                                                    ,night-owl-blue ,night-owl-red ,night-owl-cyan ,night-owl-foreground])
 
    ;; compilation
    `(compilation-message-face 'default)
@@ -4154,12 +4161,12 @@ Also affects 'linum-mode' background."
    `(magit-diff-use-overlays nil)
 
    ;; highlight-changes
-   `(highlight-changes-colors '(,night-owl-magenta ,night-owl-violet))
+   `(highlight-changes-colors '(,night-owl-red ,night-owl-violet))
 
    ;; highlight-tail
    `(highlight-tail-colors
      '((,night-owl-highlight-line . 0)
-       (,night-owl-green-lc . 20)
+       (,night-owl-orange-lc . 20)
        (,night-owl-cyan-lc . 30)
        (,night-owl-blue-lc . 50)
        (,night-owl-yellow-lc . 60)
@@ -4173,7 +4180,7 @@ Also affects 'linum-mode' background."
 
    ;; vc
    `(vc-annotate-color-map
-     '((20 . ,night-owl-red)
+     '((20 . ,night-owl-magenta)
        (40 . "#CF4F1F")
        (60 . "#C26C0F")
        (80 . ,night-owl-yellow)
@@ -4181,7 +4188,7 @@ Also affects 'linum-mode' background."
        (120 . "#A18F00")
        (140 . "#989200")
        (160 . "#8E9500")
-       (180 . ,night-owl-green)
+       (180 . ,night-owl-orange)
        (200 . "#729A1E")
        (220 . "#609C3C")
        (240 . "#4E9D5B")
@@ -4198,7 +4205,7 @@ Also affects 'linum-mode' background."
    `(weechat-color-list
      '(unspecified ,night-owl-background ,night-owl-highlight-line
                    ,night-owl-red-d ,night-owl-red
-                   ,night-owl-green-d ,night-owl-green
+                   ,night-owl-orange-d ,night-owl-orange
                    ,night-owl-yellow-d ,night-owl-yellow
                    ,night-owl-blue-d ,night-owl-blue
                    ,night-owl-magenta-d ,night-owl-magenta
