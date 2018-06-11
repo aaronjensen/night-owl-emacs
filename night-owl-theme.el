@@ -208,6 +208,11 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
+(defcustom night-owl-string "#ECC48D"
+  "Adaptive colors - string"
+  :type 'string
+  :group 'night-owl)
+
 (let* (;; Variable pitch
        (night-owl-pitch (if night-owl-use-variable-pitch
                             'variable-pitch
@@ -279,10 +284,10 @@ Also affects 'linum-mode' background."
    `(font-lock-doc-face
      ((t (:foreground ,(if night-owl-doc-face-as-comment
                            night-owl-comments
-                         night-owl-yellow)))))
+                         night-owl-string)))))
 
    `(font-lock-function-name-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-blue))))
 
    `(font-lock-keyword-face
      ((t (:foreground ,night-owl-magenta
@@ -304,7 +309,7 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(font-lock-string-face
-     ((t (:foreground ,night-owl-yellow))))
+     ((t (:foreground ,night-owl-string))))
 
    `(font-lock-type-face
      ((t (:foreground ,night-owl-blue
@@ -3828,7 +3833,7 @@ Also affects 'linum-mode' background."
      ((t (:underline t))))
 
    `(web-mode-function-name-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-blue))))
 
    `(web-mode-html-attr-name-face
      ((t (:foreground ,night-owl-blue))))
@@ -3845,11 +3850,14 @@ Also affects 'linum-mode' background."
    `(web-mode-html-attr-value-face
      ((t (:foreground ,night-owl-yellow))))
 
+   `(web-mode-html-tag-bracket-face
+     ((t (:foreground ,night-owl-cyan))))
+
    `(web-mode-html-tag-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-green))))
 
    `(web-mode-keyword-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-cyan))))
 
    `(web-mode-preprocessor-face
      ((t (:foreground ,night-owl-yellow
@@ -3857,13 +3865,13 @@ Also affects 'linum-mode' background."
                       :weight unspecified))))
 
    `(web-mode-string-face
-     ((t (:foreground ,night-owl-yellow))))
+     ((t (:foreground ,night-owl-string))))
 
    `(web-mode-type-face
      ((t (:inherit font-lock-type-face))))
 
    `(web-mode-variable-name-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-foreground))))
 
    `(web-mode-warning-face
      ((t (:inherit font-lock-warning-face))))
