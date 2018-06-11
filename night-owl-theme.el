@@ -156,12 +156,17 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
+(defcustom night-owl-heading "#82B1FF"
+  "Adaptive colors - heading"
+  :type 'string
+  :group 'night-owl)
+
 (defcustom night-owl-background "#011627"
   "Adaptive colors - background"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-background-highlight "#0b2942"
+(defcustom night-owl-background-highlight "#0B2942"
   "Adaptive colors - background highlight"
   :type 'string
   :group 'night-owl)
@@ -186,7 +191,7 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-highlight-alt "#3E3D31"
+(defcustom night-owl-highlight-alt "#3C5B74"
   "Adaptive colors - highlight"
   :type 'string
   :group 'night-owl)
@@ -2388,7 +2393,7 @@ Also affects 'linum-mode' background."
 
    ;; markdown-mode
    `(markdown-header-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-heading))))
 
    `(markdown-header-face-1
      ((t (:inherit markdown-header-face
@@ -2967,38 +2972,38 @@ Also affects 'linum-mode' background."
    `(org-level-1
      ((t (:inherit ,night-owl-pitch
                    :height ,night-owl-height-plus-4
-                   :foreground ,night-owl-orange))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-2
      ((t (:inherit ,night-owl-pitch
                    :height ,night-owl-height-plus-3
-                   :foreground ,night-owl-green))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-3
      ((t (:inherit ,night-owl-pitch
                    :height ,night-owl-height-plus-2
-                   :foreground ,night-owl-blue))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-4
      ((t (:inherit ,night-owl-pitch
                    :height ,night-owl-height-plus-1
-                   :foreground ,night-owl-yellow))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-5
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-cyan))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-6
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-green))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-7
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-red))))
+                   :foreground ,night-owl-heading))))
 
    `(org-level-8
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-blue))))
+                   :foreground ,night-owl-heading))))
 
    `(org-link
      ((t (:foreground ,night-owl-blue
