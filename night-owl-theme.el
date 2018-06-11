@@ -1,11 +1,10 @@
 ;;; night-owl-theme.el --- A fruity color theme for Emacs.
 
-;; Copyright (C) 2011-2016
+;; Copyright (C) 2018
 
-;; Author: Kelvin Smith <oneKelvinSmith@gmail.com>
-;; URL: http://github.com/oneKelvinSmith/night-owl-emacs
-;; Package-Version: 20180402.221
-;; Version: 3.5.3
+;; Author: Aaron Jensen <aaronjensen@gmail.com>
+;; URL: http://github.com/aaronjensen/night-owl-theme
+;; Version: 0.1.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,39 +21,25 @@
 
 ;;; Commentary:
 ;;
-;; A port of the popular Textmate theme Night-Owl for Emacs 24, built on top
-;; of the new built-in theme support in Emacs 24.
+;; A port of the popular VSCode theme Night Owl for Emacs 24.
 ;;
 ;;; Credits:
 ;;
-;; Wimer Hazenberg created the original theme.
-;; - http://www.night-owl.nl/blog/2006/07/15/textmate-color-theme/
+;; Sarah Drasner created the original theme.
+;; - https://github.com/sdras/night-owl-vscode-theme
 ;;
-;; Bozhidar Batsov created zenburn-theme.el and solarized-theme.el
-;;  on which this file is based.
-;; - https://github.com/bbatsov/zenburn-emacs
-;;
-;; Color Scheme Designer 3 for complementary colours.
-;; - http://colorschemedesigner.com/
-;;
-;; Xterm 256 Color Chart
-;; - https://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
-;;
-;; K. Adam Christensen for his personal night-owl theme that addresses 256 colours.
-;; - https://github.com/pope/personal/blob/master/etc/emacs.d/night-owl-theme.el
-;;
-;; Thomas Frössman for his work on solarized-emacs.
-;; - http://github.com/bbatsov/solarized-emacs
+;; Kelvin Smith created monokai-theme.el on which this file is based.
+;; -  https://github.com/oneKelvinSmith/monokai-emacs
 ;;
 ;;; Code:
 
 (unless (>= emacs-major-version 24)
   (error "The night-owl theme requires Emacs 24 or later!"))
 
-(deftheme night-owl "The Night-Owl colour theme")
+(deftheme night-owl "The Night Owl colour theme")
 
 (defgroup night-owl nil
-  "Night-Owl theme options.
+  "Night Owl theme options.
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
 
@@ -73,7 +58,7 @@ Also affects 'linum-mode' background."
   "Consider `font-lock-doc-face' as comment instead of a string."
   :type 'boolean
   :group 'night-owl
-  :package-version "3.5.1")
+)
 
 (defcustom night-owl-height-minus-1 0.8
   "Font size -1."
