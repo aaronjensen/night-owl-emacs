@@ -203,6 +203,8 @@ Also affects 'linum-mode' background."
                             'variable-pitch
                           'default))
 
+       (night-owl-gray-d "#0E293F")
+
        ;; Darker and lighter accented colors
        (night-owl-yellow-d       "#BEB244")
        (night-owl-yellow-l       "#FFF7A8")
@@ -220,7 +222,6 @@ Also affects 'linum-mode' background."
        (night-owl-cyan-l         "#D3FBF6")
        (night-owl-orange-d        "#86C30D")
        (night-owl-orange-l        "#BBEF53")
-       (night-owl-gray-d         "#35331D")
        (night-owl-gray-l         "#7B7962")
        ;; Adaptive higher/lower contrast accented colors
        (night-owl-foreground-hc  "#141414")
@@ -2936,12 +2937,12 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-alt))))
 
    `(org-block-begin-line
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-foreground-muted
                       :background ,night-owl-gray-d
                       :slant italic))))
 
    `(org-block-end-line
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-foreground-muted
                       :background ,night-owl-gray-d
                       :slant italic))))
 
