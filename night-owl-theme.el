@@ -353,9 +353,8 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(cursor
-     ((t (:foreground ,night-owl-background
-                      :background ,night-owl-foreground
-                      :inverse-video t))))
+     ((t (:foreground ,night-owl-foreground
+                      :background ,night-owl-gray))))
 
    `(mouse
      ((t (:foreground ,night-owl-background
@@ -383,13 +382,13 @@ Also affects 'linum-mode' background."
                       :weight normal))))
 
    `(success
-     ((t (:foreground ,night-owl-orange ))))
+     ((t (:foreground ,night-owl-green))))
 
    `(warning
-     ((t (:foreground ,night-owl-yellow ))))
+     ((t (:foreground ,night-owl-yellow))))
 
    `(error
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    `(eval-sexp-fu-flash
      ((t (:foreground ,night-owl-background
@@ -790,7 +789,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-orange))))
 
    `(android-mode-error-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-red
                       :weight bold))))
 
    `(android-mode-info-face
@@ -923,7 +922,7 @@ Also affects 'linum-mode' background."
 
    `(cider-test-error-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-red))))
 
    `(cider-test-failure-face
      ((t (:foreground ,night-owl-background
@@ -931,7 +930,7 @@ Also affects 'linum-mode' background."
 
    `(cider-test-success-face
      ((t (:foreground ,night-owl-background
-                      :background ,night-owl-orange))))
+                      :background ,night-owl-green))))
 
    `(cider-traced-face
      ((t :box (:color ,night-owl-blue :line-width -1 :style nil))))
@@ -943,12 +942,12 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(clojure-test-error-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-red
                       :weight bold
                       :underline t))))
 
    `(clojure-test-success-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold
                       :underline t))))
 
@@ -1015,7 +1014,7 @@ Also affects 'linum-mode' background."
                    :underline nil))))
 
    `(compilation-error-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :underline nil))))
 
    `(compilation-face
@@ -1059,7 +1058,7 @@ Also affects 'linum-mode' background."
 
    `(compilation-mode-line-fail
      ((t (:inherit compilation-error
-                   :foreground ,night-owl-magenta
+                   :foreground ,night-owl-red
                    :weight bold))))
 
    `(compilation-mode-line-run
@@ -1189,10 +1188,10 @@ Also affects 'linum-mode' background."
 
    ;; ediff
    `(ediff-fine-diff-A
-     ((t (:background ,night-owl-green-lc))))
+     ((t (:background ,night-owl-orange-lc))))
 
    `(ediff-fine-diff-B
-     ((t (:background ,night-owl-orange-lc))))
+     ((t (:background ,night-owl-green-lc))))
 
    `(ediff-fine-diff-C
      ((t (:background ,night-owl-yellow-lc))))
@@ -1227,10 +1226,10 @@ Also affects 'linum-mode' background."
    ;; edts
    `(edts-face-error-line
      ((((supports :underline (:style line)))
-       (:underline (:style line :color ,night-owl-magenta)
+       (:underline (:style line :color ,night-owl-red)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-magenta-hc
-                      :background ,night-owl-magenta-lc
+      (t (:foreground ,night-owl-red-hc
+                      :background ,night-owl-red-lc
                       :weight bold
                       :underline t))))
 
@@ -1244,7 +1243,7 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(edts-face-error-fringe-bitmap
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-red
                       :background unspecified
                       :weight bold))))
 
@@ -1254,7 +1253,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(edts-face-error-mode-line
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-red
                       :foreground unspecified))))
 
    `(edts-face-warning-mode-line
@@ -1512,8 +1511,8 @@ Also affects 'linum-mode' background."
    ;; flycheck
    `(flycheck-error
      ((((supports :underline (:style line)))
-       (:underline (:style line :color ,night-owl-magenta)))
-      (t (:foreground ,night-owl-magenta
+       (:underline (:style line :color ,night-owl-red)))
+      (t (:foreground ,night-owl-red
                       :background ,night-owl-background
                       :weight bold
                       :underline t))))
@@ -1535,7 +1534,7 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(flycheck-fringe-error
-     ((t (:foreground ,night-owl-magenta-l
+     ((t (:foreground ,night-owl-red-l
                       :background unspecified
                       :weight bold))))
 
@@ -2183,7 +2182,7 @@ Also affects 'linum-mode' background."
 
    `(jabber-chat-error
      ((t (:weight bold
-                  :foreground ,night-owl-magenta))))
+                  :foreground ,night-owl-red))))
 
    `(jabber-chat-prompt-foreign
      ((t (:weight bold
@@ -2222,7 +2221,7 @@ Also affects 'linum-mode' background."
    `(jabber-roster-user-error
      ((t (:weight light
                   :slant italic
-                  :foreground ,night-owl-magenta))))
+                  :foreground ,night-owl-red))))
 
    `(jabber-roster-user-offline
      ((t (:foreground ,night-owl-comments))))
@@ -2237,7 +2236,7 @@ Also affects 'linum-mode' background."
 
    ;; js2-mode colors
    `(js2-error
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    `(js2-external-variable
      ((t (:foreground ,night-owl-green))))
@@ -3593,7 +3592,7 @@ Also affects 'linum-mode' background."
 
    `(syslog-error-face
      ((t (:background unspecified
-                      :foreground ,night-owl-magenta
+                      :foreground ,night-owl-red
                       :weight bold))))
 
    `(syslog-warn-face
@@ -3717,14 +3716,14 @@ Also affects 'linum-mode' background."
 
    `(tuareg-font-lock-error-face
      ((t (:foreground ,night-owl-yellow
-                      :background ,night-owl-magenta
+                      :background ,night-owl-red
                       :weight bold))))
 
    `(tuareg-font-lock-interactive-output-face
      ((t (:foreground ,night-owl-cyan))))
 
    `(tuareg-font-lock-interactive-error-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-red))))
 
    ;; undo-tree
    `(undo-tree-visualizer-default-face
