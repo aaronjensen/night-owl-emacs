@@ -206,6 +206,12 @@ Also affects 'linum-mode' background."
                             'variable-pitch
                           'default))
 
+       (night-owl-input-fg          "#D1D5D9")
+       (night-owl-input-bg          "#0B253A")
+       (night-owl-button-fg         "#E2DDED")
+       (night-owl-button-bg         "#674BA5")
+       (night-owl-button-bg-hover   "#7e57c2")
+       (night-owl-button-bg-pressed "#4f3f86")
 
        ;; Darker and lighter accented colors
        (night-owl-yellow-d      "#D8C15E")
@@ -405,6 +411,30 @@ Also affects 'linum-mode' background."
 
    `(minibuffer-prompt
      ((t (:foreground ,night-owl-blue))))
+
+   `(widget-field
+     ((t (:foreground ,night-owl-input-fg
+                      :background ,night-owl-input-bg
+                      :box (:color ,night-owl-gray
+                                   :line-width 1)))))
+
+   `(custom-button
+     ((t (:foreground ,night-owl-button-fg
+                      :background ,night-owl-button-bg
+                      :box (:color ,night-owl-button-bg
+                                   :line-width 2)))))
+
+   `(custom-button-mouse
+     ((t (:foreground ,night-owl-button-fg
+                      :background ,night-owl-button-bg-hover
+                      :box (:color ,night-owl-button-bg-hover
+                                   :line-width 2)))))
+
+   `(custom-button-pressed
+     ((t (:foreground ,night-owl-button-fg
+                      :background ,night-owl-button-bg-pressed
+                      :box (:color ,night-owl-button-bg-pressed
+                                   :line-width 2)))))
 
    ;; mode-line and powerline
    `(mode-line-buffer-id
