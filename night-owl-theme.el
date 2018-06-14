@@ -31,6 +31,9 @@
 ;; Kelvin Smith created monokai-theme.el on which this file is based.
 ;; -  https://github.com/oneKelvinSmith/monokai-emacs
 ;;
+;; Color Scheme Designer 3 for complementary colours.
+;; - http://colorschemedesigner.com/
+;;
 ;;; Code:
 
 (unless (>= emacs-major-version 24)
@@ -203,46 +206,46 @@ Also affects 'linum-mode' background."
                             'variable-pitch
                           'default))
 
-       (night-owl-gray-d "#0E293F")
 
        ;; Darker and lighter accented colors
-       (night-owl-yellow-d       "#BEB244")
-       (night-owl-yellow-l       "#FFF7A8")
-       (night-owl-green-d       "#D47402")
-       (night-owl-green-l       "#FFAC4A")
-       (night-owl-magenta-d          "#F70057")
-       (night-owl-magenta-l          "#FA518D")
-       (night-owl-red-d      "#FB35EA")
-       (night-owl-red-l      "#FE8CF4")
-       (night-owl-violet-d       "#945AFF")
-       (night-owl-violet-l       "#C9ACFF")
-       (night-owl-blue-d         "#40CAE4")
-       (night-owl-blue-l         "#92E7F7")
-       (night-owl-cyan-d         "#74DBCD")
-       (night-owl-cyan-l         "#D3FBF6")
-       (night-owl-orange-d        "#86C30D")
-       (night-owl-orange-l        "#BBEF53")
-       (night-owl-gray-l         "#7B7962")
+       (night-owl-yellow-d      "#D8C15E")
+       (night-owl-yellow-l      "#FFF2BA")
+       (night-owl-green-d       "#89BA3F")
+       (night-owl-green-l       "#CBEF94")
+       (night-owl-magenta-d     "#AB69D7")
+       (night-owl-magenta-l     "#E1C0F7")
+       (night-owl-red-d         "#DC2E29")
+       (night-owl-red-l         "#FF7B78")
+       (night-owl-violet-d      "#643AAC")
+       (night-owl-violet-l      "#9E7DD8")
+       (night-owl-blue-d        "#5B8FFF")
+       (night-owl-blue-l        "#ADC7FF")
+       (night-owl-cyan-d        "#AFEFE2")
+       (night-owl-cyan-l        "#55C1AC")
+       (night-owl-orange-d      "#D76443")
+       (night-owl-orange-l      "#FFAD95")
+       (night-owl-gray-d        "#204462")
+       (night-owl-gray-l        "#8BA2B6")
        ;; Adaptive higher/lower contrast accented colors
-       (night-owl-foreground-hc  "#141414")
-       (night-owl-foreground-lc  "#171A0B")
+       (night-owl-foreground-hc "#141f1f")
+       (night-owl-foreground-lc "#182525")
        ;; High contrast colors
-       (night-owl-yellow-hc      "#FFFACE")
-       (night-owl-yellow-lc      "#9A8F21")
-       (night-owl-green-hc      "#FFBE74")
-       (night-owl-green-lc      "#A75B00")
-       (night-owl-magenta-hc         "#FEB0CC")
-       (night-owl-magenta-lc         "#F20055")
-       (night-owl-red-hc     "#FEC6F9")
-       (night-owl-red-lc     "#F309DF")
-       (night-owl-violet-hc      "#F0E7FF")
-       (night-owl-violet-lc      "#7830FC")
-       (night-owl-blue-hc        "#CAF5FD")
-       (night-owl-blue-lc        "#1DB4D0")
-       (night-owl-cyan-hc        "#D3FBF6")
-       (night-owl-cyan-lc        "#4BBEAE")
-       (night-owl-orange-hc       "#CCF47C")
-       (night-owl-orange-lc       "#679A01")
+       (night-owl-yellow-hc     "#FFF9DC")
+       (night-owl-yellow-lc     "#B49C34")
+       (night-owl-green-hc      "#E1F7C0")
+       (night-owl-green-lc      "#6A9A21")
+       (night-owl-magenta-hc    "#F9F2FF")
+       (night-owl-magenta-lc    "#8C46BC")
+       (night-owl-red-hc        "#FFA5A3")
+       (night-owl-red-lc        "#AD1612")
+       (night-owl-violet-hc     "#C5AEEC")
+       (night-owl-violet-lc     "#4B1B9F")
+       (night-owl-blue-hc       "#E8EFFF")
+       (night-owl-blue-lc       "#3172FC")
+       (night-owl-cyan-hc       "#E3FCF7")
+       (night-owl-cyan-lc       "#34A18C")
+       (night-owl-orange-hc     "#FFCDBE")
+       (night-owl-orange-lc     "#B44322")
 
        ;; Distinct fringe
        (night-owl-fringe-bg (if night-owl-distinct-fringe-background
@@ -2937,12 +2940,12 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-alt))))
 
    `(org-block-begin-line
-     ((t (:foreground ,night-owl-foreground-muted
+     ((t (:foreground ,night-owl-gray-l
                       :background ,night-owl-gray-d
                       :slant italic))))
 
    `(org-block-end-line
-     ((t (:foreground ,night-owl-foreground-muted
+     ((t (:foreground ,night-owl-gray-l
                       :background ,night-owl-gray-d
                       :slant italic))))
 
