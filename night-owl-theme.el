@@ -314,7 +314,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-green))))
 
    `(font-lock-warning-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-orange
                       :weight bold
                       :italic t
                       :underline t))))
