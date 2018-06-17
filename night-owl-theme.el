@@ -1,4 +1,5 @@
 ;;; night-owl-theme.el --- A fruity color theme for Emacs.
+;; -*- origami-fold-style: triple-braces -*-
 
 ;; Copyright (C) 2018
 
@@ -41,6 +42,7 @@
 
 (deftheme night-owl "The Night Owl colour theme")
 
+;; Customization {{{
 (defgroup night-owl nil
   "Night Owl theme options.
 The theme has to be reloaded after changing anything in this group."
@@ -200,12 +202,17 @@ Also affects 'linum-mode' background."
   "Adaptive colors - string"
   :type 'string
   :group 'night-owl)
+;; }}}
+
+;; Variables {{{
 
 (let* (;; Variable pitch
        (night-owl-pitch (if night-owl-use-variable-pitch
                             'variable-pitch
                           'default))
+       ;; }}}
 
+       ;; Colors {{{
        (night-owl-input-fg          "#D1D5D9")
        (night-owl-input-bg          "#0B253A")
        (night-owl-button-fg         "#E2DDED")
@@ -257,12 +264,14 @@ Also affects 'linum-mode' background."
        (night-owl-fringe-bg (if night-owl-distinct-fringe-background
                                 night-owl-gray
                               night-owl-background)))
+  ;; }}}
 
-  ;; Define faces
+  ;; custom-theme-set-faces {{{
   (custom-theme-set-faces
    'night-owl
+   ;; }}}
 
-   ;; font lock for syntax highlighting
+   ;; font lock for syntax highlighting {{{
    `(font-lock-builtin-face
      ((t (:foreground ,night-owl-magenta
                       :weight normal))))
@@ -321,8 +330,9 @@ Also affects 'linum-mode' background."
 
    `(c-annotation-face
      ((t (:inherit font-lock-constant-face))))
+   ;; }}}
 
-   ;; general colouring
+   ;; general colouring {{{
    '(button ((t (:underline t))))
 
    `(default
@@ -434,10 +444,11 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-button-bg-pressed
                       :box (:color ,night-owl-button-bg-pressed
                                    :line-width 2)))))
+   ;; }}}
 
-   ;; mode-line and powerline
+   ;; mode-line and powerline {{{
    `(mode-line-buffer-id
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-foreground
                       :weight bold))))
 
    `(mode-line
@@ -466,16 +477,18 @@ Also affects 'linum-mode' background."
 
    `(powerline-inactive2
      ((t (:background ,night-owl-background))))
+   ;; }}}
 
-   ;; header-line
+   ;; header-line {{{
    `(header-line
      ((t (:foreground ,night-owl-emphasis
                       :background ,night-owl-highlight
                       :box (:color ,night-owl-gray
                                    :line-width 1
                                    :style unspecified)))))
+   ;; }}}
 
-   ;; cua
+   ;; cua {{{
    `(cua-global-mark
      ((t (:background ,night-owl-yellow
                       :foreground ,night-owl-background))))
@@ -485,12 +498,14 @@ Also affects 'linum-mode' background."
 
    `(cua-rectangle-noselect
      ((t (:inherit secondary-selection))))
+   ;; }}}
 
-   ;; diary
+   ;; diary {{{
    `(diary
      ((t (:foreground ,night-owl-yellow))))
+   ;; }}}
 
-   ;; dired
+   ;; dired {{{
    `(dired-directory
      ((t (:foreground ,night-owl-blue))))
 
@@ -524,8 +539,9 @@ Also affects 'linum-mode' background."
    `(dired-warning
      ((t (:foreground ,night-owl-green
                       :underline t))))
+   ;; }}}
 
-   ;; dropdown
+   ;; dropdown {{{
    `(dropdown-list-face
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-blue))))
@@ -533,8 +549,9 @@ Also affects 'linum-mode' background."
    `(dropdown-list-selection-face
      ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background))))
+   ;; }}}
 
-   ;; ecb
+   ;; ecb {{{
    `(ecb-default-highlight-face
      ((t (:background ,night-owl-blue
                       :foreground ,night-owl-background))))
@@ -582,8 +599,9 @@ Also affects 'linum-mode' background."
      ((t (:inherit ecb-default-general-face
                    :foreground ,night-owl-gray
                    :height 1.0))))
+   ;; }}}
 
-   ;; ee
+   ;; ee {{{
    `(ee-bookmarked
      ((t (:foreground ,night-owl-emphasis))))
 
@@ -605,8 +623,9 @@ Also affects 'linum-mode' background."
 
    `(ee-shadow
      ((t (:inherit shadow))))
+   ;; }}}
 
-   ;; grep
+   ;; grep {{{
    `(grep-context-face
      ((t (:foreground ,night-owl-foreground))))
 
@@ -616,13 +635,14 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(grep-hit-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-orange))))
 
    `(grep-match-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-green
                       :weight bold))))
+   ;; }}}
 
-   ;; isearch
+   ;; isearch {{{
    `(isearch
      ((t (:inherit region
                    :foreground ,night-owl-background
@@ -633,9 +653,9 @@ Also affects 'linum-mode' background."
                    :foreground ,night-owl-magenta
                    :background ,night-owl-background
                    :bold t))))
+   ;; }}}
 
-
-   ;; ace-jump-mode
+   ;; ace-jump-mode {{{
    `(ace-jump-face-background
      ((t (:foreground ,night-owl-comments
                       :background ,night-owl-background
@@ -646,8 +666,9 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background
                       :inverse-video nil
                       :weight bold))))
+   ;; }}}
 
-   ;; auctex
+   ;; auctex {{{
    `(font-latex-bold-face
      ((t (:inherit bold
                    :foreground ,night-owl-emphasis))))
@@ -721,8 +742,9 @@ Also affects 'linum-mode' background."
    `(font-latex-warning-face
      ((t (:inherit bold
                    :foreground ,night-owl-green))))
+   ;; }}}
 
-   ;; auto-complete
+   ;; auto-complete {{{
    `(ac-candidate-face
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-blue))))
@@ -754,8 +776,9 @@ Also affects 'linum-mode' background."
    `(ac-yasnippet-selection-face
      ((t (:background ,night-owl-yellow
                       :foreground ,night-owl-background))))
+   ;; }}}
 
-   ;; auto highlight symbol
+   ;; auto highlight symbol {{{
    `(ahs-definition-face
      ((t (:foreground ,night-owl-background
                       :background ,night-owl-blue))))
@@ -783,8 +806,9 @@ Also affects 'linum-mode' background."
    `(ahs-warning-face
      ((t (:foreground ,night-owl-magenta
                       :weight bold))))
+   ;; }}}
 
-   ;; android mode
+   ;; android mode {{{
    `(android-mode-debug-face
      ((t (:foreground ,night-owl-orange))))
 
@@ -800,13 +824,15 @@ Also affects 'linum-mode' background."
 
    `(android-mode-warning-face
      ((t (:foreground ,night-owl-yellow))))
+   ;; }}}
 
-   ;; anzu-mode
+   ;; anzu-mode {{{
    `(anzu-mode-line
      ((t (:foreground ,night-owl-violet
                       :weight bold))))
+   ;; }}}
 
-   ;; bm
+   ;; bm {{{
    `(bm-face
      ((t (:background ,night-owl-yellow-lc
                       :foreground ,night-owl-background))))
@@ -822,8 +848,9 @@ Also affects 'linum-mode' background."
    `(bm-persistent-face
      ((t (:background ,night-owl-orange-lc
                       :foreground ,night-owl-background))))
+   ;; }}}
 
-   ;; calfw
+   ;; calfw {{{
    `(cfw:face-day-title
      ((t (:background ,night-owl-highlight-line))))
 
@@ -900,8 +927,9 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-yellow-hc
                       :foreground ,night-owl-yellow-lc
                       :weight bold))))
+   ;; }}}
 
-   ;; cider
+   ;; cider {{{
    `(cider-enlightened
      ((t (:foreground ,night-owl-yellow
                       :background nil
@@ -934,8 +962,9 @@ Also affects 'linum-mode' background."
 
    `(cider-traced-face
      ((t :box (:color ,night-owl-blue :line-width -1 :style nil))))
+   ;; }}}
 
-   ;; clojure-test
+   ;; clojure-test {{{
    `(clojure-test-failure-face
      ((t (:foreground ,night-owl-magenta
                       :weight bold
@@ -950,8 +979,9 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-green
                       :weight bold
                       :underline t))))
+   ;; }}}
 
-   ;; company-mode
+   ;; company-mode {{{
    `(company-tooltip
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-emphasis))))
@@ -994,8 +1024,9 @@ Also affects 'linum-mode' background."
    `(company-template-field
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-blue))))
+   ;; }}}
 
-   ;; compilation
+   ;; compilation {{{
    `(compilation-column-face
      ((t (:foreground ,night-owl-cyan
                       :underline nil))))
@@ -1064,8 +1095,9 @@ Also affects 'linum-mode' background."
    `(compilation-mode-line-run
      ((t (:foreground ,night-owl-green
                       :weight bold))))
+   ;; }}}
 
-   ;; CSCOPE
+   ;; CSCOPE {{{
    `(cscope-file-face
      ((t (:foreground ,night-owl-orange
                       :weight bold))))
@@ -1082,8 +1114,9 @@ Also affects 'linum-mode' background."
    `(cscope-mouse-face
      ((t (:background ,night-owl-blue
                       :foreground ,night-owl-foreground))))
+   ;; }}}
 
-   ;; ctable
+   ;; ctable {{{
    `(ctbl:face-cell-select
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-emphasis
@@ -1098,8 +1131,9 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-foreground
                       :underline t))))
+   ;; }}}
 
-   ;; coffee
+   ;; coffee {{{
    `(coffee-mode-class-name
      ((t (:foreground ,night-owl-yellow
                       :weight bold))))
@@ -1107,8 +1141,9 @@ Also affects 'linum-mode' background."
    `(coffee-mode-function-param
      ((t (:foreground ,night-owl-violet
                       :slant italic))))
+   ;; }}}
 
-   ;; custom
+   ;; custom {{{
    `(custom-face-tag
      ((t (:inherit ,night-owl-pitch
                    :height ,night-owl-height-plus-3
@@ -1135,8 +1170,9 @@ Also affects 'linum-mode' background."
 
    `(custom-state
      ((t (:foreground ,night-owl-orange))))
+   ;; }}}
 
-   ;; diff
+   ;; diff {{{
    `(diff-added
      ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background))))
@@ -1168,8 +1204,9 @@ Also affects 'linum-mode' background."
    `(diff-refine-removed
      ((t (:foreground ,night-owl-background
                       :background ,night-owl-red))))
+   ;; }}}
 
-   ;; diff-hl
+   ;; diff-hl {{{
    `(diff-hl-change
      ((t (:background ,night-owl-blue-lc
                       :foreground ,night-owl-blue-hc))))
@@ -1179,14 +1216,15 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-magenta-hc))))
 
    `(diff-hl-insert
-     ((t (:background ,night-owl-orange-lc
-                      :foreground ,night-owl-orange-hc))))
+     ((t (:background ,night-owl-green-lc
+                      :foreground ,night-owl-green-hc))))
 
    `(diff-hl-unknown
      ((t (:background ,night-owl-violet-lc
                       :foreground ,night-owl-violet-hc))))
+   ;; }}}
 
-   ;; ediff
+   ;; ediff {{{
    `(ediff-fine-diff-A
      ((t (:background ,night-owl-orange-lc))))
 
@@ -1222,8 +1260,9 @@ Also affects 'linum-mode' background."
    `(ediff-odd-diff-C
      ((t (:background ,night-owl-comments
                       :foreground ,night-owl-background ))))
+   ;; }}}
 
-   ;; edts
+   ;; edts {{{
    `(edts-face-error-line
      ((((supports :underline (:style line)))
        (:underline (:style line :color ,night-owl-red)
@@ -1259,9 +1298,9 @@ Also affects 'linum-mode' background."
    `(edts-face-warning-mode-line
      ((t (:background ,night-owl-yellow
                       :foreground unspecified))))
+   ;; }}}
 
-
-   ;; elfeed
+   ;; elfeed {{{
    `(elfeed-search-date-face
      ((t (:foreground ,night-owl-comments))))
 
@@ -1273,15 +1312,17 @@ Also affects 'linum-mode' background."
 
    `(elfeed-search-title-face
      ((t (:foreground ,night-owl-cyan))))
+   ;; }}}
 
-   ;; elixir
+   ;; elixir {{{
    `(elixir-attribute-face
      ((t (:foreground ,night-owl-green))))
 
    `(elixir-atom-face
      ((t (:foreground ,night-owl-violet))))
+   ;; }}}
 
-   ;; ein
+   ;; ein {{{
    `(ein:cell-input-area
      ((t (:background ,night-owl-highlight-line))))
    `(ein:cell-input-prompt
@@ -1292,8 +1333,9 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue))))
    `(ein:notification-tab-selected
      ((t (:foreground ,night-owl-green :inherit bold))))
+   ;; }}}
 
-   ;; enhanced ruby mode
+   ;; enhanced ruby mode {{{
    `(enh-ruby-string-delimiter-face
      ((t (:inherit font-lock-string-face))))
 
@@ -1305,8 +1347,9 @@ Also affects 'linum-mode' background."
 
    `(enh-ruby-op-face
      ((t (:inherit font-lock-keyword-face))))
+   ;; }}}
 
-   ;; erm-syn
+   ;; erm-syn {{{
    `(erm-syn-errline
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,night-owl-magenta)
@@ -1324,15 +1367,17 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-green-lc
                       :weight bold
                       :underline t))))
+   ;; }}}
 
-   ;; epc
+   ;; epc {{{
    `(epc:face-title
      ((t (:foreground ,night-owl-blue
                       :background ,night-owl-background
                       :weight normal
                       :underline nil))))
+   ;; }}}
 
-   ;; erc
+   ;; erc {{{
    `(erc-action-face
      ((t (:inherit erc-default-face))))
 
@@ -1396,8 +1441,9 @@ Also affects 'linum-mode' background."
 
    `(erc-underline-face
      ((t (:underline t))))
+   ;; }}}
 
-   ;; eshell
+   ;; eshell {{{
    `(eshell-prompt
      ((t (:foreground ,night-owl-blue
                       :inherit bold))))
@@ -1436,8 +1482,9 @@ Also affects 'linum-mode' background."
    `(eshell-ls-symlink
      ((t (:foreground ,night-owl-cyan
                       :inherit bold))))
+   ;; }}}
 
-   ;; evil-ex-substitute
+   ;; evil-ex-substitute {{{
    `(evil-ex-substitute-matches
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-magenta-l
@@ -1446,12 +1493,14 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-orange-l
                       :inherit italic))))
+   ;; }}}
 
-   ;; evil-search-highlight-persist
+   ;; evil-search-highlight-persist {{{
    `(evil-search-highlight-persist-highlight-face
      ((t (:inherit region))))
+   ;; }}}
 
-   ;; fic
+   ;; fic {{{
    `(fic-author-face
      ((t (:background ,night-owl-background
                       :foreground ,night-owl-green
@@ -1469,14 +1518,16 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-green
                       :weight normal
                       :slant italic))))
+   ;; }}}
 
-   ;; flx
+   ;; flx {{{
    `(flx-highlight-face
      ((t (:foreground ,night-owl-blue
                       :weight normal
                       :underline nil))))
+   ;; }}}
 
-   ;; flymake
+   ;; flymake {{{
    `(flymake-errline
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,night-owl-magenta)
@@ -1507,8 +1558,9 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-yellow-lc
                       :weight bold
                       :underline t))))
+   ;; }}}
 
-   ;; flycheck
+   ;; flycheck {{{
    `(flycheck-error
      ((((supports :underline (:style line)))
        (:underline (:style line :color ,night-owl-red)))
@@ -1520,7 +1572,7 @@ Also affects 'linum-mode' background."
    `(flycheck-warning
      ((((supports :underline (:style line)))
        (:underline (:style line :color ,night-owl-green)))
-      (t (:foreground ,night-owl-green
+      (t (:foreground ,night-owl-orange
                       :background ,night-owl-background
                       :weight bold
                       :underline t))))
@@ -1539,7 +1591,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(flycheck-fringe-warning
-     ((t (:foreground ,night-owl-green-l
+     ((t (:foreground ,night-owl-orange-l
                       :background unspecified
                       :weight bold))))
 
@@ -1547,8 +1599,9 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue-l
                       :background unspecified
                       :weight bold))))
+   ;; }}}
 
-   ;; flyspell
+   ;; flyspell {{{
    `(flyspell-duplicate
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,night-owl-yellow)
@@ -1564,9 +1617,10 @@ Also affects 'linum-mode' background."
       (t (:foreground ,night-owl-magenta
                       :weight bold
                       :underline t))))
+   ;; }}}
 
 
-   ;; git-gutter
+   ;; git-gutter {{{
    `(git-gutter:added
      ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background
@@ -1586,8 +1640,9 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-background
                       :inherit bold))))
+   ;; }}}
 
-   ;; git-gutter-fr
+   ;; git-gutter-fr {{{
    `(git-gutter-fr:added
      ((t (:foreground ,night-owl-orange
                       :inherit bold))))
@@ -1599,8 +1654,9 @@ Also affects 'linum-mode' background."
    `(git-gutter-fr:modified
      ((t (:foreground ,night-owl-blue
                       :inherit bold))))
+   ;; }}}
 
-   ;; git-gutter+ and git-gutter+-fr
+   ;; git-gutter+ and git-gutter+-fr {{{
    `(git-gutter+-added
      ((t (:background ,night-owl-orange
                       :foreground ,night-owl-background
@@ -1632,14 +1688,16 @@ Also affects 'linum-mode' background."
    `(git-gutter-fr+-modified
      ((t (:foreground ,night-owl-blue
                       :weight bold))))
+   ;; }}}
 
-   ;; git-timemachine
+   ;; git-timemachine {{{
    `(git-timemachine-minibuffer-detail-face
      ((t (:foreground ,night-owl-blue
                       :background ,night-owl-highlight-line
                       :inherit bold))))
+   ;; }}}
 
-   ;; guide-key
+   ;; guide-key {{{
    `(guide-key/highlight-command-face
      ((t (:foreground ,night-owl-blue))))
 
@@ -1648,8 +1706,9 @@ Also affects 'linum-mode' background."
 
    `(guide-key/prefix-command-face
      ((t (:foreground ,night-owl-violet))))
+   ;; }}}
 
-   ;; gnus
+   ;; gnus {{{
    `(gnus-group-mail-1
      ((t (:weight bold
                   :inherit gnus-group-mail-1-empty))))
@@ -1828,9 +1887,10 @@ Also affects 'linum-mode' background."
    `(gnus-x-face
      ((t (:background ,night-owl-foreground
                       :foreground ,night-owl-background))))
+   ;; }}}
 
 
-   ;; helm
+   ;; helm {{{
    `(helm-apt-deinstalled
      ((t (:foreground ,night-owl-comments))))
 
@@ -2007,8 +2067,9 @@ Also affects 'linum-mode' background."
 
    `(helm-ls-git-conflict-face
      ((t :foreground ,night-owl-yellow)))
+   ;; }}}
 
-   ;; hi-lock-mode
+   ;; hi-lock-mode {{{
    `(hi-yellow
      ((t (:foreground ,night-owl-yellow-lc
                       :background ,night-owl-yellow-hc))))
@@ -2046,34 +2107,39 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-emphasis
                       :background ,night-owl-background
                       :weight bold))))
+   ;; }}}
 
-   ;; highlight-changes
+   ;; highlight-changes {{{
    `(highlight-changes
      ((t (:foreground ,night-owl-green))))
 
    `(highlight-changes-delete
      ((t (:foreground ,night-owl-magenta
                       :underline t))))
+   ;; }}}
 
-   ;; highlight-indentation
+   ;; highlight-indentation {{{
    `(highlight-indentation-face
      ((t (:background ,night-owl-gray))))
 
    `(highlight-indentation-current-column-face
      ((t (:background ,night-owl-gray))))
+   ;; }}}
 
-   ;; highlight-symbol
+   ;; highlight-symbol {{{
    `(highlight-symbol-face
      ((t (:background ,night-owl-highlight))))
+   ;; }}}
 
-   ;; hl-line-mode
+   ;; hl-line-mode {{{
    `(hl-line
      ((t (:background ,night-owl-highlight-line))))
 
    `(hl-line-face
      ((t (:background ,night-owl-highlight-line))))
+   ;; }}}
 
-   ;; ido-mode
+   ;; ido-mode {{{
    `(ido-first-match
      ((t (:foreground ,night-owl-yellow
                       :weight normal))))
@@ -2097,8 +2163,9 @@ Also affects 'linum-mode' background."
 
    `(ido-virtual
      ((t (:foreground ,night-owl-cyan))))
+   ;; }}}
 
-   ;; info
+   ;; info {{{
    `(info-header-xref
      ((t (:foreground ,night-owl-orange
                       :inherit bold
@@ -2133,8 +2200,9 @@ Also affects 'linum-mode' background."
 
    `(info-title-4
      ((t (:height ,night-owl-height-plus-1))))
+   ;; }}}
 
-   ;; ivy
+   ;; ivy {{{
    `(ivy-current-match
      ((t (:background ,night-owl-gray :inherit bold))))
 
@@ -2170,8 +2238,9 @@ Also affects 'linum-mode' background."
 
    `(swiper-match-face-4
      ((t (:background ,night-owl-red))))
+   ;; }}}
 
-   ;; jabber
+   ;; jabber {{{
    `(jabber-activity-face
      ((t (:weight bold
                   :foreground ,night-owl-magenta))))
@@ -2233,8 +2302,9 @@ Also affects 'linum-mode' background."
    `(jabber-roster-user-xa
      ((t (:slant italic
                  :foreground ,night-owl-red))))
+   ;; }}}
 
-   ;; js2-mode colors
+   ;; js2-mode colors {{{
    `(js2-error
      ((t (:foreground ,night-owl-red))))
 
@@ -2279,19 +2349,22 @@ Also affects 'linum-mode' background."
 
    `(js2-warning
      ((t (:underline ,night-owl-green))))
+   ;; }}}
 
-   ;; jedi
+   ;; jedi {{{
    `(jedi:highlight-function-argument
      ((t (:inherit bold))))
+   ;; }}}
 
-   ;; linum-mode
+   ;; linum-mode {{{
    `(linum
      ((t (:foreground ,night-owl-line-number
                       :background ,night-owl-fringe-bg
                       :inherit default
                       :underline nil))))
+   ;; }}}
 
-   ;; line-number (>= Emacs26)
+   ;; line-number (>= Emacs26) {{{
    `(line-number
      ((t (:foreground ,night-owl-line-number
                       :background ,night-owl-fringe-bg
@@ -2302,14 +2375,16 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-fringe-bg
                       :inherit default
                       :underline nil))))
+   ;; }}}
 
-   ;; linum-relative-current-face
+   ;; linum-relative-current-face {{{
    `(linum-relative-current-face
      ((t (:foreground ,night-owl-line-number
                       :background ,night-owl-highlight-line
                       :underline nil))))
+   ;; }}}
 
-   ;; lusty-explorer
+   ;; lusty-explorer {{{
    `(lusty-directory-face
      ((t (:inherit dinight-owl-magenta-directory))))
 
@@ -2322,8 +2397,9 @@ Also affects 'linum-mode' background."
    `(lusty-slash-face
      ((t (:foreground ,night-owl-cyan
                       :weight bold))))
+   ;; }}}
 
-   ;; magit
+   ;; magit {{{
    ;;
    ;; TODO: Add supports for all magit faces
    ;; https://github.com/magit/magit/search?utf8=%E2%9C%93&q=face
@@ -2405,8 +2481,9 @@ Also affects 'linum-mode' background."
 
    `(magit-log-sha1
      ((t (:foreground ,night-owl-yellow))))
+   ;; }}}
 
-   ;; man
+   ;; man {{{
    `(Man-overstrike
      ((t (:foreground ,night-owl-blue
                       :weight bold))))
@@ -2416,8 +2493,9 @@ Also affects 'linum-mode' background."
 
    `(Man-underline
      ((t (:foreground ,night-owl-orange :underline t))))
+   ;; }}}
 
-   ;; monky
+   ;; monky {{{
    `(monky-section-title
      ((t (:foreground ,night-owl-yellow
                       :weight bold))))
@@ -2427,8 +2505,9 @@ Also affects 'linum-mode' background."
 
    `(monky-diff-del
      ((t (:foreground ,night-owl-magenta))))
+   ;; }}}
 
-   ;; markdown-mode
+   ;; markdown-mode {{{
    `(markdown-header-face
      ((t (:foreground ,night-owl-heading))))
 
@@ -2453,8 +2532,9 @@ Also affects 'linum-mode' background."
 
    `(markdown-header-face-6
      ((t (:inherit markdown-header-face))))
+   ;; }}}
 
-   ;; message-mode
+   ;; message-mode {{{
    `(message-cited-text
      ((t (:foreground ,night-owl-comments))))
 
@@ -2491,8 +2571,9 @@ Also affects 'linum-mode' background."
    `(message-separator
      ((t (:foreground ,night-owl-comments
                       :slant italic))))
+   ;; }}}
 
-   ;; mew
+   ;; mew {{{
    `(mew-face-header-subject
      ((t (:foreground ,night-owl-green))))
 
@@ -2572,8 +2653,9 @@ Also affects 'linum-mode' background."
 
    `(mew-face-eof-part
      ((t (:foreground ,night-owl-yellow))))
+   ;; }}}
 
-   ;; mingus
+   ;; mingus {{{
    `(mingus-directory-face
      ((t (:foreground ,night-owl-blue))))
 
@@ -2591,8 +2673,9 @@ Also affects 'linum-mode' background."
 
    `(mingus-stopped-face
      ((t (:foreground ,night-owl-magenta))))
+   ;; }}}
 
-   ;; mmm
+   ;; mmm {{{
    `(mmm-init-submode-face
      ((t (:background ,night-owl-violet-d))))
 
@@ -2616,8 +2699,9 @@ Also affects 'linum-mode' background."
 
    `(mmm-default-submode-face
      ((t (:background ,night-owl-gray-d))))
+   ;; }}}
 
-   ;; moccur
+   ;; moccur {{{
    `(moccur-current-line-face
      ((t (:underline t))))
 
@@ -2650,8 +2734,9 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-yellow
                       :weight bold))))
+   ;; }}}
 
-   ;; mu4e
+   ;; mu4e {{{
    `(mu4e-cited-1-face
      ((t (:foreground ,night-owl-orange
                       :slant italic
@@ -2784,12 +2869,14 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-blue
                       :weight normal
                       :underline nil))))
+   ;; }}}
 
-   ;; mumamo
+   ;; mumamo {{{
    `(mumamo-background-chunk-submode1
      ((t (:background ,night-owl-highlight-line))))
+   ;; }}}
 
-   ;; nav
+   ;; nav {{{
    `(nav-face-heading
      ((t (:foreground ,night-owl-yellow))))
 
@@ -2807,12 +2894,14 @@ Also affects 'linum-mode' background."
 
    `(nav-face-hfile
      ((t (:foreground ,night-owl-magenta))))
+   ;; }}}
 
-   ;; nav-flash
+   ;; nav-flash {{{
    `(nav-flash-face
      ((t (:background ,night-owl-highlight-line))))
+   ;; }}}
 
-   ;; neo-tree
+   ;; neo-tree {{{
    `(neo-banner-face
      ((t (:foreground ,night-owl-blue
                       :background ,night-owl-background
@@ -2876,8 +2965,9 @@ Also affects 'linum-mode' background."
 
    `(neo-vc-ignored-face
      ((t (:foreground ,night-owl-comments))))
+   ;; }}}
 
-   ;; adoc-mode / markup
+   ;; adoc-mode / markup {{{
    `(markup-meta-face
      ((t (:foreground ,night-owl-gray-l))))
 
@@ -2904,8 +2994,9 @@ Also affects 'linum-mode' background."
 
    `(markup-secondary-text-face
      ((t (:foreground ,night-owl-magenta))))
+   ;; }}}
 
-   ;; org-mode
+   ;; org-mode {{{
    `(org-agenda-structure
      ((t (:foreground ,night-owl-emphasis
                       :background ,night-owl-highlight-line
@@ -3162,8 +3253,9 @@ Also affects 'linum-mode' background."
 
    `(org-mode-line-clock-overrun
      ((t (:inherit mode-line))))
+   ;; }}}
 
-   ;; outline
+   ;; outline {{{
    `(outline-1
      ((t (:inherit org-level-1))))
 
@@ -3187,21 +3279,25 @@ Also affects 'linum-mode' background."
 
    `(outline-8
      ((t (:inherit org-level-8))))
+   ;; }}}
 
-   ;; parenface
+   ;; parenface {{{
    `(paren-face)
+   ;; }}}
 
-   ;; perspective
+   ;; perspective {{{
    `(persp-selected-face
      ((t (:foreground ,night-owl-blue
                       :weight bold))))
+   ;; }}}
 
-   ;; pretty-mode
+   ;; pretty-mode {{{
    `(pretty-mode-symbol-face
      ((t (:foreground ,night-owl-yellow
                       :weight normal))))
+   ;; }}}
 
-   ;; popup
+   ;; popup {{{
    `(popup-face
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-foreground))))
@@ -3230,8 +3326,9 @@ Also affects 'linum-mode' background."
    `(popup-tip-face
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-foreground))))
+   ;; }}}
 
-   ;; rainbow-delimiters
+   ;; rainbow-delimiters {{{
    `(rainbow-delimiters-depth-1-face
      ((t (:foreground ,night-owl-violet))))
 
@@ -3272,8 +3369,9 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-foreground
                       :background ,night-owl-background
                       :inverse-video t))))
+   ;; }}}
 
-   ;; realgud
+   ;; realgud {{{
    `(realgud-overlay-arrow1
      ((t (:foreground ,night-owl-orange-d))))
 
@@ -3301,8 +3399,9 @@ Also affects 'linum-mode' background."
    `(realgud-backtrace-number
      ((t (:foreground ,night-owl-yellow-d
                       :weight bold))))
+   ;; }}}
 
-   ;; rhtm-mode
+   ;; rhtm-mode {{{
    `(erb-face
      ((t (:foreground ,night-owl-emphasis
                       :background ,night-owl-background))))
@@ -3334,8 +3433,9 @@ Also affects 'linum-mode' background."
    `(erb-comment-delim-face
      ((t (:foreground ,night-owl-cyan
                       :background ,night-owl-background))))
+   ;; }}}
 
-   ;; rst-mode
+   ;; rst-mode {{{
    `(rst-level-1-face
      ((t (:background ,night-owl-yellow
                       :foreground ,night-owl-background))))
@@ -3359,8 +3459,9 @@ Also affects 'linum-mode' background."
    `(rst-level-6-face
      ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background))))
+   ;; }}}
 
-   ;; rpm-mode
+   ;; rpm-mode {{{
    `(rpm-spec-dir-face
      ((t (:foreground ,night-owl-orange))))
 
@@ -3387,8 +3488,9 @@ Also affects 'linum-mode' background."
 
    `(rpm-spec-var-face
      ((t (:foreground ,night-owl-magenta))))
+   ;; }}}
 
-   ;; sh-mode
+   ;; sh-mode {{{
    `(sh-quoted-exec
      ((t (:foreground ,night-owl-violet
                       :weight bold))))
@@ -3400,8 +3502,9 @@ Also affects 'linum-mode' background."
    `(sh-heredoc
      ((t (:foreground ,night-owl-yellow
                       :weight bold))))
+   ;; }}}
 
-   ;; smartparens
+   ;; smartparens {{{
    `(sp-pair-overlay-face
      ((t (:background ,night-owl-highlight-line))))
 
@@ -3425,8 +3528,9 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
+   ;; }}}
 
-   ;; show-paren
+   ;; show-paren {{{
    `(show-paren-match
      ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background
@@ -3438,8 +3542,9 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
+   ;; }}}
 
-   ;; mic-paren
+   ;; mic-paren {{{
    `(paren-face-match
      ((t (:foreground ,night-owl-orange
                       :background ,night-owl-background
@@ -3457,12 +3562,14 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-background
                       :weight normal
                       :inverse-video t))))
+   ;; }}}
 
-   ;; SLIME
+   ;; SLIME {{{
    `(slime-repl-inputed-output-face
      ((t (:foreground ,night-owl-magenta))))
+   ;; }}}
 
-   ;; speedbar
+   ;; speedbar {{{
    `(speedbar-button-face
      ((t (:inherit ,night-owl-pitch
                    :foreground ,night-owl-comments))))
@@ -3493,8 +3600,9 @@ Also affects 'linum-mode' background."
    `(speedbar-tag-face
      ((t (:inherit ,night-owl-pitch
                    :foreground ,night-owl-orange))))
+   ;; }}}
 
-   ;; sunrise commander headings
+   ;; sunrise commander headings {{{
    `(sr-active-path-face
      ((t (:background ,night-owl-blue
                       :foreground ,night-owl-background
@@ -3518,8 +3626,9 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-background
                       :weight bold
                       :height ,night-owl-height-plus-1))))
+   ;; }}}
 
-   ;; sunrise commander marked
+   ;; sunrise commander marked {{{
    `(sr-marked-dir-face
      ((t (:inherit dinight-owl-magenta-marked))))
 
@@ -3535,8 +3644,9 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-red
                       :foreground ,night-owl-background
                       :weight bold))))
+   ;; }}}
 
-   ;; sunrise commander fstat
+   ;; sunrise commander fstat {{{
    `(sr-directory-face
      ((t (:inherit dinight-owl-magenta-directory
                    :weight normal))))
@@ -3555,8 +3665,9 @@ Also affects 'linum-mode' background."
      ((t (:inherit dinight-owl-magenta-warning
                    :slant italic
                    :weight normal))))
+   ;; }}}
 
-   ;; sunrise commander file types
+   ;; sunrise commander file types {{{
    `(sr-compressed-face
      ((t (:foreground ,night-owl-foreground))))
 
@@ -3574,14 +3685,16 @@ Also affects 'linum-mode' background."
 
    `(sr-xml-face
      ((t (:foreground ,night-owl-foreground))))
+   ;; }}}
 
-   ;; sunrise commander misc
+   ;; sunrise commander misc {{{
    `(sr-clex-hotchar-face
      ((t (:background ,night-owl-magenta
                       :foreground ,night-owl-background
                       :weight bold))))
+   ;; }}}
 
-   ;; syslog-mode
+   ;; syslog-mode {{{
    `(syslog-ip-face
      ((t (:background unspecified
                       :foreground ,night-owl-yellow))))
@@ -3613,13 +3726,15 @@ Also affects 'linum-mode' background."
    `(syslog-su-face
      ((t (:background unspecified
                       :foreground ,night-owl-red))))
+   ;; }}}
 
-   ;; table
+   ;; table {{{
    `(table-cell
      ((t (:foreground ,night-owl-foreground
                       :background ,night-owl-highlight-line))))
+   ;; }}}
 
-   ;; term
+   ;; term {{{
    `(term-color-black
      ((t (:foreground ,night-owl-background
                       :background ,night-owl-highlight-line))))
@@ -3657,15 +3772,17 @@ Also affects 'linum-mode' background."
 
    `(term-default-bg-color
      ((t (:inherit term-color-black))))
+   ;; }}}
 
-   ;; tooltip. (NOTE: This setting has no effect on the os widgets for me
-   ;; zencoding uses this)
+   ;; tooltip {{{
+   ;; (NOTE: This setting has no effect on the os widgets for me zencoding uses this)
    `(tooltip
      ((t (:background ,night-owl-yellow-hc
                       :foreground ,night-owl-background
                       :inherit ,night-owl-pitch))))
+   ;; }}}
 
-   ;; treemacs
+   ;; treemacs {{{
    `(treemacs-directory-face
      ((t (:foreground ,night-owl-violet
                       :background ,night-owl-background
@@ -3700,8 +3817,9 @@ Also affects 'linum-mode' background."
    `(treemacs-git-conflict-face
      ((t (:foreground ,night-owl-green
                       :background ,night-owl-background))))
+   ;; }}}
 
-   ;; tuareg
+   ;; tuareg {{{
    `(tuareg-font-lock-governing-face
      ((t (:foreground ,night-owl-red
                       :weight bold))))
@@ -3724,8 +3842,9 @@ Also affects 'linum-mode' background."
 
    `(tuareg-font-lock-interactive-error-face
      ((t (:foreground ,night-owl-red))))
+   ;; }}}
 
-   ;; undo-tree
+   ;; undo-tree {{{
    `(undo-tree-visualizer-default-face
      ((t (:foreground ,night-owl-comments
                       :background ,night-owl-background))))
@@ -3744,12 +3863,14 @@ Also affects 'linum-mode' background."
 
    `(undo-tree-visualizer-register-face
      ((t (:foreground ,night-owl-yellow))))
+   ;; }}}
 
-   ;; volatile highlights
+   ;; volatile highlights {{{
    `(vhl/default-face
      ((t (:background ,night-owl-highlight-alt))))
+   ;; }}}
 
-   ;; w3m
+   ;; w3m {{{
    `(w3m-anchor
      ((t (:inherit link))))
 
@@ -3833,8 +3954,9 @@ Also affects 'linum-mode' background."
    `(w3m-tab-unselected-unseen
      ((t (:background ,night-owl-highlight-line
                       :foreground ,night-owl-violet))))
+   ;; }}}
 
-   ;; web-mode
+   ;; web-mode {{{
    `(web-mode-builtin-face
      ((t (:foreground ,night-owl-magenta))))
 
@@ -3981,8 +4103,9 @@ Also affects 'linum-mode' background."
 
    `(web-mode-whitespace-face
      ((t (:background ,night-owl-magenta))))
+   ;; }}}
 
-   ;; whitespace-mode
+   ;; whitespace-mode {{{
    `(whitespace-space
      ((t (:background unspecified
                       :foreground ,night-owl-comments
@@ -4036,8 +4159,9 @@ Also affects 'linum-mode' background."
                       :foreground ,night-owl-green
                       :inverse-video t
                       :weight bold))))
+   ;; }}}
 
-   ;; wanderlust
+   ;; wanderlust {{{
    `(wl-highlight-folder-few-face
      ((t (:foreground ,night-owl-magenta))))
 
@@ -4117,8 +4241,9 @@ Also affects 'linum-mode' background."
    `(wl-highlight-summary-displaying-face
      ((t (:underline t
                      :weight bold))))
+   ;; }}}
 
-   ;; weechat
+   ;; weechat {{{
    `(weechat-error-face
      ((t (:inherit error))))
 
@@ -4136,12 +4261,14 @@ Also affects 'linum-mode' background."
 
    `(weechat-time-face
      ((t (:foreground ,night-owl-comments))))
+   ;; }}}
 
-   ;; which-func-mode
+   ;; which-func-mode {{{
    `(which-func
      ((t (:foreground ,night-owl-orange))))
+   ;; }}}
 
-   ;; which-key
+   ;; which-key {{{
    `(which-key-key-face
      ((t (:foreground ,night-owl-orange
                       :weight bold))))
@@ -4161,11 +4288,14 @@ Also affects 'linum-mode' background."
    `(which-key-group-description-face
      ((t (:foreground ,night-owl-magenta
                       :weight bold))))
-   ;; window-number-mode
+   ;; }}}
+
+   ;; window-number-mode {{{
    `(window-number-face
      ((t (:foreground ,night-owl-orange))))
+   ;; }}}
 
-   ;; yascroll
+   ;; yascroll {{{
    `(yascroll:thumb-text-area
      ((t (:foreground ,night-owl-comments
                       :background ,night-owl-comments))))
@@ -4173,16 +4303,19 @@ Also affects 'linum-mode' background."
    `(yascroll:thumb-fringe
      ((t (:foreground ,night-owl-comments
                       :background ,night-owl-comments))))
+   ;; }}}
 
-   ;; zencoding
+   ;; zencoding {{{
    `(zencoding-preview-input
      ((t (:background ,night-owl-highlight-line
                       :box ,night-owl-emphasis)))))
+  ;; }}}
 
+  ;; custom-theme-set-variables {{{
   (custom-theme-set-variables
    'night-owl
-   `(ansi-color-names-vector [,night-owl-background ,night-owl-magenta ,night-owl-orange ,night-owl-yellow
-                                                    ,night-owl-blue ,night-owl-red ,night-owl-cyan ,night-owl-foreground])
+   `(ansi-color-names-vector [,night-owl-background ,night-owl-red ,night-owl-green ,night-owl-yellow
+                                                    ,night-owl-blue ,night-owl-magenta ,night-owl-cyan ,night-owl-foreground])
 
    ;; compilation
    `(compilation-message-face 'default)
@@ -4244,6 +4377,7 @@ Also affects 'linum-mode' background."
                    ,night-owl-magenta-d ,night-owl-magenta
                    ,night-owl-cyan-d ,night-owl-cyan
                    ,night-owl-foreground ,night-owl-emphasis))))
+;; }}}
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
