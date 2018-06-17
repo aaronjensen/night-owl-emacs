@@ -1,5 +1,4 @@
 ;;; night-owl-theme.el --- A fruity color theme for Emacs.
-;; -*- origami-fold-style: triple-braces -*-
 
 ;; Copyright (C) 2018
 
@@ -4388,6 +4387,7 @@ Also affects 'linum-mode' background."
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; fill-column: 95
+;; origami-fold-style: triple-braces
 ;; End:
 
 ;;; night-owl-theme.el ends here
