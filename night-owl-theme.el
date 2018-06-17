@@ -147,7 +147,12 @@ Also affects 'linum-mode' background."
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-foreground-muted "#676e95"
+(defcustom night-owl-foreground-slightly-muted "#8BADC1"
+  "Adaptive colors - foreground slightly muted"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-foreground-muted "#676E95"
   "Adaptive colors - foreground muted"
   :type 'string
   :group 'night-owl)
@@ -2203,10 +2208,16 @@ Also affects 'linum-mode' background."
 
    ;; ivy {{{
    `(ivy-current-match
-     ((t (:background ,night-owl-gray :inherit bold))))
+     ((t (:background ,night-owl-highlight-line :foreground ,night-owl-foreground))))
+
+   `(ivy-not-current
+     ((t (:foreground ,night-owl-foreground-slightly-muted))))
+
+   `(ivy-minibuffer-match-highlight
+     ((t (:inherit bold :foreground ,night-owl-foreground))))
 
    `(ivy-minibuffer-match-face-1
-     ((t (:inherit bold))))
+     ((t (:inherit bold :foreground ,night-owl-foreground))))
 
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,night-owl-violet
@@ -2222,6 +2233,12 @@ Also affects 'linum-mode' background."
 
    `(ivy-remote
      ((t (:foreground ,night-owl-blue))))
+
+   `(ivy-virtual
+     ((t (:foreground ,night-owl-foreground-slightly-muted))))
+
+   `(counsel-key-binding
+     ((t (:foreground ,night-owl-input-fg))))
 
    `(swiper-line-face
      ((t (:background ,night-owl-highlight-line))))

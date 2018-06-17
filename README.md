@@ -12,3 +12,29 @@ Very initial development. Still contains some of the monokai colors. PRs gladly 
 
 [night owl vscode theme]: https://github.com/sdras/night-owl-vscode-theme
 [monokai-emacs]: https://github.com/oneKelvinSmith/monokai-emacs
+
+## Tips
+
+### Ivy
+
+To style the non-selected ivy items, try this:
+
+```elisp
+(defface ivy-not-current
+  '((t (:inherit default)))
+  "Face used by Ivy for highlighting the current match.")
+
+(defun night-owl/ivy-format-function-line (cands)
+  "Transform CANDS into a string for minibuffer."
+  (ivy--format-function-generic
+   (lambda (str)
+     (ivy--add-face (concat str "\n") 'ivy-current-match))
+   (lambda (str)
+     (let ((s (concat str "\n")))
+       (font-lock-append-text-property 0 (length s) 'face 'ivy-not-current s)
+       s))
+   cands
+   ""))
+
+(setq ivy-format-function #'night-owl/ivy-format-function-line)
+```
