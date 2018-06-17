@@ -224,6 +224,8 @@ Also affects 'linum-mode' background."
        (night-owl-button-bg-hover   "#7e57c2")
        (night-owl-button-bg-pressed "#4f3f86")
 
+       (night-owl-suggest-bg "#2C3043")
+
        ;; Darker and lighter accented colors
        (night-owl-yellow-d      "#D8C15E")
        (night-owl-yellow-l      "#FFF2BA")
@@ -987,25 +989,24 @@ Also affects 'linum-mode' background."
 
    ;; company-mode {{{
    `(company-tooltip
-     ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-emphasis))))
+     ((t (:background ,night-owl-suggest-bg
+                      :foreground ,night-owl-foreground))))
 
    `(company-tooltip-selection
-     ((t (:background ,night-owl-blue
-                      :foreground ,night-owl-background))))
+     ((t (:background ,night-owl-gray
+                      :foreground ,night-owl-foreground))))
 
    `(company-tooltip-mouse
      ((t (:background ,night-owl-blue
                       :foreground ,night-owl-background))))
 
    `(company-tooltip-common
-     ((t (:foreground ,night-owl-blue
-                      :underline t))))
+     ((t (:foreground ,night-owl-white
+                      :bold t))))
 
    `(company-tooltip-common-selection
-     ((t (:foreground ,night-owl-background
-                      :background ,night-owl-blue
-                      :underline t))))
+     ((t (:foreground ,night-owl-white
+                      :bold t))))
 
    `(company-preview
      ((t (:background ,night-owl-highlight-line
@@ -1016,14 +1017,14 @@ Also affects 'linum-mode' background."
                       :underline t))))
 
    `(company-scrollbar-bg
-     ((t (:background ,night-owl-gray))))
+     ((t (:background ,night-owl-suggest-bg))))
 
    `(company-scrollbar-fg
-     ((t (:background ,night-owl-comments))))
+     ((t (:background ,night-owl-highlight-alt))))
 
    `(company-tooltip-annotation
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-orange))))
+                      :foreground ,night-owl-blue))))
 
    `(company-template-field
      ((t (:background ,night-owl-highlight-line
@@ -1622,7 +1623,6 @@ Also affects 'linum-mode' background."
                       :weight bold
                       :underline t))))
    ;; }}}
-
 
    ;; git-gutter {{{
    `(git-gutter:added
