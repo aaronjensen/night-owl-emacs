@@ -2208,16 +2208,16 @@ Also affects 'linum-mode' background."
 
    ;; ivy {{{
    `(ivy-current-match
-     ((t (:background ,night-owl-highlight-line :foreground ,night-owl-foreground))))
+     ((t (:background ,night-owl-highlight-line :foreground ,night-owl-white))))
 
    `(ivy-not-current
      ((t (:foreground ,night-owl-foreground-slightly-muted))))
 
    `(ivy-minibuffer-match-highlight
-     ((t (:inherit bold :foreground ,night-owl-foreground))))
+     ((t (:inherit bold :foreground ,night-owl-white))))
 
    `(ivy-minibuffer-match-face-1
-     ((t (:inherit bold :foreground ,night-owl-foreground))))
+     ((t (:inherit bold :foreground ,night-owl-white))))
 
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,night-owl-violet
