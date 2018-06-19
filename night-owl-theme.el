@@ -469,6 +469,9 @@ Also affects 'linum-mode' background."
                          :background ,night-owl-background-highlight
                          :box nil))))
 
+   `(mode-line-highlight
+     ((t (:box nil))))
+
    `(powerline-active1
      ((t (:background ,night-owl-gray-d))))
 
