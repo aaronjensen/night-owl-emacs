@@ -206,6 +206,11 @@ Also affects 'linum-mode' background."
   "Adaptive colors - string"
   :type 'string
   :group 'night-owl)
+
+(defcustom night-owl-cursor "#80A4C2"
+  "Adaptive colors - cursor"
+  :type 'string
+  :group 'night-owl)
 ;; }}}
 
 ;; Variables {{{
@@ -370,7 +375,7 @@ Also affects 'linum-mode' background."
 
    `(cursor
      ((t (:foreground ,night-owl-foreground
-                      :background ,night-owl-gray))))
+                      :background ,night-owl-cursor))))
 
    `(mouse
      ((t (:foreground ,night-owl-background
