@@ -682,6 +682,15 @@ Also affects 'linum-mode' background."
                       :weight bold))))
    ;; }}}
 
+   ;; ace-window {{{
+   `(aw-background-face
+     ((t (:foreground ,night-owl-comments
+                      :background ,night-owl-highlight-line))))
+
+   `(aw-leading-char-face
+     ((t (:foreground ,night-owl-white))))
+   ;; }}}
+
    ;; auctex {{{
    `(font-latex-bold-face
      ((t (:inherit bold
@@ -1900,7 +1909,6 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-foreground
                       :foreground ,night-owl-background))))
    ;; }}}
-
 
    ;; helm {{{
    `(helm-apt-deinstalled
