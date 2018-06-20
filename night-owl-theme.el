@@ -1011,6 +1011,14 @@ Also affects 'linum-mode' background."
      ((t (:background ,night-owl-suggest-bg
                       :foreground ,night-owl-foreground))))
 
+   `(company-tooltip-annotation
+     ((t (:background ,night-owl-suggest-bg
+                      :foreground ,night-owl-green))))
+
+   `(company-tooltip-annotation-selection
+     ((t (:background ,night-owl-gray
+                      :foreground ,night-owl-green))))
+
    `(company-tooltip-selection
      ((t (:background ,night-owl-gray
                       :foreground ,night-owl-foreground))))
