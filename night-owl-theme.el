@@ -467,7 +467,8 @@ Also affects 'linum-mode' background."
                          :underline unspecified
                          :foreground ,night-owl-foreground
                          :background ,night-owl-background-highlight
-                         :box nil))))
+                         :box (:color ,night-owl-background-highlight
+                                      :line-width 1)))))
 
    `(mode-line-highlight
      ((t (:box nil))))
@@ -484,7 +485,8 @@ Also affects 'linum-mode' background."
                          :underline unspecified
                          :foreground ,night-owl-foreground-muted
                          :background ,night-owl-background
-                         :box nil))))
+                         :box (:color ,night-owl-gray
+                                      :line-width 1)))))
 
    `(powerline-inactive1
      ((t (:background ,night-owl-gray-d))))
