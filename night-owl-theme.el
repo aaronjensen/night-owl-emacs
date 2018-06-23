@@ -3204,7 +3204,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(org-table
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-foreground-slightly-muted))))
 
    `(org-tag
      ((t (:weight bold))))
