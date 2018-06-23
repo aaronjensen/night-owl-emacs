@@ -1,4 +1,4 @@
-# Night Owl for Emacs
+# Night Owl for Emacs [![MELPA](https://melpa.org/packages/night-owl-theme-badge.svg)](https://melpa.org/#/night-owl-theme)
 
 Based entirely on Sarah Drasner's amazing [Night Owl VSCode Theme][]. Built by
 modifying Kelvin Smith's [monokai-emacs][]. Many thanks to both Sarah Drasner
