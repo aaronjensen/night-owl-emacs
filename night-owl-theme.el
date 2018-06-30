@@ -237,6 +237,7 @@ Also affects 'linum-mode' background."
        (night-owl-button-bg-pressed "#4f3f86")
 
        (night-owl-suggest-bg "#2C3043")
+       (night-owl-match-bg "#1d374b")
 
        ;; Darker and lighter accented colors
        (night-owl-yellow-d      "#D8C15E")
@@ -3567,10 +3568,9 @@ Also affects 'linum-mode' background."
      ((t (:inherit highlight))))
 
    `(sp-show-pair-match-face
-     ((t (:foreground ,night-owl-orange
-                      :background ,night-owl-background
-                      :weight normal
-                      :inverse-video t))))
+     ((t (:foreground ,night-owl-foreground
+                      :background ,night-owl-match-bg
+                      :weight normal))))
 
    `(sp-show-pair-mismatch-face
      ((t (:foreground ,night-owl-magenta
@@ -3581,10 +3581,9 @@ Also affects 'linum-mode' background."
 
    ;; show-paren {{{
    `(show-paren-match
-     ((t (:foreground ,night-owl-orange
-                      :background ,night-owl-background
-                      :weight normal
-                      :inverse-video t))))
+     ((t (:foreground ,night-owl-foreground
+                      :background ,night-owl-match-bg
+                      :weight normal))))
 
    `(show-paren-mismatch
      ((t (:foreground ,night-owl-magenta
@@ -3595,10 +3594,9 @@ Also affects 'linum-mode' background."
 
    ;; mic-paren {{{
    `(paren-face-match
-     ((t (:foreground ,night-owl-orange
-                      :background ,night-owl-background
-                      :weight normal
-                      :inverse-video t))))
+     ((t (:foreground ,night-owl-foreground
+                      :background ,night-owl-match-bg
+                      :weight normal))))
 
    `(paren-face-mismatch
      ((t (:foreground ,night-owl-magenta
