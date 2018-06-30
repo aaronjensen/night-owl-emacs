@@ -11,7 +11,7 @@ and Kelvin Smith.
 
 ## Status
 
-Very initial development. Still contains some of the monokai colors. PRs gladly accepted.
+Initial development, but covers most of my use cases. PRs gladly accepted.
 
 [night owl vscode theme]: https://github.com/sdras/night-owl-vscode-theme
 [monokai-emacs]: https://github.com/oneKelvinSmith/monokai-emacs
