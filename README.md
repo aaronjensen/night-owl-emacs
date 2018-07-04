@@ -61,10 +61,11 @@ To style spacemacs cursors, try this:
                  do
                  (night-owl-set-evil-cursor state (symbol-value color) style))
       ;; not night-owl theme, restore default spacemacs cursors
-      (if (functionp (spacemacs/add-evil-cursor))
+      (if (functionp 'spacemacs/add-evil-cursor)
           (cl-loop for (state color shape) in spacemacs-evil-cursors
                    do (spacemacs/add-evil-cursor state color shape))))))
 
+(add-hook 'after-init-hook #'night-owl-update-evil-cursors)
 ;; For spacemacs (comment this out if not using spacemacs):
 (add-hook 'spacemacs-post-theme-change-hook #'night-owl-update-evil-cursors)
 
