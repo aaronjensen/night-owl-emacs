@@ -377,8 +377,8 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-comments))))
 
    `(match
-     ((t (:background ,night-owl-orange
-                      :foreground ,night-owl-background
+     ((t (:background ,night-owl-highlight-alt
+                      :foreground ,night-owl-white
                       :weight bold))))
 
    `(cursor
