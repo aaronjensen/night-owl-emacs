@@ -125,12 +125,17 @@ before-change-functions
   :type 'string
   :group 'night-owl)
 
+(defcustom night-owl-light-purple "#994cc3"
+  "Primary colors - purple"
+  :type 'string
+  :group 'night-owl)
+
 (defcustom night-owl-red "#EF5350"
   "Primary colors - red"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-magenta "#C792EA"
+(defcustom night-owl-light-purple "#C792EA"
   "Primary colors - magenta"
   :type 'string
   :group 'night-owl)
@@ -253,8 +258,6 @@ before-change-functions
        ;; Darker and lighter accented colors
        (night-owl-yellow-d      "#D8C15E")
        (night-owl-yellow-l      "#FFF2BA")
-       (night-owl-magenta-d     "#AB69D7")
-       (night-owl-magenta-l     "#E1C0F7")
        (night-owl-red-d         "#DC2E29")
        (night-owl-red-l         "#FF7B78")
        (night-owl-violet-d      "#643AAC")
@@ -275,6 +278,12 @@ before-change-functions
        (night-owl-light-magenta-l      "#e713b2")
        (night-owl-light-magenta-lc     "#ff80df")
 
+       ;; 994cc3
+       (night-owl-light-purple-hc    "#40075f")
+       (night-owl-light-purple-d     "#70239a")
+       (night-owl-light-purple-l     "#bc67e9")
+       (night-owl-light-purple-lc    "#d68aff")
+
        (night-owl-gray-d        "#204462")
        (night-owl-gray-l        "#8BA2B6")
        ;; Adaptive higher/lower contrast accented colors
@@ -285,8 +294,6 @@ before-change-functions
        (night-owl-yellow-lc     "#B49C34")
        (night-owl-light-green-hc "#004230")
        (night-owl-light-green-lc "#80FFDB")
-       (night-owl-magenta-hc    "#F9F2FF")
-       (night-owl-magenta-lc    "#8C46BC")
        (night-owl-red-hc        "#FFA5A3")
        (night-owl-red-lc        "#AD1612")
        (night-owl-violet-hc     "#C5AEEC")
@@ -309,7 +316,7 @@ before-change-functions
 
    ;; font lock for syntax highlighting {{{
    `(font-lock-builtin-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight normal))))
 
    `(font-lock-comment-delimiter-face
@@ -330,7 +337,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(font-lock-keyword-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight normal))))
 
    `(font-lock-negation-char-face
@@ -442,10 +449,10 @@ before-change-functions
 
    `(eval-sexp-fu-flash-error
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-magenta))))
+                      :background ,night-owl-light-purple))))
 
    `(trailing-whitespace
-     ((t (:background ,night-owl-magenta))))
+     ((t (:background ,night-owl-light-purple))))
 
    `(vertical-border
      ((t (:foreground ,night-owl-gray))))
@@ -551,7 +558,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(dired-flagged
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(dired-header
      ((t (:foreground ,night-owl-blue
@@ -671,7 +678,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-foreground))))
 
    `(grep-error-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold
                       :underline t))))
 
@@ -691,7 +698,7 @@ before-change-functions
 
    `(isearch-fail
      ((t (:inherit isearch
-                   :foreground ,night-owl-magenta
+                   :foreground ,night-owl-light-purple
                    :background ,night-owl-light-background
                    :bold t))))
    ;; }}}
@@ -854,7 +861,7 @@ before-change-functions
                       :background ,night-owl-light-magenta))))
 
    `(ahs-warning-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
    ;; }}}
 
@@ -929,7 +936,7 @@ before-change-functions
 
    `(cfw:face-holiday
      ((t (:background nil
-                      :foreground ,night-owl-magenta
+                      :foreground ,night-owl-light-purple
                       :weight bold))))
 
    `(cfw:face-periods
@@ -944,8 +951,8 @@ before-change-functions
                       :background ,night-owl-cyan-lc))))
 
    `(cfw:face-sunday
-     ((t (:foreground ,night-owl-magenta-hc
-                      :background ,night-owl-magenta-lc
+     ((t (:foreground ,night-owl-light-purple-hc
+                      :background ,night-owl-light-purple-lc
                       :weight bold))))
 
    `(cfw:face-title
@@ -1004,7 +1011,7 @@ before-change-functions
 
    `(cider-test-failure-face
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-magenta))))
+                      :background ,night-owl-light-purple))))
 
    `(cider-test-success-face
      ((t (:foreground ,night-owl-light-background
@@ -1016,7 +1023,7 @@ before-change-functions
 
    ;; clojure-test {{{
    `(clojure-test-failure-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold
                       :underline t))))
 
@@ -1222,7 +1229,7 @@ before-change-functions
 
    `(custom-group-tag-1
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-magenta
+                   :foreground ,night-owl-light-purple
                    :height ,night-owl-height-plus-3))))
 
    `(custom-state
@@ -1239,7 +1246,7 @@ before-change-functions
                       :background ,night-owl-light-background))))
 
    `(diff-removed
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background))))
 
    `(diff-header
@@ -1269,8 +1276,8 @@ before-change-functions
                       :foreground ,night-owl-blue-hc))))
 
    `(diff-hl-delete
-     ((t (:background ,night-owl-magenta-lc
-                      :foreground ,night-owl-magenta-hc))))
+     ((t (:background ,night-owl-light-purple-lc
+                      :foreground ,night-owl-light-purple-hc))))
 
    `(diff-hl-insert
      ((t (:background ,night-owl-light-green-lc
@@ -1385,7 +1392,7 @@ before-change-functions
    `(ein:cell-input-prompt
      ((t (:foreground ,night-owl-light-magenta))))
    `(ein:cell-output-prompt
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    `(ein:notification-tab-normal
      ((t (:foreground ,night-owl-blue))))
    `(ein:notification-tab-selected
@@ -1409,10 +1416,10 @@ before-change-functions
    ;; erm-syn {{{
    `(erm-syn-errline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-magenta)
+       (:underline (:style wave :color ,night-owl-light-purple)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-magenta-hc
-                      :background ,night-owl-magenta-lc
+      (t (:foreground ,night-owl-light-purple-hc
+                      :background ,night-owl-light-purple-lc
                       :weight bold
                       :underline t))))
 
@@ -1475,7 +1482,7 @@ before-change-functions
                       :weight bold))))
 
    `(erc-my-nick-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
 
    `(erc-nick-msg-face
@@ -1506,7 +1513,7 @@ before-change-functions
                       :inherit bold))))
 
    `(eshell-ls-archive
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
 
    `(eshell-ls-backup
@@ -1544,7 +1551,7 @@ before-change-functions
    ;; evil-ex-substitute {{{
    `(evil-ex-substitute-matches
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-magenta-l
+                      :foreground ,night-owl-light-purple-d
                       :inherit italic))))
    `(evil-ex-substitute-replacement
      ((t (:background ,night-owl-highlight-line
@@ -1587,12 +1594,12 @@ before-change-functions
    ;; flymake {{{
    `(flymake-errline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-magenta)
+       (:underline (:style wave :color ,night-owl-light-purple)
                    :inherit unspecified
                    :foreground unspecified
                    :background unspecified))
-      (t (:foreground ,night-owl-magenta-hc
-                      :background ,night-owl-magenta-lc
+      (t (:foreground ,night-owl-light-purple-hc
+                      :background ,night-owl-light-purple-lc
                       :weight bold
                       :underline t))))
 
@@ -1669,9 +1676,9 @@ before-change-functions
 
    `(flyspell-incorrect
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-magenta)
+       (:underline (:style wave :color ,night-owl-light-purple)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-magenta
+      (t (:foreground ,night-owl-light-purple
                       :weight bold
                       :underline t))))
    ;; }}}
@@ -1683,7 +1690,7 @@ before-change-functions
                       :inherit bold))))
 
    `(git-gutter:deleted
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-light-purple
                       :foreground ,night-owl-light-background
                       :inherit bold))))
 
@@ -1704,7 +1711,7 @@ before-change-functions
                       :inherit bold))))
 
    `(git-gutter-fr:deleted
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :inherit bold))))
 
    `(git-gutter-fr:modified
@@ -1719,7 +1726,7 @@ before-change-functions
                       :inherit bold))))
 
    `(git-gutter+-deleted
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-light-purple
                       :foreground ,night-owl-light-background
                       :inherit bold))))
 
@@ -1738,7 +1745,7 @@ before-change-functions
                       :weight bold))))
 
    `(git-gutter-fr+-deleted
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
 
    `(git-gutter-fr+-modified
@@ -1902,13 +1909,13 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-cite-7
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(gnus-cite-8
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(gnus-cite-9
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(gnus-cite-10
      ((t (:foreground ,night-owl-yellow))))
@@ -1983,7 +1990,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-comments))))
 
    `(helm-buffer-saved-out
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background
                       :inverse-video t))))
 
@@ -2031,7 +2038,7 @@ before-change-functions
      ((t (:inherit helm-match))))
 
    `(helm-grep-running
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(helm-header
      ((t (:inherit header-line))))
@@ -2089,7 +2096,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-time-zone-home
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(helm-visible-mark
      ((t (:background ,night-owl-light-background
@@ -2115,10 +2122,10 @@ before-change-functions
      ((t :foreground ,night-owl-light-magenta-d)))
 
    `(helm-ls-git-deleted-not-staged-face
-     ((t :foreground ,night-owl-magenta)))
+     ((t :foreground ,night-owl-light-purple)))
 
    `(helm-ls-git-deleted-and-staged-face
-     ((t :foreground ,night-owl-magenta-l)))
+     ((t :foreground ,night-owl-light-purple-d)))
 
    `(helm-ls-git-conflict-face
      ((t :foreground ,night-owl-yellow)))
@@ -2155,7 +2162,7 @@ before-change-functions
                       :weight bold))))
 
    `(hi-red-b
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
 
    `(hi-black-hb
@@ -2169,7 +2176,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-blue))))
 
    `(highlight-changes-delete
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :underline t))))
    ;; }}}
 
@@ -2208,11 +2215,11 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(ido-incomplete-regexp
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold ))))
 
    `(ido-indicator
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-light-purple
                       :foreground ,night-owl-light-background
                       :width condensed))))
 
@@ -2310,7 +2317,7 @@ before-change-functions
    ;; jabber {{{
    `(jabber-activity-face
      ((t (:weight bold
-                  :foreground ,night-owl-magenta))))
+                  :foreground ,night-owl-light-purple))))
 
    `(jabber-activity-personal-face
      ((t (:weight bold
@@ -2322,7 +2329,7 @@ before-change-functions
 
    `(jabber-chat-prompt-foreign
      ((t (:weight bold
-                  :foreground ,night-owl-magenta))))
+                  :foreground ,night-owl-light-purple))))
 
    `(jabber-chat-prompt-local
      ((t (:weight bold
@@ -2352,7 +2359,7 @@ before-change-functions
 
    `(jabber-roster-user-dnd
      ((t (:slant italic
-                 :foreground ,night-owl-magenta))))
+                 :foreground ,night-owl-light-purple))))
 
    `(jabber-roster-user-error
      ((t (:weight light
@@ -2453,7 +2460,7 @@ before-change-functions
 
    ;; lusty-explorer {{{
    `(lusty-directory-face
-     ((t (:inherit dinight-owl-magenta-directory))))
+     ((t (:inherit dinight-owl-light-purple-directory))))
 
    `(lusty-file-face
      ((t nil)))
@@ -2513,8 +2520,8 @@ before-change-functions
      ((t (:foreground ,night-owl-light-comments))))
 
    `(magit-log-head-label-bisect-bad
-     ((t (:background ,night-owl-magenta-hc
-                      :foreground ,night-owl-magenta-lc
+     ((t (:background ,night-owl-light-purple-hc
+                      :foreground ,night-owl-light-purple-lc
                       :box 1))))
 
    `(magit-log-head-label-bisect-good
@@ -2532,8 +2539,8 @@ before-change-functions
                       :box 1))))
 
    `(magit-log-head-label-patches
-     ((t (:background ,night-owl-magenta-lc
-                      :foreground ,night-owl-magenta-hc
+     ((t (:background ,night-owl-light-purple-lc
+                      :foreground ,night-owl-light-purple-hc
                       :box 1))))
 
    `(magit-log-head-label-remote
@@ -2571,7 +2578,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(monky-diff-del
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    ;; }}}
 
    ;; markdown-mode {{{
@@ -2651,7 +2658,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-header-to
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(mew-face-header-key
      ((t (:foreground ,night-owl-light-magenta))))
@@ -2667,13 +2674,13 @@ before-change-functions
                       :weight bold))))
 
    `(mew-face-header-warning
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(mew-face-header-xmew
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-header-xmew-bad
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(mew-face-body-url
      ((t (:foreground ,night-owl-light-blue))))
@@ -2695,7 +2702,7 @@ before-change-functions
      ((t (:foreground ,night-owl-yellow))))
 
    `(mew-face-body-cite5
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(mew-face-mark-review
      ((t (:foreground ,night-owl-blue))))
@@ -2704,7 +2711,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-mark-delete
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(mew-face-mark-unlink
      ((t (:foreground ,night-owl-yellow))))
@@ -2713,7 +2720,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-mark-unread
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(mew-face-eof-message
      ((t (:foreground ,night-owl-light-magenta))))
@@ -2739,7 +2746,7 @@ before-change-functions
      ((t (:foreground ,night-owl-yellow))))
 
    `(mingus-stopped-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    ;; }}}
 
    ;; mmm {{{
@@ -2756,7 +2763,7 @@ before-change-functions
      ((t (:background ,night-owl-blue-d))))
 
    `(mmm-output-submode-face
-     ((t (:background ,night-owl-magenta-d))))
+     ((t (:background ,night-owl-light-purple-l))))
 
    `(mmm-special-submode-face
      ((t (:background ,night-owl-light-magenta-l))))
@@ -2785,7 +2792,7 @@ before-change-functions
      ((t (:background ,night-owl-highlight-line))))
 
    `(moccur-edit-reject-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(moccur-face
      ((t (:background ,night-owl-highlight-line
@@ -2848,7 +2855,7 @@ before-change-functions
                       :weight normal))))
 
    `(mu4e-warning-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :slant normal
                       :weight bold))))
 
@@ -2954,13 +2961,13 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(nav-face-hdir
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(nav-face-file
      ((t (:foreground ,night-owl-light-foreground))))
 
    `(nav-face-hfile
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    ;; }}}
 
    ;; nav-flash {{{
@@ -2999,7 +3006,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-foreground))))
 
    `(neo-vc-user-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :slant italic))))
 
    `(neo-vc-up-to-date-face
@@ -3012,10 +3019,10 @@ before-change-functions
      ((t (:underline t))))
 
    `(neo-vc-needs-merge-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(neo-vc-unlocked-changes-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-comments))))
 
    `(neo-vc-added-face
@@ -3025,10 +3032,10 @@ before-change-functions
      ((t (:strike-through t))))
 
    `(neo-vc-conflict-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(neo-vc-missing-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(neo-vc-ignored-face
      ((t (:foreground ,night-owl-light-comments))))
@@ -3060,7 +3067,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(markup-secondary-text-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    ;; }}}
 
    ;; org-mode {{{
@@ -3231,7 +3238,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-comments))))
 
    `(org-todo
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
 
    `(org-upcoming-deadline
@@ -3267,11 +3274,11 @@ before-change-functions
      ((t (:background ,night-owl-yellow-lc))))
 
    `(org-habit-overdue-face
-     ((t (:background ,night-owl-magenta
-                      :foreground ,night-owl-magenta-lc))))
+     ((t (:background ,night-owl-light-purple
+                      :foreground ,night-owl-light-purple-lc))))
 
    `(org-habit-overdue-future-face
-     ((t (:background ,night-owl-magenta-lc))))
+     ((t (:background ,night-owl-light-purple-lc))))
 
    ;; latest additions
    `(org-agenda-dimmed-todo-face
@@ -3297,7 +3304,7 @@ before-change-functions
                       :weight bold))))
 
    `(org-date-selected
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :inverse-video t))))
 
    `(org-document-info
@@ -3412,7 +3419,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-blue))))
 
    `(rainbow-delimiters-depth-6-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(rainbow-delimiters-depth-7-face
      ((t (:foreground ,night-owl-violet))))
@@ -3430,7 +3437,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-blue))))
 
    `(rainbow-delimiters-depth-12-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(rainbow-delimiters-unmatched-face
      ((t (:foreground ,night-owl-light-foreground
@@ -3455,7 +3462,7 @@ before-change-functions
      ((t (:inherit secondary-selection))))
 
    `(realgud-bp-line-enabled-face
-     ((t (:foreground ,night-owl-magenta-d))))
+     ((t (:foreground ,night-owl-light-purple-l))))
 
    `(realgud-bp-line-disabled-face
      ((t (:inherit secondary-selection))))
@@ -3524,7 +3531,7 @@ before-change-functions
                       :foreground ,night-owl-light-background))))
 
    `(rst-level-6-face
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-light-purple
                       :foreground ,night-owl-light-background))))
    ;; }}}
 
@@ -3536,16 +3543,16 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(rpm-spec-ghost-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(rpm-spec-macro-face
      ((t (:foreground ,night-owl-yellow))))
 
    `(rpm-spec-obsolete-tag-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(rpm-spec-package-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(rpm-spec-section-face
      ((t (:foreground ,night-owl-yellow))))
@@ -3554,7 +3561,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(rpm-spec-var-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    ;; }}}
 
    ;; sh-mode {{{
@@ -3590,7 +3597,7 @@ before-change-functions
                       :weight normal))))
 
    `(sp-show-pair-mismatch-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background
                       :weight normal
                       :inverse-video t))))
@@ -3603,7 +3610,7 @@ before-change-functions
                       :weight normal))))
 
    `(show-paren-mismatch
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background
                       :weight normal
                       :inverse-video t))))
@@ -3616,13 +3623,13 @@ before-change-functions
                       :weight normal))))
 
    `(paren-face-mismatch
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background
                       :weight normal
                       :inverse-video t))))
 
    `(paren-face-no-match
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background
                       :weight normal
                       :inverse-video t))))
@@ -3630,7 +3637,7 @@ before-change-functions
 
    ;; SLIME {{{
    `(slime-repl-inputed-output-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
    ;; }}}
 
    ;; speedbar {{{
@@ -3694,10 +3701,10 @@ before-change-functions
 
    ;; sunrise commander marked {{{
    `(sr-marked-dir-face
-     ((t (:inherit dinight-owl-magenta-marked))))
+     ((t (:inherit dinight-owl-light-purple-marked))))
 
    `(sr-marked-file-face
-     ((t (:inherit dinight-owl-magenta-marked))))
+     ((t (:inherit dinight-owl-light-purple-marked))))
 
    `(sr-alt-marked-dir-face
      ((t (:background ,night-owl-red
@@ -3712,21 +3719,21 @@ before-change-functions
 
    ;; sunrise commander fstat {{{
    `(sr-directory-face
-     ((t (:inherit dinight-owl-magenta-directory
+     ((t (:inherit dinight-owl-light-purple-directory
                    :weight normal))))
 
    `(sr-symlink-directory-face
-     ((t (:inherit dinight-owl-magenta-directory
+     ((t (:inherit dinight-owl-light-purple-directory
                    :slant italic
                    :weight normal))))
 
    `(sr-symlink-face
-     ((t (:inherit dinight-owl-magenta-symlink
+     ((t (:inherit dinight-owl-light-purple-symlink
                    :slant italic
                    :weight normal))))
 
    `(sr-broken-link-face
-     ((t (:inherit dinight-owl-magenta-warning
+     ((t (:inherit dinight-owl-light-purple-warning
                    :slant italic
                    :weight normal))))
    ;; }}}
@@ -3753,7 +3760,7 @@ before-change-functions
 
    ;; sunrise commander misc {{{
    `(sr-clex-hotchar-face
-     ((t (:background ,night-owl-magenta
+     ((t (:background ,night-owl-light-purple
                       :foreground ,night-owl-light-background
                       :weight bold))))
    ;; }}}
@@ -3804,8 +3811,8 @@ before-change-functions
                       :background ,night-owl-highlight-line))))
 
    `(term-color-red
-     ((t (:foreground ,night-owl-magenta
-                      :background ,night-owl-magenta-d))))
+     ((t (:foreground ,night-owl-light-purple
+                      :background ,night-owl-light-purple-d))))
 
    `(term-color-green
      ((t (:foreground ,night-owl-light-magenta
@@ -3863,7 +3870,7 @@ before-change-functions
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-renamed-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-ignored-face
@@ -3871,7 +3878,7 @@ before-change-functions
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-untracked-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-added-face
@@ -3976,7 +3983,7 @@ before-change-functions
    `(w3m-lnum
      ((t (:underline nil
                      :bold nil
-                     :foreground ,night-owl-magenta))))
+                     :foreground ,night-owl-light-purple))))
 
    `(w3m-session-select
      ((t (:foreground ,night-owl-light-foreground))))
@@ -4009,7 +4016,7 @@ before-change-functions
 
    `(w3m-tab-selected-retrieving
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-magenta))))
+                      :foreground ,night-owl-light-purple))))
 
    `(w3m-tab-unselected-retrieving
      ((t (:background ,night-owl-highlight-line
@@ -4022,7 +4029,7 @@ before-change-functions
 
    ;; web-mode {{{
    `(web-mode-builtin-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(web-mode-comment-face
      ((t (:foreground ,night-owl-light-comments))))
@@ -4068,7 +4075,7 @@ before-change-functions
      ((t (:foreground ,night-owl-cyan))))
 
    `(web-mode-keyword-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(web-mode-preprocessor-face
      ((t (:foreground ,night-owl-yellow
@@ -4166,7 +4173,7 @@ before-change-functions
      ((t (:foreground ,night-owl-violet))))
 
    `(web-mode-whitespace-face
-     ((t (:background ,night-owl-magenta))))
+     ((t (:background ,night-owl-light-purple))))
    ;; }}}
 
    ;; whitespace-mode {{{
@@ -4183,7 +4190,7 @@ before-change-functions
 
    `(whitespace-tab
      ((t (:background unspecified
-                      :foreground ,night-owl-magenta
+                      :foreground ,night-owl-light-purple
                       :inverse-video unspecified
                       :weight bold))))
 
@@ -4203,7 +4210,7 @@ before-change-functions
                       :inverse-video unspecified))))
 
    `(whitespace-space-before-tab
-     ((t (:background ,night-owl-magenta-lc
+     ((t (:background ,night-owl-light-purple-lc
                       :foreground unspecified
                       :inverse-video unspecified))))
 
@@ -4215,7 +4222,7 @@ before-change-functions
 
    `(whitespace-empty
      ((t (:background unspecified
-                      :foreground ,night-owl-magenta-lc
+                      :foreground ,night-owl-light-purple-lc
                       :inverse-video t))))
 
    `(whitespace-space-after-tab
@@ -4227,10 +4234,10 @@ before-change-functions
 
    ;; wanderlust {{{
    `(wl-highlight-folder-few-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(wl-highlight-folder-many-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(wl-highlight-folder-path-face
      ((t (:foreground ,night-owl-light-blue))))
@@ -4245,10 +4252,10 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-citation-header
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(wl-highlight-message-cited-text-1
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(wl-highlight-message-cited-text-2
      ((t (:foreground ,night-owl-light-magenta))))
@@ -4263,7 +4270,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-headers-face
-     ((t (:foreground ,night-owl-magenta))))
+     ((t (:foreground ,night-owl-light-purple))))
 
    `(wl-highlight-message-important-header-contents
      ((t (:foreground ,night-owl-light-magenta))))
@@ -4280,7 +4287,7 @@ before-change-functions
    `(wl-highlight-message-unimportant-header-contents
      ((t (:foreground ,night-owl-light-foreground))))
 
-   `(wl-highlight-summary-answenight-owl-magenta-face
+   `(wl-highlight-summary-answenight-owl-light-purple-face
      ((t (:foreground ,night-owl-blue))))
 
    `(wl-highlight-summary-disposed-face
@@ -4350,7 +4357,7 @@ before-change-functions
      ((t (:foreground ,night-owl-yellow-hc))))
 
    `(which-key-group-description-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-light-purple
                       :weight bold))))
    ;; }}}
 
@@ -4379,7 +4386,7 @@ before-change-functions
   (custom-theme-set-variables
    'night-owl
    `(ansi-color-names-vector [,night-owl-light-background ,night-owl-red ,night-owl-light-blue ,night-owl-yellow
-                                                    ,night-owl-blue ,night-owl-magenta ,night-owl-cyan ,night-owl-light-foreground])
+                                                    ,night-owl-blue ,night-owl-light-purple ,night-owl-cyan ,night-owl-light-foreground])
 
    ;; compilation
    `(compilation-message-face 'default)
@@ -4401,7 +4408,7 @@ before-change-functions
        (,night-owl-blue-lc . 50)
        (,night-owl-yellow-lc . 60)
        (,night-owl-light-magenta-lc . 70)
-       (,night-owl-magenta-lc . 85)
+       (,night-owl-light-purple-lc . 85)
        (,night-owl-highlight-line . 100)))
 
    ;; pos-tip
@@ -4410,7 +4417,7 @@ before-change-functions
 
    ;; vc
    `(vc-annotate-color-map
-     '((20 . ,night-owl-magenta)
+     '((20 . ,night-owl-light-purple)
        (40 . "#CF4F1F")
        (60 . "#C26C0F")
        (80 . ,night-owl-yellow)
@@ -4438,7 +4445,7 @@ before-change-functions
                    ,night-owl-light-magenta-l ,night-owl-light-magenta
                    ,night-owl-yellow-d ,night-owl-yellow
                    ,night-owl-blue-d ,night-owl-blue
-                   ,night-owl-magenta-d ,night-owl-magenta
+                   ,night-owl-light-purple-l ,night-owl-light-purple
                    ,night-owl-cyan-d ,night-owl-cyan
                    ,night-owl-light-foreground ,night-owl-emphasis))))
 ;; }}}
