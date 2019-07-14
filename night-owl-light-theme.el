@@ -46,7 +46,7 @@
 (unless (>= emacs-major-version 24)
   (error "The night-owl theme requires Emacs 24 or later!"))
 
-(deftheme night-owl "The Night Owl Light colour theme")
+(deftheme night-owl-light "The Night Owl Light colour theme")
 
 ;; Customization {{{
 (defgroup night-owl nil
@@ -100,18 +100,28 @@ before-change-functions
 ;; Primary colors
 
 ;; Converted
-(defcustom night-owl-white "#F0F0F0"
+(defcustom night-owl-light-black "#3E3C54"
+  "Primary colors - black"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-light-white "#F0F0F0"
   "Primary colors - white"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-green "#22da6e"
+(defcustom night-owl-light-blue "#4876D6"
+  "Primary colors - blue"
+  :type 'string
+  :group 'night-owl)
+
+(defcustom night-owl-light-green "#08916a"
   "Primary colors - green"
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-orange "#F78C6C"
-  "Primary colors - orange"
+(defcustom night-owl-light-magenta "#AA0982"
+  "Primary colors - magenta"
   :type 'string
   :group 'night-owl)
 
@@ -180,7 +190,7 @@ before-change-functions
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-comments "#637777"
+(defcustom night-owl-light-comments "#989fb1"
   "Adaptive colors - comments"
   :type 'string
   :group 'night-owl)
@@ -190,7 +200,7 @@ before-change-functions
   :type 'string
   :group 'night-owl)
 
-(defcustom night-owl-highlight-alt "#3C5B74"
+(defcustom night-owl-light-highlight-alt "#d0e9fa"
   "Adaptive colors - highlight"
   :type 'string
   :group 'night-owl)
@@ -243,8 +253,6 @@ before-change-functions
        ;; Darker and lighter accented colors
        (night-owl-yellow-d      "#D8C15E")
        (night-owl-yellow-l      "#FFF2BA")
-       (night-owl-green-d       "#89BA3F")
-       (night-owl-green-l       "#CBEF94")
        (night-owl-magenta-d     "#AB69D7")
        (night-owl-magenta-l     "#E1C0F7")
        (night-owl-red-d         "#DC2E29")
@@ -255,8 +263,18 @@ before-change-functions
        (night-owl-blue-l        "#ADC7FF")
        (night-owl-cyan-d        "#AFEFE2")
        (night-owl-cyan-l        "#55C1AC")
-       (night-owl-orange-d      "#D76443")
-       (night-owl-orange-l      "#FFAD95")
+
+       ; AA0982
+       (night-owl-light-blue-hc  "#0C3388")
+       (night-owl-light-blue-d  "#1A47A8")
+       (night-owl-light-blue-l  "#7DA4F7")
+       (night-owl-light-blue-lc  "#75A1FF")
+
+       (night-owl-light-magenta-hc     "#52003d")
+       (night-owl-light-magenta-d      "#800060")
+       (night-owl-light-magenta-l      "#e713b2")
+       (night-owl-light-magenta-lc     "#ff80df")
+
        (night-owl-gray-d        "#204462")
        (night-owl-gray-l        "#8BA2B6")
        ;; Adaptive higher/lower contrast accented colors
@@ -265,8 +283,8 @@ before-change-functions
        ;; High contrast colors
        (night-owl-yellow-hc     "#FFF9DC")
        (night-owl-yellow-lc     "#B49C34")
-       (night-owl-green-hc      "#E1F7C0")
-       (night-owl-green-lc      "#6A9A21")
+       (night-owl-light-green-hc "#004230")
+       (night-owl-light-green-lc "#80FFDB")
        (night-owl-magenta-hc    "#F9F2FF")
        (night-owl-magenta-lc    "#8C46BC")
        (night-owl-red-hc        "#FFA5A3")
@@ -277,8 +295,6 @@ before-change-functions
        (night-owl-blue-lc       "#3172FC")
        (night-owl-cyan-hc       "#E3FCF7")
        (night-owl-cyan-lc       "#34A18C")
-       (night-owl-orange-hc     "#FFCDBE")
-       (night-owl-orange-lc     "#B44322")
 
        ;; Distinct fringe
        (night-owl-fringe-bg (if night-owl-distinct-fringe-background
@@ -297,17 +313,17 @@ before-change-functions
                       :weight normal))))
 
    `(font-lock-comment-delimiter-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(font-lock-comment-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(font-lock-constant-face
      ((t (:foreground ,night-owl-violet))))
 
    `(font-lock-doc-face
      ((t (:foreground ,(if night-owl-doc-face-as-comment
-                           night-owl-comments
+                           night-owl-light-comments
                          night-owl-string)))))
 
    `(font-lock-function-name-face
@@ -340,10 +356,10 @@ before-change-functions
                       :italic nil))))
 
    `(font-lock-variable-name-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(font-lock-warning-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight bold
                       :italic t
                       :underline t))))
@@ -364,7 +380,7 @@ before-change-functions
 
    `(lazy-highlight
      ((t (:inherit highlight
-                   :background ,night-owl-highlight-alt))))
+                   :background ,night-owl-light-highlight-alt))))
 
    `(region
      ((t (:inherit highlight
@@ -372,14 +388,14 @@ before-change-functions
 
    `(secondary-selection
      ((t (:inherit region
-                   :background ,night-owl-highlight-alt))))
+                   :background ,night-owl-light-highlight-alt))))
 
    `(shadow
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(match
-     ((t (:background ,night-owl-highlight-alt
-                      :foreground ,night-owl-white
+     ((t (:background ,night-owl-light-highlight-alt
+                      :foreground ,night-owl-foreground
                       :weight bold))))
 
    `(cursor
@@ -392,10 +408,10 @@ before-change-functions
                       :inverse-video t))))
 
    `(escape-glyph
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(escape-glyph-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(fringe
      ((t (:foreground ,night-owl-light-foreground
@@ -412,7 +428,7 @@ before-change-functions
                       :weight normal))))
 
    `(success
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(warning
      ((t (:foreground ,night-owl-yellow))))
@@ -422,7 +438,7 @@ before-change-functions
 
    `(eval-sexp-fu-flash
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-orange))))
+                      :background ,night-owl-light-magenta))))
 
    `(eval-sexp-fu-flash-error
      ((t (:foreground ,night-owl-light-background
@@ -546,7 +562,7 @@ before-change-functions
      ((t (:inherit shadow))))
 
    `(dired-mark
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight bold))))
 
    `(dired-marked
@@ -562,7 +578,7 @@ before-change-functions
                       :slant italic))))
 
    `(dired-warning
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :underline t))))
    ;; }}}
 
@@ -572,7 +588,7 @@ before-change-functions
                       :foreground ,night-owl-blue))))
 
    `(dropdown-list-selection-face
-     ((t (:background ,night-owl-orange
+     ((t (:background ,night-owl-light-magenta
                       :foreground ,night-owl-light-background))))
    ;; }}}
 
@@ -591,11 +607,11 @@ before-change-functions
 
    `(ecb-history-dead-buffer-face
      ((t (:inherit ecb-history-general-face
-                   :foreground ,night-owl-comments))))
+                   :foreground ,night-owl-light-comments))))
 
    `(ecb-directory-not-accessible-face
      ((t (:inherit ecb-directories-general-face
-                   :foreground ,night-owl-comments))))
+                   :foreground ,night-owl-light-comments))))
 
    `(ecb-bucket-node-face
      ((t (:inherit ecb-default-general-face
@@ -607,7 +623,7 @@ before-change-functions
 
    `(ecb-analyse-bucket-element-face
      ((t (:inherit ecb-analyse-general-face
-                   :foreground ,night-owl-orange))))
+                   :foreground ,night-owl-light-magenta))))
 
    `(ecb-directories-general-face
      ((t (:inherit ecb-default-general-face
@@ -618,7 +634,7 @@ before-change-functions
                    :foreground ,night-owl-cyan))))
 
    `(ecb-mode-line-prefix-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(ecb-tree-guide-line-face
      ((t (:inherit ecb-default-general-face
@@ -644,7 +660,7 @@ before-change-functions
                       :weight bold))))
 
    `(ee-omitted
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(ee-shadow
      ((t (:inherit shadow))))
@@ -660,10 +676,10 @@ before-change-functions
                       :underline t))))
 
    `(grep-hit-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(grep-match-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight bold))))
    ;; }}}
 
@@ -682,7 +698,7 @@ before-change-functions
 
    ;; ace-jump-mode {{{
    `(ace-jump-face-background
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :background ,night-owl-light-background
                       :inverse-video nil))))
 
@@ -695,11 +711,11 @@ before-change-functions
 
    ;; ace-window {{{
    `(aw-background-face
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :background ,night-owl-highlight-line))))
 
    `(aw-leading-char-face
-     ((t (:foreground ,night-owl-white))))
+     ((t (:foreground ,night-owl-light-black))))
    ;; }}}
 
    ;; auctex {{{
@@ -775,7 +791,7 @@ before-change-functions
 
    `(font-latex-warning-face
      ((t (:inherit bold
-                   :foreground ,night-owl-green))))
+                   :foreground ,night-owl-light-blue))))
    ;; }}}
 
    ;; auto-complete {{{
@@ -831,11 +847,11 @@ before-change-functions
 
    `(ahs-plugin-defalt-face
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-light-blue))))
 
    `(ahs-plugin-whole-buffer-face
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-orange))))
+                      :background ,night-owl-light-magenta))))
 
    `(ahs-warning-face
      ((t (:foreground ,night-owl-magenta
@@ -844,7 +860,7 @@ before-change-functions
 
    ;; android mode {{{
    `(android-mode-debug-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(android-mode-error-face
      ((t (:foreground ,night-owl-red
@@ -854,7 +870,7 @@ before-change-functions
      ((t (:foreground ,night-owl-light-foreground))))
 
    `(android-mode-verbose-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(android-mode-warning-face
      ((t (:foreground ,night-owl-yellow))))
@@ -876,11 +892,11 @@ before-change-functions
                       :foreground ,night-owl-light-background))))
 
    `(bm-fringe-persistent-face
-     ((t (:background ,night-owl-orange-lc
+     ((t (:background ,night-owl-light-magenta-lc
                       :foreground ,night-owl-light-background))))
 
    `(bm-persistent-face
-     ((t (:background ,night-owl-orange-lc
+     ((t (:background ,night-owl-light-magenta-lc
                       :foreground ,night-owl-light-background))))
    ;; }}}
 
@@ -893,7 +909,7 @@ before-change-functions
                    :foreground ,night-owl-yellow))))
 
    `(cfw:face-default-content
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(cfw:face-default-day
      ((t (:inherit cfw:face-day-title
@@ -901,10 +917,10 @@ before-change-functions
 
    `(cfw:face-disable
      ((t (:inherit cfw:face-day-title
-                   :foreground ,night-owl-comments))))
+                   :foreground ,night-owl-light-comments))))
 
    `(cfw:face-grid
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(cfw:face-header
      ((t (:foreground ,night-owl-blue-hc
@@ -992,7 +1008,7 @@ before-change-functions
 
    `(cider-test-success-face
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-light-blue))))
 
    `(cider-traced-face
      ((t :box (:color ,night-owl-blue :line-width -1 :style nil))))
@@ -1010,7 +1026,7 @@ before-change-functions
                       :underline t))))
 
    `(clojure-test-success-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight bold
                       :underline t))))
    ;; }}}
@@ -1022,11 +1038,11 @@ before-change-functions
 
    `(company-tooltip-annotation
      ((t (:background ,night-owl-suggest-bg
-                      :foreground ,night-owl-green))))
+                      :foreground ,night-owl-light-blue))))
 
    `(company-tooltip-annotation-selection
      ((t (:background ,night-owl-gray
-                      :foreground ,night-owl-green))))
+                      :foreground ,night-owl-light-blue))))
 
    `(company-tooltip-selection
      ((t (:background ,night-owl-gray
@@ -1037,11 +1053,11 @@ before-change-functions
                       :foreground ,night-owl-light-background))))
 
    `(company-tooltip-common
-     ((t (:foreground ,night-owl-white
+     ((t (:foreground ,night-owl-light-black
                       :bold t))))
 
    `(company-tooltip-common-selection
-     ((t (:foreground ,night-owl-white
+     ((t (:foreground ,night-owl-light-black
                       :bold t))))
 
    `(company-preview
@@ -1056,7 +1072,7 @@ before-change-functions
      ((t (:background ,night-owl-suggest-bg))))
 
    `(company-scrollbar-fg
-     ((t (:background ,night-owl-highlight-alt))))
+     ((t (:background ,night-owl-light-highlight-alt))))
 
    `(company-tooltip-annotation
      ((t (:background ,night-owl-highlight-line
@@ -1078,7 +1094,7 @@ before-change-functions
                    :underline nil))))
 
    `(compilation-enter-directory-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :underline nil))))
 
    `(compilation-error
@@ -1094,7 +1110,7 @@ before-change-functions
                       :underline nil))))
 
    `(compilation-info
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :underline nil
                       :bold nil))))
 
@@ -1103,15 +1119,15 @@ before-change-functions
                       :underline nil))))
 
    `(compilation-leave-directory-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :underline nil))))
 
    `(compilation-line-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :underline nil))))
 
    `(compilation-line-number
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :underline nil))))
 
    `(compilation-warning
@@ -1125,7 +1141,7 @@ before-change-functions
 
    `(compilation-mode-line-exit
      ((t (:inherit compilation-info
-                   :foreground ,night-owl-orange
+                   :foreground ,night-owl-light-magenta
                    :weight bold))))
 
    `(compilation-mode-line-fail
@@ -1134,13 +1150,13 @@ before-change-functions
                    :weight bold))))
 
    `(compilation-mode-line-run
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight bold))))
    ;; }}}
 
    ;; CSCOPE {{{
    `(cscope-file-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight bold))))
 
    `(cscope-function-face
@@ -1197,7 +1213,7 @@ before-change-functions
                    :height ,night-owl-height-plus-3))))
 
    `(custom-comment-tag
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(custom-group-tag
      ((t (:inherit ,night-owl-pitch
@@ -1210,12 +1226,12 @@ before-change-functions
                    :height ,night-owl-height-plus-3))))
 
    `(custom-state
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
    ;; }}}
 
    ;; diff {{{
    `(diff-added
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :background ,night-owl-light-background))))
 
    `(diff-changed
@@ -1236,7 +1252,7 @@ before-change-functions
 
    `(diff-refine-added
      ((t (:foreground ,night-owl-light-background
-                      :background ,night-owl-green))))
+                      :background ,night-owl-light-blue))))
 
    `(diff-refine-change
      ((t (:foreground ,night-owl-light-background
@@ -1257,8 +1273,8 @@ before-change-functions
                       :foreground ,night-owl-magenta-hc))))
 
    `(diff-hl-insert
-     ((t (:background ,night-owl-green-lc
-                      :foreground ,night-owl-green-hc))))
+     ((t (:background ,night-owl-light-green-lc
+                      :foreground ,night-owl-light-green-hc))))
 
    `(diff-hl-unknown
      ((t (:background ,night-owl-violet-lc
@@ -1267,10 +1283,10 @@ before-change-functions
 
    ;; ediff {{{
    `(ediff-fine-diff-A
-     ((t (:background ,night-owl-orange-lc))))
+     ((t (:background ,night-owl-light-magenta-lc))))
 
    `(ediff-fine-diff-B
-     ((t (:background ,night-owl-green-lc))))
+     ((t (:background ,night-owl-light-blue-lc))))
 
    `(ediff-fine-diff-C
      ((t (:background ,night-owl-yellow-lc))))
@@ -1279,27 +1295,27 @@ before-change-functions
      ((t (:background ,night-owl-blue-lc))))
 
    `(ediff-even-diff-A
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-foreground-lc ))))
 
    `(ediff-odd-diff-A
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-foreground-hc ))))
 
    `(ediff-even-diff-B
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-foreground-hc ))))
 
    `(ediff-odd-diff-B
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-foreground-lc ))))
 
    `(ediff-even-diff-C
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-foreground ))))
 
    `(ediff-odd-diff-C
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-background ))))
    ;; }}}
 
@@ -1343,10 +1359,10 @@ before-change-functions
 
    ;; elfeed {{{
    `(elfeed-search-date-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(elfeed-search-feed-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(elfeed-search-tag-face
      ((t (:foreground ,night-owl-light-foreground))))
@@ -1357,7 +1373,7 @@ before-change-functions
 
    ;; elixir {{{
    `(elixir-attribute-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(elixir-atom-face
      ((t (:foreground ,night-owl-violet))))
@@ -1367,13 +1383,13 @@ before-change-functions
    `(ein:cell-input-area
      ((t (:background ,night-owl-highlight-line))))
    `(ein:cell-input-prompt
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
    `(ein:cell-output-prompt
      ((t (:foreground ,night-owl-magenta))))
    `(ein:notification-tab-normal
      ((t (:foreground ,night-owl-blue))))
    `(ein:notification-tab-selected
-     ((t (:foreground ,night-owl-green :inherit bold))))
+     ((t (:foreground ,night-owl-light-blue :inherit bold))))
    ;; }}}
 
    ;; enhanced ruby mode {{{
@@ -1402,10 +1418,10 @@ before-change-functions
 
    `(erm-syn-warnline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-green)
+       (:underline (:style wave :color ,night-owl-light-blue)
                    :inherit unspecified))
-      (t (:foreground ,night-owl-green-hc
-                      :background ,night-owl-green-lc
+      (t (:foreground ,night-owl-light-blue-hc
+                      :background ,night-owl-light-blue-lc
                       :weight bold
                       :underline t))))
    ;; }}}
@@ -1466,19 +1482,19 @@ before-change-functions
      ((t (:inherit erc-default-face))))
 
    `(erc-notice-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(erc-pal-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight bold))))
 
    `(erc-prompt-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :background ,night-owl-light-background
                       :weight bold))))
 
    `(erc-timestamp-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(erc-underline-face
      ((t (:underline t))))
@@ -1504,7 +1520,7 @@ before-change-functions
                       :inherit bold))))
 
    `(eshell-ls-executable
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :inherit bold))))
 
    `(eshell-ls-unreadable
@@ -1532,7 +1548,7 @@ before-change-functions
                       :inherit italic))))
    `(evil-ex-substitute-replacement
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-orange-l
+                      :foreground ,night-owl-light-magenta-d
                       :inherit italic))))
    ;; }}}
 
@@ -1544,19 +1560,19 @@ before-change-functions
    ;; fic {{{
    `(fic-author-face
      ((t (:background ,night-owl-light-background
-                      :foreground ,night-owl-green
+                      :foreground ,night-owl-light-blue
                       :underline t
                       :slant italic))))
 
    `(fic-face
      ((t (:background ,night-owl-light-background
-                      :foreground ,night-owl-green
+                      :foreground ,night-owl-light-blue
                       :weight normal
                       :slant italic))))
 
    `(font-lock-fic-face
      ((t (:background ,night-owl-light-background
-                      :foreground ,night-owl-green
+                      :foreground ,night-owl-light-blue
                       :weight normal
                       :slant italic))))
    ;; }}}
@@ -1582,12 +1598,12 @@ before-change-functions
 
    `(flymake-infoline
      ((((supports :underline (:style wave)))
-       (:underline (:style wave :color ,night-owl-orange)
+       (:underline (:style wave :color ,night-owl-light-magenta)
                    :inherit unspecified
                    :foreground unspecified
                    :background unspecified))
-      (t (:foreground ,night-owl-orange-hc
-                      :background ,night-owl-orange-lc))))
+      (t (:foreground ,night-owl-light-magenta-hc
+                      :background ,night-owl-light-magenta-lc))))
 
    `(flymake-warnline
      ((((supports :underline (:style wave)))
@@ -1612,8 +1628,8 @@ before-change-functions
 
    `(flycheck-warning
      ((((supports :underline (:style line)))
-       (:underline (:style line :color ,night-owl-green)))
-      (t (:foreground ,night-owl-orange
+       (:underline (:style line :color ,night-owl-light-blue)))
+      (t (:foreground ,night-owl-light-magenta
                       :background ,night-owl-light-background
                       :weight bold
                       :underline t))))
@@ -1632,7 +1648,7 @@ before-change-functions
                       :weight bold))))
 
    `(flycheck-fringe-warning
-     ((t (:foreground ,night-owl-orange-l
+     ((t (:foreground ,night-owl-light-magenta-d
                       :background unspecified
                       :weight bold))))
 
@@ -1662,7 +1678,7 @@ before-change-functions
 
    ;; git-gutter {{{
    `(git-gutter:added
-     ((t (:background ,night-owl-orange
+     ((t (:background ,night-owl-light-magenta
                       :foreground ,night-owl-light-background
                       :inherit bold))))
 
@@ -1684,7 +1700,7 @@ before-change-functions
 
    ;; git-gutter-fr {{{
    `(git-gutter-fr:added
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :inherit bold))))
 
    `(git-gutter-fr:deleted
@@ -1698,7 +1714,7 @@ before-change-functions
 
    ;; git-gutter+ and git-gutter+-fr {{{
    `(git-gutter+-added
-     ((t (:background ,night-owl-orange
+     ((t (:background ,night-owl-light-magenta
                       :foreground ,night-owl-light-background
                       :inherit bold))))
 
@@ -1718,7 +1734,7 @@ before-change-functions
                       :inherit bold))))
 
    `(git-gutter-fr+-added
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight bold))))
 
    `(git-gutter-fr+-deleted
@@ -1742,7 +1758,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(guide-key/key-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(guide-key/prefix-command-face
      ((t (:foreground ,night-owl-violet))))
@@ -1821,18 +1837,18 @@ before-change-functions
      ((t (:inherit message-header-subject))))
 
    `(gnus-summary-cancelled
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(gnus-summary-high-ancient
      ((t (:foreground ,night-owl-blue
                       :weight bold))))
 
    `(gnus-summary-high-read
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight bold))))
 
    `(gnus-summary-high-ticked
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight bold))))
 
    `(gnus-summary-high-unread
@@ -1843,10 +1859,10 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(gnus-summary-low-read
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-summary-low-ticked
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(gnus-summary-low-unread
      ((t (:foreground ,night-owl-light-foreground))))
@@ -1855,10 +1871,10 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(gnus-summary-normal-read
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-summary-normal-ticked
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(gnus-summary-normal-unread
      ((t (:foreground ,night-owl-light-foreground))))
@@ -1877,13 +1893,13 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(gnus-cite-4
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-cite-5
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-cite-6
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-cite-7
      ((t (:foreground ,night-owl-magenta))))
@@ -1904,10 +1920,10 @@ before-change-functions
      ((t (:foreground ,night-owl-yellow))))
 
    `(gnus-group-news-2-empty
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-group-news-3-empty
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(gnus-group-news-4-empty
      ((t (:foreground ,night-owl-blue))))
@@ -1919,7 +1935,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue-lc))))
 
    `(gnus-group-news-low-empty
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(gnus-signature
      ((t (:foreground ,night-owl-yellow))))
@@ -1931,10 +1947,10 @@ before-change-functions
 
    ;; helm {{{
    `(helm-apt-deinstalled
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(helm-apt-installed
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-bookmark-directory
      ((t (:inherit helm-ff-directory))))
@@ -1946,7 +1962,7 @@ before-change-functions
      ((t (:foreground ,night-owl-cyan))))
 
    `(helm-bookmark-info
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-bookmark-man
      ((t (:foreground ,night-owl-violet))))
@@ -1955,7 +1971,7 @@ before-change-functions
      ((t (:foreground ,night-owl-yellow))))
 
    `(helm-bookmarks-su
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(helm-buffer-file
      ((t (:foreground ,night-owl-light-foreground))))
@@ -1964,7 +1980,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(helm-buffer-process
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(helm-buffer-saved-out
      ((t (:foreground ,night-owl-magenta
@@ -1972,7 +1988,7 @@ before-change-functions
                       :inverse-video t))))
 
    `(helm-buffer-size
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(helm-candidate-number
      ((t (:background ,night-owl-highlight-line
@@ -1983,7 +1999,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(helm-ff-executable
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-ff-file
      ((t (:background ,night-owl-light-background
@@ -1991,11 +2007,11 @@ before-change-functions
 
    `(helm-ff-invalid-symlink
      ((t (:background ,night-owl-light-background
-                      :foreground ,night-owl-green
+                      :foreground ,night-owl-light-blue
                       :slant italic))))
 
    `(helm-ff-prefix
-     ((t (:background ,night-owl-orange
+     ((t (:background ,night-owl-light-magenta
                       :foreground ,night-owl-light-background))))
 
    `(helm-ff-symlink
@@ -2006,10 +2022,10 @@ before-change-functions
                       :underline t))))
 
    `(helm-grep-finish
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-grep-lineno
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(helm-grep-match
      ((t (:inherit helm-match))))
@@ -2029,7 +2045,7 @@ before-change-functions
                       :bold t))))
 
    `(helm-M-x-key
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :underline t))))
 
    `(helm-moccur-buffer
@@ -2037,7 +2053,7 @@ before-change-functions
                       :underline t))))
 
    `(helm-match
-     ((t (:foreground ,night-owl-orange :inherit bold))))
+     ((t (:foreground ,night-owl-light-magenta :inherit bold))))
 
    `(helm-match-item
      ((t (:inherit helm-match))))
@@ -2067,10 +2083,10 @@ before-change-functions
      ((t (:background ,night-owl-highlight-line))))
 
    `(helm-swoop-target-word-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-time-zone-current
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(helm-time-zone-home
      ((t (:foreground ,night-owl-magenta))))
@@ -2090,13 +2106,13 @@ before-change-functions
      ((t :foreground ,night-owl-blue-l)))
 
    `(helm-ls-git-untracked-face
-     ((t :foreground ,night-owl-green)))
+     ((t :foreground ,night-owl-light-blue)))
 
    `(helm-ls-git-added-copied-face
-     ((t :foreground ,night-owl-orange)))
+     ((t :foreground ,night-owl-light-magenta)))
 
    `(helm-ls-git-added-modified-face
-     ((t :foreground ,night-owl-orange-l)))
+     ((t :foreground ,night-owl-light-magenta-d)))
 
    `(helm-ls-git-deleted-not-staged-face
      ((t :foreground ,night-owl-magenta)))
@@ -2118,8 +2134,8 @@ before-change-functions
                       :background ,night-owl-red-hc))))
 
    `(hi-green
-     ((t (:foreground ,night-owl-orange-lc
-                      :background ,night-owl-orange-hc))))
+     ((t (:foreground ,night-owl-light-magenta-lc
+                      :background ,night-owl-light-magenta-hc))))
 
    `(hi-blue
      ((t (:foreground ,night-owl-blue-lc
@@ -2135,7 +2151,7 @@ before-change-functions
                       :weight bold))))
 
    `(hi-green-b
-     ((t (:foreground ,night-owl-orange-lc
+     ((t (:foreground ,night-owl-light-magenta-lc
                       :weight bold))))
 
    `(hi-red-b
@@ -2150,7 +2166,7 @@ before-change-functions
 
    ;; highlight-changes {{{
    `(highlight-changes
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(highlight-changes-delete
      ((t (:foreground ,night-owl-magenta
@@ -2206,7 +2222,7 @@ before-change-functions
 
    ;; info {{{
    `(info-header-xref
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :inherit bold
                       :underline t))))
 
@@ -2218,7 +2234,7 @@ before-change-functions
                       :inherit bold))))
 
    `(info-quoted-name
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(info-reference-item
      ((t (:background nil
@@ -2243,23 +2259,23 @@ before-change-functions
 
    ;; ivy {{{
    `(ivy-current-match
-     ((t (:background ,night-owl-highlight-line :foreground ,night-owl-white))))
+     ((t (:background ,night-owl-highlight-line :foreground ,night-owl-light-black))))
 
    `(ivy-not-current
      ((t (:foreground ,night-owl-light-foreground-slightly-muted))))
 
    `(ivy-minibuffer-match-highlight
-     ((t (:inherit bold :foreground ,night-owl-white))))
+     ((t (:inherit bold :foreground ,night-owl-light-black))))
 
    `(ivy-minibuffer-match-face-1
-     ((t (:inherit bold :foreground ,night-owl-white))))
+     ((t (:inherit bold :foreground ,night-owl-light-black))))
 
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,night-owl-violet
                       :underline t))))
 
    `(ivy-minibuffer-match-face-3
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :underline t))))
 
    `(ivy-minibuffer-match-face-4
@@ -2282,10 +2298,10 @@ before-change-functions
      ((t (:background ,night-owl-gray-d))))
 
    `(swiper-match-face-2
-     ((t (:background ,night-owl-orange))))
+     ((t (:background ,night-owl-light-magenta))))
 
    `(swiper-match-face-3
-     ((t (:background ,night-owl-green))))
+     ((t (:background ,night-owl-light-blue))))
 
    `(swiper-match-face-4
      ((t (:background ,night-owl-red))))
@@ -2314,25 +2330,25 @@ before-change-functions
 
    `(jabber-chat-prompt-system
      ((t (:weight bold
-                  :foreground ,night-owl-orange))))
+                  :foreground ,night-owl-light-magenta))))
 
    `(jabber-chat-text-foreign
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(jabber-chat-text-local
      ((t (:foreground ,night-owl-light-foreground))))
 
    `(jabber-chat-rare-time-face
      ((t (:underline t
-                     :foreground ,night-owl-orange))))
+                     :foreground ,night-owl-light-magenta))))
 
    `(jabber-roster-user-away
      ((t (:slant italic
-                 :foreground ,night-owl-orange))))
+                 :foreground ,night-owl-light-magenta))))
 
    `(jabber-roster-user-chatty
      ((t (:weight bold
-                  :foreground ,night-owl-green))))
+                  :foreground ,night-owl-light-blue))))
 
    `(jabber-roster-user-dnd
      ((t (:slant italic
@@ -2344,7 +2360,7 @@ before-change-functions
                   :foreground ,night-owl-red))))
 
    `(jabber-roster-user-offline
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(jabber-roster-user-online
      ((t (:weight bold
@@ -2360,22 +2376,22 @@ before-change-functions
      ((t (:foreground ,night-owl-red))))
 
    `(js2-external-variable
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(js2-function-call
      ((t (:foreground ,night-owl-light-foreground))))
 
    `(js2-function-param
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(js2-instance-member
      ((t (:foreground ,night-owl-violet))))
 
    `(js2-jsdoc-html-tag-delimiter
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(js2-jsdoc-html-tag-name
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(js2-jsdoc-tag
      ((t (:foreground ,night-owl-violet))))
@@ -2384,7 +2400,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(js2-jsdoc-value
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(js2-magic-paren
      ((t (:underline t))))
@@ -2399,7 +2415,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(js2-warning
-     ((t (:underline ,night-owl-green))))
+     ((t (:underline ,night-owl-light-blue))))
    ;; }}}
 
    ;; jedi {{{
@@ -2456,7 +2472,7 @@ before-change-functions
    ;; https://github.com/magit/magit/search?utf8=%E2%9C%93&q=face
    ;;
    `(magit-diff-added
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :background ,night-owl-light-background))))
 
    `(magit-diff-context-highlight
@@ -2464,7 +2480,7 @@ before-change-functions
                       :foreground ,night-owl-light-foreground-muted))))
 
    `(magit-diff-added-highlight
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :background ,night-owl-highlight-line))))
 
    `(magit-diff-removed
@@ -2483,7 +2499,7 @@ before-change-functions
                       :weight bold))))
 
    `(magit-branch
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight bold))))
 
    `(magit-item-highlight
@@ -2494,7 +2510,7 @@ before-change-functions
      ((t (:foreground ,night-owl-cyan))))
 
    `(magit-log-graph
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(magit-log-head-label-bisect-bad
      ((t (:background ,night-owl-magenta-hc
@@ -2502,8 +2518,8 @@ before-change-functions
                       :box 1))))
 
    `(magit-log-head-label-bisect-good
-     ((t (:background ,night-owl-orange-hc
-                      :foreground ,night-owl-orange-lc
+     ((t (:background ,night-owl-light-magenta-hc
+                      :foreground ,night-owl-light-magenta-lc
                       :box 1))))
 
    `(magit-log-head-label-default
@@ -2521,8 +2537,8 @@ before-change-functions
                       :box 1))))
 
    `(magit-log-head-label-remote
-     ((t (:background ,night-owl-orange-lc
-                      :foreground ,night-owl-orange-hc
+     ((t (:background ,night-owl-light-magenta-lc
+                      :foreground ,night-owl-light-magenta-hc
                       :box 1))))
 
    `(magit-log-head-label-tags
@@ -2540,10 +2556,10 @@ before-change-functions
                       :weight bold))))
 
    `(Man-reverse
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(Man-underline
-     ((t (:foreground ,night-owl-orange :underline t))))
+     ((t (:foreground ,night-owl-light-magenta :underline t))))
    ;; }}}
 
    ;; monky {{{
@@ -2552,7 +2568,7 @@ before-change-functions
                       :weight bold))))
 
    `(monky-diff-add
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(monky-diff-del
      ((t (:foreground ,night-owl-magenta))))
@@ -2587,10 +2603,10 @@ before-change-functions
 
    ;; message-mode {{{
    `(message-cited-text
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(message-header-name
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(message-header-other
      ((t (:foreground ,night-owl-light-foreground
@@ -2620,28 +2636,28 @@ before-change-functions
                       :weight bold))))
 
    `(message-separator
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :slant italic))))
    ;; }}}
 
    ;; mew {{{
    `(mew-face-header-subject
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(mew-face-header-from
      ((t (:foreground ,night-owl-yellow))))
 
    `(mew-face-header-date
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-header-to
      ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-header-key
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-header-private
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-header-important
      ((t (:foreground ,night-owl-blue))))
@@ -2654,26 +2670,26 @@ before-change-functions
      ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-header-xmew
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-header-xmew-bad
      ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-body-url
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(mew-face-body-comment
      ((t (:foreground ,night-owl-light-foreground
                       :slant italic))))
 
    `(mew-face-body-cite1
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-body-cite2
      ((t (:foreground ,night-owl-blue))))
 
    `(mew-face-body-cite3
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(mew-face-body-cite4
      ((t (:foreground ,night-owl-yellow))))
@@ -2685,7 +2701,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(mew-face-mark-escape
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-mark-delete
      ((t (:foreground ,night-owl-magenta))))
@@ -2694,13 +2710,13 @@ before-change-functions
      ((t (:foreground ,night-owl-yellow))))
 
    `(mew-face-mark-refile
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-mark-unread
      ((t (:foreground ,night-owl-magenta))))
 
    `(mew-face-eof-message
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(mew-face-eof-part
      ((t (:foreground ,night-owl-yellow))))
@@ -2731,7 +2747,7 @@ before-change-functions
      ((t (:background ,night-owl-violet-d))))
 
    `(mmm-cleanup-submode-face
-     ((t (:background ,night-owl-green-d))))
+     ((t (:background ,night-owl-light-blue-l))))
 
    `(mmm-declaration-submode-face
      ((t (:background ,night-owl-cyan-d))))
@@ -2743,7 +2759,7 @@ before-change-functions
      ((t (:background ,night-owl-magenta-d))))
 
    `(mmm-special-submode-face
-     ((t (:background ,night-owl-orange-d))))
+     ((t (:background ,night-owl-light-magenta-l))))
 
    `(mmm-code-submode-face
      ((t (:background ,night-owl-gray))))
@@ -2757,7 +2773,7 @@ before-change-functions
      ((t (:underline t))))
 
    `(moccur-edit-done-face
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :background ,night-owl-light-background
                       :slant italic))))
 
@@ -2789,7 +2805,7 @@ before-change-functions
 
    ;; mu4e {{{
    `(mu4e-cited-1-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :slant italic
                       :weight normal))))
 
@@ -2799,7 +2815,7 @@ before-change-functions
                       :weight normal))))
 
    `(mu4e-cited-3-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :slant italic
                       :weight normal))))
 
@@ -2814,7 +2830,7 @@ before-change-functions
                       :weight normal))))
 
    `(mu4e-cited-6-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :slant italic
                       :weight normal))))
 
@@ -2935,7 +2951,7 @@ before-change-functions
      ((t (:foreground ,night-owl-cyan))))
 
    `(nav-face-dir
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(nav-face-hdir
      ((t (:foreground ,night-owl-magenta))))
@@ -2964,7 +2980,7 @@ before-change-functions
                       :background ,night-owl-light-background))))
 
    `(neo-root-dir-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :background ,night-owl-light-background))))
 
    `(neo-dir-link-face
@@ -2977,7 +2993,7 @@ before-change-functions
      ((t (:underline nil))))
 
    `(neo-expand-btn-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(neo-vc-default-face
      ((t (:foreground ,night-owl-light-foreground))))
@@ -2987,10 +3003,10 @@ before-change-functions
                       :slant italic))))
 
    `(neo-vc-up-to-date-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(neo-vc-edited-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(neo-vc-needs-update-face
      ((t (:underline t))))
@@ -3000,10 +3016,10 @@ before-change-functions
 
    `(neo-vc-unlocked-changes-face
      ((t (:foreground ,night-owl-magenta
-                      :background ,night-owl-comments))))
+                      :background ,night-owl-light-comments))))
 
    `(neo-vc-added-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(neo-vc-removed-face
      ((t (:strike-through t))))
@@ -3015,7 +3031,7 @@ before-change-functions
      ((t (:foreground ,night-owl-magenta))))
 
    `(neo-vc-ignored-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
    ;; }}}
 
    ;; adoc-mode / markup {{{
@@ -3027,7 +3043,7 @@ before-change-functions
                       :background ,night-owl-blue-lc))))
 
    `(markup-verbatim-face
-     ((t (:background ,night-owl-green-lc))))
+     ((t (:background ,night-owl-light-blue-lc))))
 
    `(markup-list-face
      ((t (:foreground ,night-owl-violet-hc
@@ -3066,7 +3082,7 @@ before-change-functions
                       :slant italic))))
 
    `(org-agenda-date
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :background ,night-owl-light-background
                       :weight normal
                       :inverse-video nil
@@ -3079,7 +3095,7 @@ before-change-functions
      ((t (:inherit org-agenda-date
                    :inverse-video nil
                    :background unspecified
-                   :foreground ,night-owl-comments
+                   :foreground ,night-owl-light-comments
                    :weight unspecified
                    :underline t
                    :overline nil
@@ -3096,19 +3112,19 @@ before-change-functions
                    :background ,night-owl-light-background))) t)
 
    `(org-agenda-done
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :slant italic))) t)
 
    `(org-archived
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :weight normal))))
 
    `(org-block
      ((t (:foreground ,night-owl-emphasis
-                      :background ,night-owl-highlight-alt))))
+                      :background ,night-owl-light-highlight-alt))))
 
    `(org-block-background
-     ((t (:background ,night-owl-highlight-alt))))
+     ((t (:background ,night-owl-light-highlight-alt))))
 
    `(org-block-begin-line
      ((t (:foreground ,night-owl-gray-l
@@ -3126,7 +3142,7 @@ before-change-functions
                       :box (:line-width 1 :style released-button)))))
 
    `(org-code
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(org-date
      ((t (:foreground ,night-owl-blue
@@ -3134,16 +3150,16 @@ before-change-functions
 
    `(org-done
      ((t (:weight bold
-                  :foreground ,night-owl-orange))))
+                  :foreground ,night-owl-light-magenta))))
 
    `(org-ellipsis
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(org-formula
      ((t (:foreground ,night-owl-yellow))))
 
    `(org-headline-done
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(org-hide
      ((t (:foreground ,night-owl-light-background))))
@@ -3192,7 +3208,7 @@ before-change-functions
      ((t (:foreground ,night-owl-violet))))
 
    `(org-scheduled
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(org-scheduled-previously
      ((t (:foreground ,night-owl-cyan))))
@@ -3202,7 +3218,7 @@ before-change-functions
                       :weight normal))))
 
    `(org-special-keyword
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :weight bold))))
 
    `(org-table
@@ -3212,7 +3228,7 @@ before-change-functions
      ((t (:weight bold))))
 
    `(org-time-grid
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(org-todo
      ((t (:foreground ,night-owl-magenta
@@ -3224,7 +3240,7 @@ before-change-functions
                       :underline nil))))
 
    `(org-warning
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :weight normal
                       :underline nil))))
 
@@ -3237,11 +3253,11 @@ before-change-functions
      ((t (:background ,night-owl-blue-lc))))
 
    `(org-habit-ready-face
-     ((t (:background ,night-owl-orange-lc
-                      :foreground ,night-owl-orange))))
+     ((t (:background ,night-owl-light-magenta-lc
+                      :foreground ,night-owl-light-magenta))))
 
    `(org-habit-ready-future-face
-     ((t (:background ,night-owl-orange-lc))))
+     ((t (:background ,night-owl-light-magenta-lc))))
 
    `(org-habit-alert-face
      ((t (:background ,night-owl-yellow
@@ -3259,7 +3275,7 @@ before-change-functions
 
    ;; latest additions
    `(org-agenda-dimmed-todo-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(org-agenda-restriction-lock
      ((t (:background ,night-owl-yellow))))
@@ -3300,7 +3316,7 @@ before-change-functions
                       :underline t))))
 
    `(org-latex-and-export-specials
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(org-mode-line-clock-overrun
      ((t (:inherit mode-line))))
@@ -3354,7 +3370,7 @@ before-change-functions
                       :foreground ,night-owl-light-foreground))))
 
    `(popup-isearch-match
-     ((t (:background ,night-owl-orange))))
+     ((t (:background ,night-owl-light-magenta))))
 
    `(popup-menu-face
      ((t (:background ,night-owl-highlight-line
@@ -3369,7 +3385,7 @@ before-change-functions
                       :foreground ,night-owl-light-background))))
 
    `(popup-scroll-bar-background-face
-     ((t (:background ,night-owl-comments))))
+     ((t (:background ,night-owl-light-comments))))
 
    `(popup-scroll-bar-foreground-face
      ((t (:background ,night-owl-emphasis))))
@@ -3387,13 +3403,13 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(rainbow-delimiters-depth-3-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(rainbow-delimiters-depth-4-face
      ((t (:foreground ,night-owl-yellow))))
 
    `(rainbow-delimiters-depth-5-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(rainbow-delimiters-depth-6-face
      ((t (:foreground ,night-owl-magenta))))
@@ -3405,13 +3421,13 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(rainbow-delimiters-depth-9-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(rainbow-delimiters-depth-10-face
      ((t (:foreground ,night-owl-yellow))))
 
    `(rainbow-delimiters-depth-11-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(rainbow-delimiters-depth-12-face
      ((t (:foreground ,night-owl-magenta))))
@@ -3424,13 +3440,13 @@ before-change-functions
 
    ;; realgud {{{
    `(realgud-overlay-arrow1
-     ((t (:foreground ,night-owl-orange-d))))
+     ((t (:foreground ,night-owl-light-magenta-l))))
 
    `(realgud-overlay-arrow2
      ((t (:foreground ,night-owl-yellow-d))))
 
    `(realgud-overlay-arrow3
-     ((t (:foreground ,night-owl-green-d))))
+     ((t (:foreground ,night-owl-light-blue-l))))
 
    `(realgud-bp-enabled-face
      ((t (:inherit error))))
@@ -3514,10 +3530,10 @@ before-change-functions
 
    ;; rpm-mode {{{
    `(rpm-spec-dir-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(rpm-spec-doc-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(rpm-spec-ghost-face
      ((t (:foreground ,night-owl-magenta))))
@@ -3620,7 +3636,7 @@ before-change-functions
    ;; speedbar {{{
    `(speedbar-button-face
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-comments))))
+                   :foreground ,night-owl-light-comments))))
 
    `(speedbar-directory-face
      ((t (:inherit ,night-owl-pitch
@@ -3647,7 +3663,7 @@ before-change-functions
 
    `(speedbar-tag-face
      ((t (:inherit ,night-owl-pitch
-                   :foreground ,night-owl-orange))))
+                   :foreground ,night-owl-light-magenta))))
    ;; }}}
 
    ;; sunrise commander headings {{{
@@ -3664,13 +3680,13 @@ before-change-functions
                       :height ,night-owl-height-plus-1))))
 
    `(sr-highlight-path-face
-     ((t (:background ,night-owl-orange
+     ((t (:background ,night-owl-light-magenta
                       :foreground ,night-owl-light-background
                       :weight bold
                       :height ,night-owl-height-plus-1))))
 
    `(sr-passive-path-face
-     ((t (:background ,night-owl-comments
+     ((t (:background ,night-owl-light-comments
                       :foreground ,night-owl-light-background
                       :weight bold
                       :height ,night-owl-height-plus-1))))
@@ -3749,7 +3765,7 @@ before-change-functions
 
    `(syslog-hour-face
      ((t (:background unspecified
-                      :foreground ,night-owl-orange))))
+                      :foreground ,night-owl-light-magenta))))
 
    `(syslog-error-face
      ((t (:background unspecified
@@ -3758,7 +3774,7 @@ before-change-functions
 
    `(syslog-warn-face
      ((t (:background unspecified
-                      :foreground ,night-owl-green
+                      :foreground ,night-owl-light-blue
                       :weight bold))))
 
    `(syslog-info-face
@@ -3792,8 +3808,8 @@ before-change-functions
                       :background ,night-owl-magenta-d))))
 
    `(term-color-green
-     ((t (:foreground ,night-owl-orange
-                      :background ,night-owl-orange-d))))
+     ((t (:foreground ,night-owl-light-magenta
+                      :background ,night-owl-light-magenta-l))))
 
    `(term-color-yellow
      ((t (:foreground ,night-owl-yellow
@@ -3843,7 +3859,7 @@ before-change-functions
                       :weight bold))))
 
    `(treemacs-git-modified-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-renamed-face
@@ -3859,11 +3875,11 @@ before-change-functions
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-added-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :background ,night-owl-light-background))))
 
    `(treemacs-git-conflict-face
-     ((t (:foreground ,night-owl-green
+     ((t (:foreground ,night-owl-light-blue
                       :background ,night-owl-light-background))))
    ;; }}}
 
@@ -3894,11 +3910,11 @@ before-change-functions
 
    ;; undo-tree {{{
    `(undo-tree-visualizer-default-face
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :background ,night-owl-light-background))))
 
    `(undo-tree-visualizer-unmodified-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(undo-tree-visualizer-current-face
      ((t (:foreground ,night-owl-blue
@@ -3915,7 +3931,7 @@ before-change-functions
 
    ;; volatile highlights {{{
    `(vhl/default-face
-     ((t (:background ,night-owl-highlight-alt))))
+     ((t (:background ,night-owl-light-highlight-alt))))
    ;; }}}
 
    ;; w3m {{{
@@ -3997,7 +4013,7 @@ before-change-functions
 
    `(w3m-tab-unselected-retrieving
      ((t (:background ,night-owl-highlight-line
-                      :foreground ,night-owl-green))))
+                      :foreground ,night-owl-light-blue))))
 
    `(w3m-tab-unselected-unseen
      ((t (:background ,night-owl-highlight-line
@@ -4009,7 +4025,7 @@ before-change-functions
      ((t (:foreground ,night-owl-magenta))))
 
    `(web-mode-comment-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(web-mode-constant-face
      ((t (:foreground ,night-owl-red))))
@@ -4020,7 +4036,7 @@ before-change-functions
                      :background ,night-owl-highlight-line))))
 
    `(web-mode-doctype-face
-     ((t (:foreground ,night-owl-comments
+     ((t (:foreground ,night-owl-light-comments
                       :slant italic
                       :weight bold))))
 
@@ -4031,7 +4047,7 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(web-mode-html-attr-name-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(web-mode-html-attr-custom-face
      ((t (:inherit web-mode-html-attr-name-face))))
@@ -4156,7 +4172,7 @@ before-change-functions
    ;; whitespace-mode {{{
    `(whitespace-space
      ((t (:background unspecified
-                      :foreground ,night-owl-comments
+                      :foreground ,night-owl-light-comments
                       :inverse-video unspecified
                       :slant italic))))
 
@@ -4173,12 +4189,12 @@ before-change-functions
 
    `(whitespace-newline
      ((t(:background unspecified
-                     :foreground ,night-owl-comments
+                     :foreground ,night-owl-light-comments
                      :inverse-video unspecified))))
 
    `(whitespace-trailing
      ((t (:background unspecified
-                      :foreground ,night-owl-green-lc
+                      :foreground ,night-owl-light-blue-lc
                       :inverse-video t))))
 
    `(whitespace-line
@@ -4204,7 +4220,7 @@ before-change-functions
 
    `(whitespace-space-after-tab
      ((t (:background unspecified
-                      :foreground ,night-owl-green
+                      :foreground ,night-owl-light-blue
                       :inverse-video t
                       :weight bold))))
    ;; }}}
@@ -4217,7 +4233,7 @@ before-change-functions
      ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-folder-path-face
-     ((t (:foreground ,night-owl-green))))
+     ((t (:foreground ,night-owl-light-blue))))
 
    `(wl-highlight-folder-unread-face
      ((t (:foreground ,night-owl-blue))))
@@ -4235,7 +4251,7 @@ before-change-functions
      ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-message-cited-text-2
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-cited-text-3
      ((t (:foreground ,night-owl-blue))))
@@ -4244,22 +4260,22 @@ before-change-functions
      ((t (:foreground ,night-owl-blue))))
 
    `(wl-highlight-message-header-contents-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-headers-face
      ((t (:foreground ,night-owl-magenta))))
 
    `(wl-highlight-message-important-header-contents
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-header-contents
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-important-header-contents2
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-signature
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
 
    `(wl-highlight-message-unimportant-header-contents
      ((t (:foreground ,night-owl-light-foreground))))
@@ -4300,7 +4316,7 @@ before-change-functions
                       :weight bold))))
 
    `(weechat-nick-self-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight unspecified
                       :inverse-video t))))
 
@@ -4308,24 +4324,24 @@ before-change-functions
      ((t (:inherit minibuffer-prompt))))
 
    `(weechat-time-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
    ;; }}}
 
    ;; which-func-mode {{{
    `(which-func
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
    ;; }}}
 
    ;; which-key {{{
    `(which-key-key-face
-     ((t (:foreground ,night-owl-orange
+     ((t (:foreground ,night-owl-light-magenta
                       :weight bold))))
 
    `(which-key-separator-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(which-key-note-face
-     ((t (:foreground ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments))))
 
    `(which-key-command-description-face
      ((t (:foreground ,night-owl-light-foreground))))
@@ -4340,17 +4356,17 @@ before-change-functions
 
    ;; window-number-mode {{{
    `(window-number-face
-     ((t (:foreground ,night-owl-orange))))
+     ((t (:foreground ,night-owl-light-magenta))))
    ;; }}}
 
    ;; yascroll {{{
    `(yascroll:thumb-text-area
-     ((t (:foreground ,night-owl-comments
-                      :background ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments
+                      :background ,night-owl-light-comments))))
 
    `(yascroll:thumb-fringe
-     ((t (:foreground ,night-owl-comments
-                      :background ,night-owl-comments))))
+     ((t (:foreground ,night-owl-light-comments
+                      :background ,night-owl-light-comments))))
    ;; }}}
 
    ;; zencoding {{{
@@ -4362,7 +4378,7 @@ before-change-functions
   ;; custom-theme-set-variables {{{
   (custom-theme-set-variables
    'night-owl
-   `(ansi-color-names-vector [,night-owl-light-background ,night-owl-red ,night-owl-green ,night-owl-yellow
+   `(ansi-color-names-vector [,night-owl-light-background ,night-owl-red ,night-owl-light-blue ,night-owl-yellow
                                                     ,night-owl-blue ,night-owl-magenta ,night-owl-cyan ,night-owl-light-foreground])
 
    ;; compilation
@@ -4380,11 +4396,11 @@ before-change-functions
    ;; highlight-tail
    `(highlight-tail-colors
      '((,night-owl-highlight-line . 0)
-       (,night-owl-orange-lc . 20)
+       (,night-owl-light-magenta-lc . 20)
        (,night-owl-cyan-lc . 30)
        (,night-owl-blue-lc . 50)
        (,night-owl-yellow-lc . 60)
-       (,night-owl-orange-lc . 70)
+       (,night-owl-light-magenta-lc . 70)
        (,night-owl-magenta-lc . 85)
        (,night-owl-highlight-line . 100)))
 
@@ -4402,7 +4418,7 @@ before-change-functions
        (120 . "#A18F00")
        (140 . "#989200")
        (160 . "#8E9500")
-       (180 . ,night-owl-orange)
+       (180 . ,night-owl-light-magenta)
        (200 . "#729A1E")
        (220 . "#609C3C")
        (240 . "#4E9D5B")
@@ -4419,7 +4435,7 @@ before-change-functions
    `(weechat-color-list
      '(unspecified ,night-owl-light-background ,night-owl-highlight-line
                    ,night-owl-red-d ,night-owl-red
-                   ,night-owl-orange-d ,night-owl-orange
+                   ,night-owl-light-magenta-l ,night-owl-light-magenta
                    ,night-owl-yellow-d ,night-owl-yellow
                    ,night-owl-blue-d ,night-owl-blue
                    ,night-owl-magenta-d ,night-owl-magenta
