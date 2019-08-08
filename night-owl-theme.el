@@ -321,7 +321,7 @@ Also affects 'linum-mode' background."
                       :weight bold))))
 
    `(font-lock-preprocessor-face
-     ((t (:foreground ,night-owl-red))))
+     ((t (:foreground ,night-owl-magenta))))
 
    `(font-lock-regexp-grouping-construct
      ((t (:foreground ,night-owl-yellow
@@ -335,7 +335,7 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-string))))
 
    `(font-lock-type-face
-     ((t (:foreground ,night-owl-blue
+     ((t (:foreground ,night-owl-magenta
                       :italic nil))))
 
    `(font-lock-variable-name-face
