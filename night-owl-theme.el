@@ -359,7 +359,8 @@ Also affects 'linum-mode' background."
                        :background ,night-owl-background))))
 
    `(highlight
-     ((t (:background ,night-owl-highlight))))
+     ((t (:background ,night-owl-highlight
+                      :distant-foreground ,night-owl-foreground-muted))))
 
    `(lazy-highlight
      ((t (:inherit highlight
@@ -367,7 +368,8 @@ Also affects 'linum-mode' background."
 
    `(region
      ((t (:inherit highlight
-                   :background ,night-owl-highlight))))
+                   :background ,night-owl-highlight
+                   :distant-foreground ,night-owl-foreground-muted))))
 
    `(secondary-selection
      ((t (:inherit region
