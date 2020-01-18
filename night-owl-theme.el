@@ -567,6 +567,93 @@ Also affects 'linum-mode' background."
                       :underline t))))
    ;; }}}
 
+   ;; dired+ {{{
+   `(diredp-compressed-file-suffix
+     ((t (:foreground ,night-owl-blue))))
+
+   `(diredp-compressed-file-name
+     ((t (:foreground ,night-owl-blue))))
+
+   `(diredp-deletion
+     ((t (:inherit error
+                   :inverse-video t))))
+
+   `(diredp-deletion-file-name
+     ((t (:inherit error))))
+
+   `(diredp-date-time
+     ((t (:foreground ,night-owl-cyan))))
+
+   `(diredp-dir-heading
+     ((t (:foreground ,night-owl-green
+                      :weight bold))))
+
+   `(diredp-dir-name
+     ((t (:foreground ,night-owl-blue))))
+
+   `(diredp-dir-priv
+     ((t (:foreground ,night-owl-violet
+                      :background nil))))
+
+   `(diredp-exec-priv
+     ((t (:foreground ,night-owl-orange
+                      :background nil))))
+
+   `(diredp-executable-tag
+     ((t (:foreground ,night-owl-red
+                      :background nil))))
+
+   `(diredp-file-name
+     ((t (:foreground ,night-owl-orange-d))))
+
+   `(diredp-file-suffix
+     ((t (:foreground ,night-owl-green))))
+
+   `(diredp-flag-mark
+     ((t (:foreground ,night-owl-green
+                      :inverse-video t))))
+
+   `(diredp-flag-mark-line
+     ((t (:background nil
+                      :inherit highlight))))
+
+   `(diredp-ignored-file-name
+     ((t (:foreground ,night-owl-comments))))
+
+   `(diredp-link-priv
+     ((t (:foreground ,night-owl-violet
+                      :background nil))))
+
+   `(diredp-mode-line-flagged
+     ((t (:foreground ,night-owl-red))))
+
+   `(diredp-mode-line-marked
+     ((t (:foreground ,night-owl-green))))
+
+   `(diredp-no-priv
+     ((t (:background nil))))
+
+   `(diredp-number
+     ((t (:foreground ,night-owl-orange))))
+
+   `(diredp-other-priv
+     ((t (:foreground ,night-owl-violet
+                      :background nil))))
+
+   `(diredp-rare-priv
+     ((t (:foreground ,night-owl-red :background nil))))
+
+   `(diredp-read-priv
+     ((t (:foreground ,night-owl-green :background nil))))
+
+   `(diredp-symlink
+     ((t (:foreground ,night-owl-violet))))
+
+   `(diredp-write-priv
+     ((t (:foreground ,night-owl-orange
+                      :background nil))))
+   ;; }}}
+
    ;; dropdown {{{
    `(dropdown-list-face
      ((t (:background ,night-owl-highlight-line
