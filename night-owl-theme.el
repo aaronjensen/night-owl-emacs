@@ -218,6 +218,11 @@ Also affects 'linum-mode' background."
   "Adaptive colors - cursor"
   :type 'string
   :group 'night-owl)
+
+(defcustom night-owl-classname "#FFCB8B"
+  "Adaptive colors - class name"
+  :type 'string
+  :group 'night-owl)
 ;; }}}
 
 ;; Variables {{{
@@ -335,11 +340,11 @@ Also affects 'linum-mode' background."
      ((t (:foreground ,night-owl-string))))
 
    `(font-lock-type-face
-     ((t (:foreground ,night-owl-magenta
+     ((t (:foreground ,night-owl-classname
                       :italic nil))))
 
    `(font-lock-variable-name-face
-     ((t (:foreground ,night-owl-blue))))
+     ((t (:foreground ,night-owl-white))))
 
    `(font-lock-warning-face
      ((t (:foreground ,night-owl-orange
