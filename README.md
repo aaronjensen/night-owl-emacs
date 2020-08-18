@@ -9,6 +9,22 @@ and Kelvin Smith.
 
 ![Screenshot of Night Owl Theme for Emacs](https://user-images.githubusercontent.com/8588/41229702-dbc79340-6d31-11e8-9581-7c168b1fb693.png)
 
+## Installation
+
+If you're all set up to use [MELPA](http://melpa.milkbox.net/#/getting-started), simply
+
+```
+M-x package-install RET night-owl-theme RET
+```
+
+Otherwise, ensure sure a directory containing these files is on your `load-path`.
+
+Use `M-x customize-themes` to activate it, or put the following in your Emacs configuration file:
+
+```elisp
+(load-theme 'night-owl t)
+```
+
 ## Status
 
 Initial development, but covers most of my use cases. PRs gladly accepted.
