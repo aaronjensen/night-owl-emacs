@@ -80,3 +80,24 @@ To style spacemacs cursors, try this:
 ;; 
 ;; (add-hook 'after-load-theme-hook #'night-owl-update-evil-cursors)
 ```
+
+# Installation
+
+## Manual
+
+Download `night-owl-theme.el` to the directory `~/.emacs.d/themes/`. Add this to your
+`.emacs` (or `init.el`):
+
+```lisp
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+```
+
+Now you can load the theme with the interactive function `load-theme` like this:
+
+`M-x load-theme RET night-owl-theme`
+
+To load it automatically on Emacs startup add this to your init file:
+
+```lisp
+(load-theme 'night-owl-theme t)
+```
