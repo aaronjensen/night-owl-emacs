@@ -516,7 +516,7 @@ Also affects 'linum-mode' background."
                       :background ,night-owl-highlight
                       :box (:color ,night-owl-gray
                                    :line-width 1
-                                   :style unspecified)))))
+                                   :style nil)))))
    ;; }}}
 
    ;; cua {{{
