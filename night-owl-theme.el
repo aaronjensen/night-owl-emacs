@@ -1,4 +1,4 @@
-;;; night-owl-theme.el --- A color theme for the night owls out there
+;;; night-owl-theme.el --- A color theme for the night owls out there  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018
 
